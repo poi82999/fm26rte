@@ -1,0 +1,30 @@
+[package]
+name = "fm26-rte"
+version = "0.1.0"
+description = "FM26 player editor"
+authors = ["FM26 RTE"]
+edition = "2021"
+
+[lib]
+name = "fm26_rte_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+base64 = "0.22"
+lzma-rs = "0.1"
+windows-sys = { version = "0.60", features = [
+  "Win32_Foundation",
+  "Win32_Security",
+  "Win32_System_Diagnostics_Debug",
+  "Win32_System_Diagnostics_ToolHelp",
+  "Win32_System_Memory",
+  "Win32_System_Threading"
+] }
+sysinfo = "0.39.0"
+winapi = "0.3.9"

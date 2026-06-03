@@ -1,0 +1,1127 @@
+﻿id,object,group,description,variable_type,custom_type,address,offsets,bit_start,bit_length,string_length,unicode,path,dropdown
+12878,Award,Details,Row ID,4 Bytes,,ptrAward,objo.Rwid,,,,,Award > > Details > > Row ID,*:
+12877,Award,Details,Unique ID,4 Bytes,,ptrAward,objo.Duni,,,,,Award > > Details > > Unique ID,*:
+17669,Award,Details,Random ID,4 Bytes,,ptrAward,objo.Rdui,,,,,Award > > Details > > Random ID,*:
+12876,Award,Details,Full Name,String,,ptrAward,4 -> awro.AWna,,,32,0,Award > > Details > > Full Name,:
+19677,Award,Details,Short Name,String,,ptrAward,4 -> awro.AWsn,,,32,0,Award > > Details > > Short Name,:
+19702,Award,Details,Continent,String,,ptrAward,4 -> cono.Cnam -> awro.AWci,,,32,0,Award > > Details > > Continent,:
+19701,Award,Details,Nation,String,,ptrAward,4 -> nato.Nnam -> awro.AWni,,,32,0,Award > > Details > > Nation,:
+19703,Award,Details,Competition,String,,ptrAward,4 -> cmpo.Cnam -> awro.AWmi,,,32,0,Award > > Details > > Competition,:
+19675,Award,Details,Reputation,Byte,,ptrAward,awro.AWre,,,,,Award > > Details > > Reputation,
+12881,Award,Details,Winner Home Reputation,Byte,,ptrAward,awro.AWwh,,,,,Award > > Details > > Winner Home Reputation,
+19704,Award,Details,Winner World Reputation,Byte,,ptrAward,awro.AWwr,,,,,Award > > Details > > Winner World Reputation,
+19681,Award,Details,Hex,4 Bytes,,ptrAward,awro.AWfc,,,,,Award > > Details > > Colour Setting > > Foreground Colour > > Hex,
+19683,Award,Details,Red,Byte,,ptrAward,awro.AWfc+2,,,,,Award > > Details > > Colour Setting > > Foreground Colour > > Red,
+19684,Award,Details,Green,Byte,,ptrAward,awro.AWfc+1,,,,,Award > > Details > > Colour Setting > > Foreground Colour > > Green,
+19685,Award,Details,Blue,Byte,,ptrAward,awro.AWfc,,,,,Award > > Details > > Colour Setting > > Foreground Colour > > Blue,
+19686,Award,Details,Opacity,Byte,,ptrAward,awro.AWfc+3,,,,,Award > > Details > > Colour Setting > > Foreground Colour > > Opacity,
+19688,Award,Details,Hex,4 Bytes,,ptrAward,awro.AWbc,,,,,Award > > Details > > Colour Setting > > Background Colour > > Hex,
+19690,Award,Details,Red,Byte,,ptrAward,awro.AWbc+2,,,,,Award > > Details > > Colour Setting > > Background Colour > > Red,
+19691,Award,Details,Green,Byte,,ptrAward,awro.AWbc+1,,,,,Award > > Details > > Colour Setting > > Background Colour > > Green,
+19692,Award,Details,Blue,Byte,,ptrAward,awro.AWbc,,,,,Award > > Details > > Colour Setting > > Background Colour > > Blue,
+19693,Award,Details,Opacity,Byte,,ptrAward,awro.AWbc+3,,,,,Award > > Details > > Colour Setting > > Background Colour > > Opacity,
+19695,Award,Details,Hex,4 Bytes,,ptrAward,awro.AWtc,,,,,Award > > Details > > Colour Setting > > Trim Colour > > Hex,
+19697,Award,Details,Red,Byte,,ptrAward,awro.AWtc+2,,,,,Award > > Details > > Colour Setting > > Trim Colour > > Red,
+19698,Award,Details,Green,Byte,,ptrAward,awro.AWtc+1,,,,,Award > > Details > > Colour Setting > > Trim Colour > > Green,
+19699,Award,Details,Blue,Byte,,ptrAward,awro.AWtc,,,,,Award > > Details > > Colour Setting > > Trim Colour > > Blue,
+19700,Award,Details,Opacity,Byte,,ptrAward,awro.AWtc+3,,,,,Award > > Details > > Colour Setting > > Trim Colour > > Opacity,
+19705,Award,Rules,Award Recipient Type,Byte,,ptrAward,awro.AWrt,,,,,Award > > Rules > > Award Recipient Type,0:Not Set | 1:Player | 2:Non Player | 3:Player or Non Player | 4:Referee | 6:Rookie Player | 7:Squad Of Players | 8:Club or Nation
+19710,Award,Rules,Award Type,Byte,,ptrAward,awro.AWty,,,,,Award > > Rules > > Award Type,-1:Ignore | 0:Not Set | 1:Club | 3:Manager | 4:Top Goalscorer | 5:Most Man Of The Match | 14:Personality | 15:Goal | 16:Referee | 19:Recruitment Policy | 30:Most Assists | 31:Quickest Goal | 33:Flair Player | 37:Highest Average Rating | 38:Highest Reputation | 39:Least Goals Conceded | 44:Most Clean Sheets | 41:Most Improved | 42:Fair Play Team | 43:Comeback
+19709,Award,Rules,Award Period,Byte,,ptrAward,awro.AWdr,,,,,Award > > Rules > > Award Period,0:Invalid | 1:Of The Week | 2:Of The Month | 3:Of The Season | 4:Of The Competition | 5:Of The Year | 6:On Specified Date | 8:Of The Opening Or Closing Season
+12880,Award,Rules,Announcement Date,Custom,FM Date,ptrAward,awro.AWad,,,,,Award > > Rules > > Announcement Date,*:
+19708,Award,Rules,Number Of Placings,Byte,,ptrAward,awro.AWnp,,,,,Award > > Rules > > Number Of Placings,0:Not Set | 1:1st To 3rd Place | 2:1st Place Only | 3:1st And 2nd Place
+19707,Award,Rules,Voting,Byte,,ptrAward,awro.AWsc,,,,,Award > > Rules > > Voting,1:No Voting | 2:Competition Club Manager | 3:Nation Club Manager | 4:Continent Club Manager | 5:Continent Nation Manager | 6:World Club Manager | 7:World Nation Manager | 8:Any Manager
+19706,Award,Rules,Voting Format,Byte,,ptrAward,awro.AWvf,,,,,Award > > Rules > > Voting Format,0:Not Set | 1:One Vote Each | 2:3 Votes Weighted | 3:5 Votes Weighted
+19711,Award,Rules,Can Vote For Own Player,Binary,,ptrAward,awro.AWop,1,1,,,Award > > Rules > > Can Vote For Own Player,
+19715,Award,Rules,Run By,Byte,,ptrAward,awro.AWrb,,,,,Award > > Rules > > Run By,0:Not Set | 1:Football Association | 2:Media | 3:Players
+19714,Award,Rules,Based,Byte,,ptrAward,awro.AWbr,,,,,Award > > Rules > > Based,0:Not Set | 1:Foreign Based Nationals | 2:Domestic Based | 3:Domestic Based Foreigners | 4:Domestic Based Nationals | 5:Based Anywhere Nationals | 6:Based Anywhere Anyone | 7:Domestic Based African | 8:Based Continent Anyone
+19713,Award,Rules,Use Stats From,Byte,,ptrAward,awro.AWss,,,,,Award > > Rules > > Use Stats From,0:Not Set | 1:Domestic League | 2:Domestic Cup | 3:Domestic Overall | 4:Continental | 5:Overall Club | 6:International | 7:Overall
+19718,Award,Rules,Allow Previous Winner,Byte,,ptrAward,awro.AWap,,,,,Award > > Rules > > Allow Previous Winner,0:Not Set | 1:Never | 2:Rarely | 3:Yes
+19712,Award,Rules,Minimum Percentage Of Games Played,Byte,,ptrAward,awro.AWmg,,,,,Award > > Rules > > Minimum Percentage Of Games Played,
+19717,Award,Rules,Minimum Age,Byte,,ptrAward,awro.AWma,,,,,Award > > Rules > > Minimum Age,
+19716,Award,Rules,Maximum Age,Byte,,ptrAward,awro.AWxa,,,,,Award > > Rules > > Maximum Age,
+19720,Award,Rules,Position,2 Bytes,,ptrAward,awro.AWpo,,,,,Award > > Rules > > Position,0:Not Set | 1:Goalkeeper | 2:Sweeper | 12:Full Back | 30:Defender | 96:Wing Back | 128:Defensive Midfielder | 16256:Midfielder | 14336:Attacking Midfielder | 6144:Winger | 16384:Striker
+19719,Award,Rules,Side,Byte,,ptrAward,awro.AWsr,,,,,Award > > Rules > > Side,0:Any Side | 1:Left Side | 2:Right Side | 3:Centre | 4:Left or Right Side
+19809,Award,Rules,Formation,Byte,,ptrAward,awro.AWfo,,,,,Award > > Rules > > Formation,
+19668,City,Details,Row ID,4 Bytes,,ptrCity,objo.Rwid,,,,,City > > Details > > Row ID,*:
+19669,City,Details,Unique ID,4 Bytes,,ptrCity,objo.Duni,,,,,City > > Details > > Unique ID,*:
+19670,City,Details,Random ID,4 Bytes,,ptrCity,objo.Rdui,,,,,City > > Details > > Random ID,*:
+19671,City,Details,Full Name,String,,ptrCity,4 -> ctyo.Cnam,,,32,0,City > > Details > > Full Name,:
+19672,City,Details,Altitude,Float,,ptrCity,ctyo.Calt,,,,,City > > Details > > Altitude,
+19673,City,Details,Latitude,Float,,ptrCity,ctyo.Clat,,,,,City > > Details > > Latitude,
+19674,City,Details,Longitude,Float,,ptrCity,ctyo.Clon,,,,,City > > Details > > Longitude,
+12882,City,Details,Inhabitants Range,Byte,,ptrCity,ctyo.Cinh,,,,,City > > Details > > Inhabitants Range,
+19676,City,Details,Attraction,Byte,,ptrCity,ctyo.Catt,,,,,City > > Details > > Attraction,
+1150,Club,Details,Row ID,4 Bytes,,ptrClub,objo.Rwid,,,,,Club > > Details > > Row ID,*:
+1151,Club,Details,Unique ID,4 Bytes,,ptrClub,objo.Duni,,,,,Club > > Details > > Unique ID,*:
+17203,Club,Details,Random ID,4 Bytes,,ptrClub,objo.Rdui,,,,,Club > > Details > > Random ID,*:
+1156,Club,Details,Full Name,String,,ptrClub,4 -> cluo.Cnam,,,32,0,Club > > Details > > Full Name,:
+1157,Club,Details,Short Name,String,,ptrClub,4 -> cluo.Csnm,,,16,0,Club > > Details > > Short Name,:
+1187,Club,Details,Nickname,String,,ptrClub,4 -> cluo.Tcnn -> cluo.Cino,,,32,0,Club > > Details > > Nickname,:
+12863,Club,Details,Six Letter Name,String,,ptrClub,4 -> cluo.Csxn -> cluo.Cint,,,32,0,Club > > Details > > Six Letter Name,:
+1094,Club,Details,Nation,String,,ptrClub,4 -> nato.Nnam -> cluo.Cnti,,,32,0,Club > > Details > > Nation,:
+12868,Club,Details,Based Nation,String,,ptrClub,4 -> nato.Nnam -> cluo.Cbni,,,32,0,Club > > Details > > Based Nation,:
+12867,Club,Details,Continental Cup Nation,String,,ptrClub,4 -> nato.Nnam -> cluo.Cccn,,,32,0,Club > > Details > > Continental Cup Nation,:
+17651,Club,Details,City,String,,ptrClub,4 -> ctyo.Cnam -> cluo.Ccty,,,32,0,Club > > Details > > City,:
+295,Club,Details,Year Founded,2 Bytes,,ptrClub,cluo.Cyfn -> cluo.Cint,,,,,Club > > Details > > Year Founded,
+1323,Club,Details,Status,Byte,,ptrClub,cluo.Cprs,,,,,Club > > Details > > Status,0:Not Set | 1:Professional | 2:Semi Professional | 3:Amateur
+632,Club,Details,Team Type,Byte,,ptrTeam,teao.Ttyp,,,,,Club > > Details > > Team Type,0:First Team | 1:Reserves | 2:A | 3:B | 4:Superdraft A | 5:Superdraft B | 6:Superdraft C | 7:Superdraft D | 8:Waivers | 9:U23 | 10:U21 | 11:U19 | 12:U18 | 13:C | 14:Amateur | 15:II | 16:Team 2 | 17:Team 3 | 18:U20 | 22:Youth Evaluation | 30:Dutch Reserves
+297,Club,Details,Morale,Byte,,ptrClub,cluo.Cmle -> cluo.Cint,,,,,Club > > Details > > Morale,
+300,Club,Details,Reputation,2 Bytes,,ptrTeam,teao.Trep,,,,,Club > > Details > > Reputation,
+12610,Club,Details,Scouting Package,Byte,,ptrClub,cluo.Cscp -> cluo.Cint,,,,,Club > > Details > > Scouting Package,1:None | 2:Own Division - Senior | 3:Own Division - All | 4:Surrounding Divisions - Senior | 5:Surrounding Divisions - All | 6:Nation - Senior | 7:Nation - All | 8:Region - Senior | 9:Region - All | 10:Continent - Senior | 11:Continent - All | 12:World - Senior | 13:World - All
+23745,Club,Details,Allow Licensed Kit,Binary,,ptrClub,teao.Tmlk -> 0 -> cluo.Ctea,3,1,,,Club > > Details > > Allow Licensed Kit,0:Yes | 1:No
+1273,Club,Details,Hex,4 Bytes,,ptrClub,cluo.Ttcl -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Foreground Colour > > Hex,
+1334,Club,Details,Red,Byte,,ptrClub,cluo.Ttcl+2 -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Foreground Colour > > Red,
+1339,Club,Details,Green,Byte,,ptrClub,cluo.Ttcl+1 -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Foreground Colour > > Green,
+1340,Club,Details,Blue,Byte,,ptrClub,cluo.Ttcl -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Foreground Colour > > Blue,
+1341,Club,Details,Opacity,Byte,,ptrClub,cluo.Ttcl+3 -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Foreground Colour > > Opacity,
+1318,Club,Details,Hex,4 Bytes,,ptrClub,cluo.Tbcl -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Background Colour > > Hex,
+1338,Club,Details,Red,Byte,,ptrClub,cluo.Tbcl+2 -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Background Colour > > Red,
+1335,Club,Details,Green,Byte,,ptrClub,cluo.Tbcl+1 -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Background Colour > > Green,
+1336,Club,Details,Blue,Byte,,ptrClub,cluo.Tbcl -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Background Colour > > Blue,
+1337,Club,Details,Opacity,Byte,,ptrClub,cluo.Tbcl+3 -> cluo.Cino,,,,,Club > > Details > > Colour Setting > > Background Colour > > Opacity,
+12437,Club,Ownership,Chairman Title,Byte,,ptrClub,cluo.Chti -> cluo.Cint,,,,,Club > > Ownership > > Chairman Title,0:Not Set | 1:Chairman | 2:President | 3:General Manager
+12438,Club,Ownership,Ownership Type,Byte,,ptrClub,cluo.Cown -> cluo.Cint,,,,,Club > > Ownership > > Ownership Type,1:Limited Liability Company | 2:Public Limited Company | 3:Member Owned (Elections) | 4:Member Owned (No Elections) | 5:Consortium Private Limited | 6:Consortium Public Limited
+12439,Club,Ownership,Chairman Status,2 Bytes,,ptrClub,cluo.Chst -> cluo.Cint,,,,,Club > > Ownership > > Chairman Status,
+1475,Club,Facilities,Stadium,String,,ptrClub,4 -> stao.Snam -> teao.Tsti -> 0 -> cluo.Ctea,,,32,0,Club > > Facilities > > Stadium,:
+17634,Club,Facilities,Training Ground,String,,ptrClub,4 -> stao.Snam -> cluo.Ctrg,,,32,0,Club > > Facilities > > Training Ground,:
+653,Club,Facilities,Average Attendance,4 Bytes,,ptrClub,cluo.Catd -> cluo.Cino,,,,,Club > > Facilities > > Average Attendance,
+657,Club,Facilities,Minimum Attendance,4 Bytes,,ptrClub,cluo.Cmna -> cluo.Cino,,,,,Club > > Facilities > > Minimum Attendance,
+656,Club,Facilities,Maximum Attendance,4 Bytes,,ptrClub,cluo.Cmxa -> cluo.Cino,,,,,Club > > Facilities > > Maximum Attendance,
+11371,Club,Facilities,Training Facilities,Byte,,ptrClub,cluo.Ctlv -> cluo.Cint,,,,,Club > > Facilities > > Training Facilities,
+290,Club,Facilities,Youth Coaching,Byte,,ptrClub,cluo.Cytv -> cluo.Cint,,,,,Club > > Facilities > > Youth Coaching,
+291,Club,Facilities,Youth Facilities,Byte,,ptrClub,cluo.Cyfb -> cluo.Cint,,,,,Club > > Facilities > > Youth Facilities,
+289,Club,Facilities,Youth Recruitment,Byte,,ptrClub,cluo.Crcb -> cluo.Cint,,,,,Club > > Facilities > > Youth Recruitment,
+294,Club,Facilities,Youth Importance,Byte,,ptrClub,cluo.Cyim -> cluo.Cint,,,,,Club > > Facilities > > Youth Importance,
+687,Club,Facilities,Corporate Facilities,Byte,,ptrClub,cluo.Ccfe -> cluo.Cfin,,,,,Club > > Facilities > > Corporate Facilities,
+686,Club,Finances,Balance,Custom,United Kingdom Pound,ptrClub,cluo.Ccba -> cluo.Cfin,,,,,Club > > Finances > > General > > Balance,
+706,Club,Finances,Transfer Budget (Season),Custom,United Kingdom Pound,ptrClub,cluo.Ctbu -> cluo.Cfin,,,,,Club > > Finances > > General > > Transfer Budget (Season),
+705,Club,Finances,Transfer Budget (Rem.),Custom,United Kingdom Pound,ptrClub,cluo.Ctbc -> cluo.Cfin,,,,,Club > > Finances > > General > > Transfer Budget (Rem.),
+704,Club,Finances,Trn. Income Made Available (%),Byte,,ptrClub,cluo.Ctpc -> cluo.Cfin,,,,,Club > > Finances > > General > > Trn. Income Made Available (%),
+703,Club,Finances,Weekly Wage Budget,Custom,United Kingdom Pound,ptrClub,cluo.Crmb -> cluo.Cfin,,,,,Club > > Finances > > General > > Weekly Wage Budget,
+702,Club,Finances,Weekly Wage Total,Custom,United Kingdom Pound,ptrClub,cluo.Ctwg -> cluo.Cfin,,,,,Club > > Finances > > General > > Weekly Wage Total,:
+12488,Club,Finances,Weekly Wage Total (Incl. Bonuses),Custom,United Kingdom Pound,ptrClub,cluo.Ctwb -> cluo.Cfin,,,,,Club > > Finances > > General > > Weekly Wage Total (Incl. Bonuses),:
+12115,Club,Finances,Highest Wage Allowed,Custom,United Kingdom Pound,ptrClub,cluo.Cmwe -> cluo.Cfin,,,,,Club > > Finances > > General > > Highest Wage Allowed,
+700,Club,Finances,Highest Wage Paid,Custom,United Kingdom Pound,ptrClub,cluo.Chwp -> cluo.Cfin,,,,,Club > > Finances > > General > > Highest Wage Paid,:
+699,Club,Finances,Highest Staff Wage Paid,Custom,United Kingdom Pound,ptrClub,cluo.Chws -> cluo.Cfin,,,,,Club > > Finances > > General > > Highest Staff Wage Paid,:
+697,Club,Finances,Sugar Daddy,Byte,,ptrClub,cluo.Chsd -> cluo.Cfin,,,,,Club > > Finances > > General > > Sugar Daddy,0:None | 1:Front End | 2:Back End | 3:Underwriter | 4:Underwriter Expects Return
+689,Club,Finances,Sugar Daddy Increases Starting Finances,Binary,,ptrClub,cluo.Chaf -> cluo.Cfin,0,1,,,Club > > Finances > > General > > Sugar Daddy Increases Starting Finances,0:No | 1:Yes
+12592,Club,Finances,In Administration,Binary,,ptrClub,cluo.Cadm -> cluo.Cfin,1,1,,,Club > > Finances > > General > > In Administration,0:No | 1:Yes
+17822,Club,Finances,Embargo Start Date,Custom,FM Date,ptrClub,cluo.Cesd -> cluo.Cfin,,,,,Club > > Finances > > General > > Embargo Start Date,*:
+17823,Club,Finances,Embargo End Date,Custom,FM Date,ptrClub,cluo.Ceed -> cluo.Cfin,,,,,Club > > Finances > > General > > Embargo End Date,*:
+17824,Club,Finances,Embargo Appeal Date,Custom,FM Date,ptrClub,cluo.Cead -> cluo.Cfin,,,,,Club > > Finances > > General > > Embargo Appeal Date,*:
+690,Club,Finances,Stadium Rental Per Year,Custom,United Kingdom Pound,ptrClub,cluo.Csry -> cluo.Cfin,,,,,Club > > Finances > > General > > Stadium Rental Per Year,
+696,Club,Finances,Average Match Ticket Price,Float,,ptrClub,cluo.Cmtp -> cluo.Cfin,,,,,Club > > Finances > > General > > Average Match Ticket Price,
+695,Club,Finances,Average Season Ticket Price,Float,,ptrClub,cluo.Casp -> cluo.Cfin,,,,,Club > > Finances > > General > > Average Season Ticket Price,
+1278,Club,Finances,Number Of Season Ticket Holders,4 Bytes,,ptrClub,cluo.Csth -> cluo.Cint,,,,,Club > > Finances > > General > > Number Of Season Ticket Holders,
+19989,Club,Finances,Corporate Facilities Income,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x3C -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Corporate Facilities Income,
+20006,Club,Finances,Fund Raising,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x24 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Fund Raising,
+19983,Club,Finances,Gate Receipts,Custom,United Kingdom Pound,ptrClub,cluo.Citm -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Gate Receipts,
+19987,Club,Finances,Grants,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x2C -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Grants,
+19980,Club,Finances,Interest,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0xC -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Interest,
+20004,Club,Finances,Investments,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x10 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Investments,
+24084,Club,Finances,Loan Income,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x44 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Loan Income,
+19986,Club,Finances,Match Day Income,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x20 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Match Day Income,
+19984,Club,Finances,Merchandising,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x14 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Merchandising,
+20002,Club,Finances,Other,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x4 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Other,
+19985,Club,Finances,Players Sold,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x18 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Players Sold,
+20007,Club,Finances,Prize Money,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x34 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Prize Money,
+19982,Club,Finances,Season Tickets,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x8 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Season Tickets,
+20010,Club,Finances,Soladarity Payments,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x40 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Soladarity Payments,
+20003,Club,Finances,Sponsorship,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x1C -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > Sponsorship,
+19988,Club,Finances,TV Revenue,Custom,United Kingdom Pound,ptrClub,cluo.Citm+0x38 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Month > > TV Revenue,
+24234,Club,Finances,Corporate Facilities Income,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x3C -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Corporate Facilities Income,
+24235,Club,Finances,Fund Raising,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x24 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Fund Raising,
+24236,Club,Finances,Gate Receipts,Custom,United Kingdom Pound,ptrClub,cluo.Cilm -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Gate Receipts,
+24237,Club,Finances,Grants,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x2C -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Grants,
+24238,Club,Finances,Interest,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0xC -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Interest,
+24239,Club,Finances,Investments,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x10 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Investments,
+24240,Club,Finances,Loan Income,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x44 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Loan Income,
+24241,Club,Finances,Match Day Income,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x20 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Match Day Income,
+24242,Club,Finances,Merchandising,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x14 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Merchandising,
+24243,Club,Finances,Other,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x4 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Other,
+24244,Club,Finances,Players Sold,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x18 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Players Sold,
+24245,Club,Finances,Prize Money,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x34 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Prize Money,
+24246,Club,Finances,Season Tickets,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x8 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Season Tickets,
+24247,Club,Finances,Soladarity Payments,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x40 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Soladarity Payments,
+24248,Club,Finances,Sponsorship,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x1C -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > Sponsorship,
+24249,Club,Finances,TV Revenue,Custom,United Kingdom Pound,ptrClub,cluo.Cilm+0x38 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Month > > TV Revenue,
+19999,Club,Finances,Corporate Facilities Income,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x3C -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Corporate Facilities Income,
+20009,Club,Finances,Fund Raising,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x24 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Fund Raising,
+19991,Club,Finances,Gate Receipts,Custom,United Kingdom Pound,ptrClub,cluo.Cits -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Gate Receipts,
+19997,Club,Finances,Grants,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x2C -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Grants,
+19993,Club,Finances,Interest,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0xC -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Interest,
+20005,Club,Finances,Investments,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x10 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Investments,
+24085,Club,Finances,Loan Income,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x44 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Loan Income,
+19996,Club,Finances,Match Day Income,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x20 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Match Day Income,
+19994,Club,Finances,Merchandising,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x14 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Merchandising,
+20000,Club,Finances,Other,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x4 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Other,
+19995,Club,Finances,Players Sold,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x18 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Players Sold,
+20008,Club,Finances,Prize Money,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x34 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Prize Money,
+19992,Club,Finances,Season Tickets,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x8 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Season Tickets,
+20011,Club,Finances,Soladarity Payments,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x40 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Soladarity Payments,
+20001,Club,Finances,Sponsorship,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x1C -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > Sponsorship,
+19998,Club,Finances,TV Revenue,Custom,United Kingdom Pound,ptrClub,cluo.Cits+0x38 -> cluo.Cfin,,,,,Club > > Finances > > Income > > This Season > > TV Revenue,
+24251,Club,Finances,Corporate Facilities Income,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x3C -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Corporate Facilities Income,
+24252,Club,Finances,Fund Raising,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x24 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Fund Raising,
+24253,Club,Finances,Gate Receipts,Custom,United Kingdom Pound,ptrClub,cluo.Cils -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Gate Receipts,
+24254,Club,Finances,Grants,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x2C -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Grants,
+24255,Club,Finances,Interest,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0xC -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Interest,
+24256,Club,Finances,Investments,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x10 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Investments,
+24257,Club,Finances,Loan Income,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x44 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Loan Income,
+24258,Club,Finances,Match Day Income,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x20 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Match Day Income,
+24259,Club,Finances,Merchandising,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x14 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Merchandising,
+24260,Club,Finances,Other,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x4 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Other,
+24261,Club,Finances,Players Sold,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x18 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Players Sold,
+24262,Club,Finances,Prize Money,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x34 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Prize Money,
+24263,Club,Finances,Season Tickets,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x8 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Season Tickets,
+24264,Club,Finances,Soladarity Payments,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x40 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Soladarity Payments,
+24265,Club,Finances,Sponsorship,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x1C -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > Sponsorship,
+24266,Club,Finances,TV Revenue,Custom,United Kingdom Pound,ptrClub,cluo.Cils+0x38 -> cluo.Cfin,,,,,Club > > Finances > > Income > > Last Season > > TV Revenue,
+11607,Club,Finances,Agent Fees,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x80 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Agent Fees,
+11609,Club,Finances,Bonuses,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x1C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Bonuses,
+12603,Club,Finances,Director Emoluments,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x78 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Director Emoluments,
+12860,Club,Finances,Dividends,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x18 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Dividends,
+11622,Club,Finances,Ground Maintenance,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0xC -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Ground Maintenance,
+24086,Club,Finances,Insurance,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x94 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Insurance,
+24184,Club,Finances,League Fines,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x8 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > League Fines,
+24087,Club,Finances,Loan Fees,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x98 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Loan Fees,
+24185,Club,Finances,Loan Repayments and Interest,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x4 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Loan Repayments and Interest,
+11617,Club,Finances,Loyalty Bonuses,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x20 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Loyalty Bonuses,
+11619,Club,Finances,Match Day Expenses,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x74 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Match Day Expenses,
+11605,Club,Finances,Non-Football Costs,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x7C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Non-Football Costs,
+11603,Club,Finances,Other,Custom,United Kingdom Pound,ptrClub,cluo.Cetm -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Other,
+12434,Club,Finances,Player Wages,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x10 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Player Wages,
+12605,Club,Finances,Scouting Costs,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x88 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Scouting Costs,
+11598,Club,Finances,Staff Wages,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x14 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Staff Wages,
+24186,Club,Finances,Tax - Income Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x2C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Income Tax,
+24187,Club,Finances,Tax - Employer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x30 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Employer Tax,
+12433,Club,Finances,Tax - Corporation Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x34 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Corporation Tax,
+12597,Club,Finances,Tax - VAT,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x38 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - VAT,
+24188,Club,Finances,Tax - Nl Employee,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x3C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Nl Employee,
+12599,Club,Finances,Tax - Nl Employer,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x40 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Nl Employer,
+24192,Club,Finances,Tax - Pension Employee,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x44 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Pension Employee,
+24191,Club,Finances,Tax - Pension Employer,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x48 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Pension Employer,
+24190,Club,Finances,Tax - Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x4C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Transfer Tax,
+24189,Club,Finances,Tax - Internal Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x50 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Internal Transfer Tax,
+24083,Club,Finances,Tax - External Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x54 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - External Transfer Tax,
+24193,Club,Finances,Tax - Ticket Entertainment Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x60 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Ticket Entertainment Tax,
+11850,Club,Finances,Tax - Other,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x64 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Other,
+24194,Club,Finances,Tax - Brazilian Ticket Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x68 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Brazilian Ticket Tax,
+24195,Club,Finances,Tax - Foreign Player Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x6C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Foreign Player Transfer Tax,
+24196,Club,Finances,Tax - Domestic Player Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x70 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Tax - Domestic Player Transfer Tax,
+12600,Club,Finances,Transfer Expenditure,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x24 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Transfer Expenditure,
+11615,Club,Finances,Travel Costs,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x8C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Travel Costs,
+12609,Club,Finances,Youth Setup,Custom,United Kingdom Pound,ptrClub,cluo.Cetm+0x84 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Month > > Youth Setup,
+24198,Club,Finances,Agent Fees,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x80 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Agent Fees,
+24199,Club,Finances,Bonuses,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x1C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Bonuses,
+24200,Club,Finances,Director Emoluments,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x78 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Director Emoluments,
+24201,Club,Finances,Dividends,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x18 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Dividends,
+24202,Club,Finances,Ground Maintenance,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0xC -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Ground Maintenance,
+24203,Club,Finances,Insurance,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x94 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Insurance,
+24204,Club,Finances,League Fines,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x8 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > League Fines,
+24205,Club,Finances,Loan Fees,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x98 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Loan Fees,
+24206,Club,Finances,Loan Repayments and Interest,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x4 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Loan Repayments and Interest,
+24207,Club,Finances,Loyalty Bonuses,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x20 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Loyalty Bonuses,
+24208,Club,Finances,Match Day Expenses,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x74 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Match Day Expenses,
+24209,Club,Finances,Non-Football Costs,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x7C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Non-Football Costs,
+24210,Club,Finances,Other,Custom,United Kingdom Pound,ptrClub,cluo.Celm -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Other,
+24211,Club,Finances,Player Wages,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x10 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Player Wages,
+24212,Club,Finances,Scouting Costs,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x88 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Scouting Costs,
+24213,Club,Finances,Staff Wages,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x14 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Staff Wages,
+24214,Club,Finances,Tax - Income Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x2C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Income Tax,
+24215,Club,Finances,Tax - Employer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x30 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Employer Tax,
+24216,Club,Finances,Tax - Corporation Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x34 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Corporation Tax,
+24217,Club,Finances,Tax - VAT,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x38 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - VAT,
+24218,Club,Finances,Tax - Nl Employee,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x3C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Nl Employee,
+24219,Club,Finances,Tax - Nl Employer,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x40 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Nl Employer,
+24220,Club,Finances,Tax - Pension Employee,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x44 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Pension Employee,
+24221,Club,Finances,Tax - Pension Employer,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x48 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Pension Employer,
+24222,Club,Finances,Tax - Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x4C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Transfer Tax,
+24223,Club,Finances,Tax - Internal Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x50 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Internal Transfer Tax,
+24224,Club,Finances,Tax - External Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x54 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - External Transfer Tax,
+24225,Club,Finances,Tax - Ticket Entertainment Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x60 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Ticket Entertainment Tax,
+24226,Club,Finances,Tax - Other,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x64 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Other,
+24227,Club,Finances,Tax - Brazilian Ticket Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x68 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Brazilian Ticket Tax,
+24228,Club,Finances,Tax - Foreign Player Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x6C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Foreign Player Transfer Tax,
+24229,Club,Finances,Tax - Domestic Player Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x70 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Tax - Domestic Player Transfer Tax,
+24230,Club,Finances,Transfer Expenditure,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x24 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Transfer Expenditure,
+24231,Club,Finances,Travel Costs,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x8C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Travel Costs,
+24232,Club,Finances,Youth Setup,Custom,United Kingdom Pound,ptrClub,cluo.Celm+0x84 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Month > > Youth Setup,
+11608,Club,Finances,Agent Fees,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x80 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Agent Fees,
+11610,Club,Finances,Bonuses,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x1C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Bonuses,
+12602,Club,Finances,Director Emoluments,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x78 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Director Emoluments,
+12861,Club,Finances,Dividends,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x18 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Dividends,
+11621,Club,Finances,Ground Maintenance,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0xC -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Ground Maintenance,
+24088,Club,Finances,Insurance,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x94 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Insurance,
+24146,Club,Finances,League Fines,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x8 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > League Fines,
+24089,Club,Finances,Loan Fees,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x98 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Loan Fees,
+24147,Club,Finances,Loan Repayments and Interest,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x4 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Loan Repayments and Interest,
+11618,Club,Finances,Loyalty Bonuses,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x20 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Loyalty Bonuses,
+11620,Club,Finances,Match Day Expenses,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x74 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Match Day Expenses,
+11606,Club,Finances,Non-Football Costs,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x7C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Non-Football Costs,
+11604,Club,Finances,Other,Custom,United Kingdom Pound,ptrClub,cluo.Cets -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Other,
+11614,Club,Finances,Player Wages,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x10 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Player Wages,
+12604,Club,Finances,Scouting Costs,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x88 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Scouting Costs,
+11599,Club,Finances,Staff Wages,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x14 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Staff Wages,
+24144,Club,Finances,Tax - Income Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x2C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Income Tax,
+24145,Club,Finances,Tax - Employer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x30 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Employer Tax,
+12435,Club,Finances,Tax - Corporation Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x34 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Corporation Tax,
+12596,Club,Finances,Tax - VAT,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x38 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - VAT,
+24139,Club,Finances,Tax - Nl Employee,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x3C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Nl Employee,
+12598,Club,Finances,Tax - Nl Employer,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x40 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Nl Employer,
+24143,Club,Finances,Tax - Pension Employee,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x44 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Pension Employee,
+24140,Club,Finances,Tax - Pension Employer,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x48 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Pension Employer,
+24142,Club,Finances,Tax - Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x4C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Transfer Tax,
+24141,Club,Finances,Tax - Internal Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x50 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Internal Transfer Tax,
+24082,Club,Finances,Tax - External Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x54 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - External Transfer Tax,
+24138,Club,Finances,Tax - Ticket Entertainment Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x60 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Ticket Entertainment Tax,
+11848,Club,Finances,Tax - Other,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x64 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Other,
+24137,Club,Finances,Tax - Brazilian Ticket Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x68 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Brazilian Ticket Tax,
+24135,Club,Finances,Tax - Foreign Player Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x6C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Foreign Player Transfer Tax,
+24136,Club,Finances,Tax - Domestic Player Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x70 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Tax - Domestic Player Transfer Tax,
+12601,Club,Finances,Transfer Expenditure,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x24 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Transfer Expenditure,
+11616,Club,Finances,Travel Costs,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x8C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Travel Costs,
+12608,Club,Finances,Youth Setup,Custom,United Kingdom Pound,ptrClub,cluo.Cets+0x84 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > This Season > > Youth Setup,
+24149,Club,Finances,Agent Fees,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x80 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Agent Fees,
+24150,Club,Finances,Bonuses,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x1C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Bonuses,
+24151,Club,Finances,Director Emoluments,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x78 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Director Emoluments,
+24152,Club,Finances,Dividends,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x18 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Dividends,
+24153,Club,Finances,Ground Maintenance,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0xC -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Ground Maintenance,
+24154,Club,Finances,Insurance,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x94 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Insurance,
+24155,Club,Finances,League Fines,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x8 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > League Fines,
+24156,Club,Finances,Loan Fees,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x98 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Loan Fees,
+24157,Club,Finances,Loan Repayments and Interest,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x4 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Loan Repayments and Interest,
+24158,Club,Finances,Loyalty Bonuses,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x20 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Loyalty Bonuses,
+24159,Club,Finances,Match Day Expenses,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x74 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Match Day Expenses,
+24160,Club,Finances,Non-Football Costs,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x7C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Non-Football Costs,
+24161,Club,Finances,Other,Custom,United Kingdom Pound,ptrClub,cluo.Cels -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Other,
+24162,Club,Finances,Player Wages,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x10 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Player Wages,
+24163,Club,Finances,Scouting Costs,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x88 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Scouting Costs,
+24164,Club,Finances,Staff Wages,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x14 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Staff Wages,
+24165,Club,Finances,Tax - Income Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x2C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Income Tax,
+24166,Club,Finances,Tax - Employer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x30 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Employer Tax,
+24167,Club,Finances,Tax - Corporation Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x34 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Corporation Tax,
+24168,Club,Finances,Tax - VAT,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x38 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - VAT,
+24169,Club,Finances,Tax - Nl Employee,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x3C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Nl Employee,
+24170,Club,Finances,Tax - Nl Employer,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x40 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Nl Employer,
+24171,Club,Finances,Tax - Pension Employee,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x44 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Pension Employee,
+24172,Club,Finances,Tax - Pension Employer,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x48 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Pension Employer,
+24173,Club,Finances,Tax - Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x4C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Transfer Tax,
+24174,Club,Finances,Tax - Internal Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x50 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Internal Transfer Tax,
+24175,Club,Finances,Tax - External Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x54 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - External Transfer Tax,
+24176,Club,Finances,Tax - Ticket Entertainment Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x60 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Ticket Entertainment Tax,
+24177,Club,Finances,Tax - Other,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x64 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Other,
+24178,Club,Finances,Tax - Brazilian Ticket Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x68 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Brazilian Ticket Tax,
+24179,Club,Finances,Tax - Foreign Player Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x6C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Foreign Player Transfer Tax,
+24180,Club,Finances,Tax - Domestic Player Transfer Tax,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x70 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Tax - Domestic Player Transfer Tax,
+24181,Club,Finances,Transfer Expenditure,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x24 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Transfer Expenditure,
+24182,Club,Finances,Travel Costs,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x8C -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Travel Costs,
+24183,Club,Finances,Youth Setup,Custom,United Kingdom Pound,ptrClub,cluo.Cels+0x84 -> cluo.Cfin,,,,,Club > > Finances > > Expenditure > > Last Season > > Youth Setup,
+674,Club,Tactical Attributes,Preferred Formation,Byte,,ptrClub,cluo.Cpfr -> cluo.Cino,,,,,Club > > Tactical Attributes > > Preferred Formation,
+673,Club,Tactical Attributes,Second Preferred Formation,Byte,,ptrClub,cluo.C2pf -> cluo.Cino,,,,,Club > > Tactical Attributes > > Second Preferred Formation,
+672,Club,Tactical Attributes,Defensive Formation,Byte,,ptrClub,cluo.Cdfo -> cluo.Cino,,,,,Club > > Tactical Attributes > > Defensive Formation,
+675,Club,Tactical Attributes,Attacking Formation,Byte,,ptrClub,cluo.Cafo -> cluo.Cino,,,,,Club > > Tactical Attributes > > Attacking Formation,
+23742,Club,Supporters ->,Social Media Followers,4 Bytes,,ptrClub,cluo.Cssf -> cluo.Cint,,,,,Club > > Supporters -> > Social Media -> > Social Media Followers,
+23741,Club,Supporters ->,Social Stature,2 Bytes,,ptrClub,cluo.Csss -> cluo.Cint,,,,,Club > > Supporters -> > Social Media -> > Social Stature,
+23740,Club,Supporters ->,Social Trendiness,2 Bytes,,ptrClub,cluo.Csst -> cluo.Cint,,,,,Club > > Supporters -> > Social Media -> > Social Trendiness,
+1326,Club,Supporters ->,Loyalty,Byte,,ptrClub,cluo.Csly -> cluo.Cint,,,,,Club > > Supporters -> > Supporter Profile > > Loyalty,
+1331,Club,Supporters ->,Passion,Byte,,ptrClub,cluo.Csps -> cluo.Cint,,,,,Club > > Supporters -> > Supporter Profile > > Passion,
+1330,Club,Supporters ->,Patience,Byte,,ptrClub,cluo.Cspt -> cluo.Cint,,,,,Club > > Supporters -> > Supporter Profile > > Patience,
+1329,Club,Supporters ->,Affluence,Byte,,ptrClub,cluo.Csaf -> cluo.Cint,,,,,Club > > Supporters -> > Supporter Profile > > Affluence,
+1328,Club,Supporters ->,Temperament,Byte,,ptrClub,cluo.Cste -> cluo.Cint,,,,,Club > > Supporters -> > Supporter Profile > > Temperament,
+1327,Club,Supporters ->,Expectations,Byte,,ptrClub,cluo.Cspe -> cluo.Cint,,,,,Club > > Supporters -> > Supporter Profile > > Expectations,
+10156,Club,Contract Types,Star Player,Byte,,ptrClub,cluo.Ccsp -> cluo.Cint,,,,,Club > > Contract Types > > Squad Status > > Star Player,
+12631,Club,Contract Types,Important Player,Byte,,ptrClub,cluo.Ccsk -> cluo.Cint,,,,,Club > > Contract Types > > Squad Status > > Important Player,
+10157,Club,Contract Types,Regular Starter,Byte,,ptrClub,cluo.Ccsf -> cluo.Cint,,,,,Club > > Contract Types > > Squad Status > > Regular Starter,
+10158,Club,Contract Types,Squad Player,Byte,,ptrClub,cluo.Ccsr -> cluo.Cint,,,,,Club > > Contract Types > > Squad Status > > Squad Player,
+10159,Club,Contract Types,Fringe Player,Byte,,ptrClub,cluo.Ccsb -> cluo.Cint,,,,,Club > > Contract Types > > Squad Status > > Fringe Player,
+10160,Club,Contract Types,Hot Prospect,Byte,,ptrClub,cluo.Ccsh -> cluo.Cint,,,,,Club > > Contract Types > > Squad Status > > Hot Prospect,
+10161,Club,Contract Types,Youngster,Byte,,ptrClub,cluo.Ccsy -> cluo.Cint,,,,,Club > > Contract Types > > Squad Status > > Youngster,
+10163,Club,Contract Types,Manager,Byte,,ptrClub,cluo.Ccjm -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Manager,
+10164,Club,Contract Types,Ast. Manager,Byte,,ptrClub,cluo.Ccja -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Ast. Manager,
+10165,Club,Contract Types,Coach,Byte,,ptrClub,cluo.Ccjc -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Coach,
+10166,Club,Contract Types,Fitness Coach,Byte,,ptrClub,cluo.Ccji -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Fitness Coach,
+10167,Club,Contract Types,Goalkeeping Coach,Byte,,ptrClub,cluo.Ccjg -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Goalkeeping Coach,
+10168,Club,Contract Types,Youth Team Coach,Byte,,ptrClub,cluo.Ccjy -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Youth Team Coach,
+10169,Club,Contract Types,Scout,Byte,,ptrClub,cluo.Ccjs -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Scout,
+10170,Club,Contract Types,Physio,Byte,,ptrClub,cluo.Ccjp -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Physio,
+10173,Club,Contract Types,Director of Football,Byte,,ptrClub,cluo.Ccjd -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Director of Football,
+12632,Club,Contract Types,Technical Director,Byte,,ptrClub,cluo.Ccjt -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Technical Director,
+12633,Club,Contract Types,Loan Manager,Byte,,ptrClub,cluo.Ccjh -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Loan Manager,
+10172,Club,Contract Types,Data Analyst,Byte,,ptrClub,cluo.Ccda -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Data Analyst,
+10171,Club,Contract Types,Sports Scientist,Byte,,ptrClub,cluo.Ccss -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Sports Scientist,
+12634,Club,Contract Types,Doctor,Byte,,ptrClub,cluo.Ccdr -> cluo.Cint,,,,,Club > > Contract Types > > Job Type > > Doctor,
+959,Competition,Details,Row ID,4 Bytes,,ptrComp,objo.Rwid,,,,,Competition > > Details > > Row ID,*:
+961,Competition,Details,Unique ID,4 Bytes,,ptrComp,objo.Duni,,,,,Competition > > Details > > Unique ID,*:
+17202,Competition,Details,Random ID,4 Bytes,,ptrComp,objo.Rdui,,,,,Competition > > Details > > Random ID,*:
+968,Competition,Details,Full Name,String,,ptrComp,4 -> cmpo.Cnam,,,32,0,Competition > > Details > > Full Name,
+962,Competition,Details,Short Name,String,,ptrComp,4 -> cmpo.Csnm,,,32,0,Competition > > Details > > Short Name,
+970,Competition,Details,Three Letter Name,String,,ptrComp,4 -> cmpo.C3ln,,,3,0,Competition > > Details > > Three Letter Name,
+972,Competition,Details,Nation,String,,ptrComp,4 -> nato.Nnam -> cmpo.Cnti,,,32,0,Competition > > Details > > Nation,:
+997,Competition,Details,Continent,String,,ptrComp,4 -> cono.Cnam -> cmpo.Ccti,,,32,0,Competition > > Details > > Continent,:
+1314,Competition,Details,Lowest Official Category Allowed,Byte,,ptrComp,cmpo.Lauc,,,,,Competition > > Details > > Lowest Official Category Allowed,-1:Not Available | 0:None | 1:European Elite Group | 2:European Elite Development Group | 3:European First Group | 4:European Second Group | 5:European Third Group
+967,Competition,Details,Reputation,2 Bytes,,ptrComp,cmpo.Crep,,,,,Competition > > Details > > Reputation,
+983,Competition,Details,Original Reputation,2 Bytes,,ptrComp,cmpo.Crep+2,,,,,Competition > > Details > > Original Reputation,
+12593,Competition,Details,Trophy,Byte,,ptrComp,cmpo.Ctty,,,,,Competition > > Details > > Trophy,0:Not set | 1:Silver Plate | 4:National Cup 1 | 3:National Cup 2 | 2:National Cup 3 | 7:National Championship 1 | 6:National Championship 2 | 5:National Championship 3 | 9:International Cup 1 | 8:International Cup 2 | 11:Continental Cup 1 | 10:Continental Cup 2
+984,Competition,Details,Continental Position,2 Bytes,,ptrComp,cmpo.Cpos,,,,,Competition > > Details > > Continental Position,-1:Not Available
+985,Competition,Details,Last Continental Position,2 Bytes,,ptrComp,cmpo.Cpos-2,,,,,Competition > > Details > > Last Continental Position,-1:Not Available
+994,Competition,Details,Uses Extra Officials,Byte,,ptrComp,cmpo.Cuae,,,,,Competition > > Details > > Uses Extra Officials,0:No | 1:Yes
+995,Competition,Details,Uses Seated Stadiums Only,Byte,,ptrComp,cmpo.Csso,,,,,Competition > > Details > > Uses Seated Stadiums Only,0:No | 1:Yes
+17987,Competition,Details,Is Extinct,Binary,,ptrComp,cmpo.Cfla,2,1,,,Competition > > Details > > Is Extinct,0:False | 1:True
+992,Competition,Details,Type,Byte,,ptrComp,cmpo.Dbty,,,,,Competition > > Details > > Type,0:Domestic Top Division | 1:Domestic Division | 2:Domestic Main Cup | 3:Domestic League Cup | 4:Domestic Cup | 5:Super Cup | 6:International Finals | 7:International Qualifiers | 8:Reserve Division | 9:Club Friendly | 10:Main Continental Intarnational Finals | 11:Main Continental International Qualifiers | 12:Club Finals | 13:Friendly | 14:Domestic Other Division | 15:U21 International Finals | 16:U21 International Qualifiers | 17:U19 International Finals | 18:U19 International Qualifiers | 19:U23 International Finals | 20:U23 International Qualifiers | 31:U22 International Finals | 32:U22 International Qualifiers | 21:Club Champions Cup | 22:Cup Winners Cup | 23:Reserve Cup | 24:International Friendly | 25:U20 International Finals | 26:All Stars Cup | 27:U20 International Qualifiers | 28:Inactive Competition | 29:Inactive Other Competition | 33:U23 Division | 34:U22 Division | 35:U21 Division | 36:U20 Division | 37:U19 Division | 38:U18 Division | 39:Youth Cup
+1313,Competition,Details,Competition Level,Byte,,ptrComp,cmpo.Levl,,,,,Competition > > Details > > Competition Level,
+1312,Competition,Details,Uses Squad Numbers (Inactive Comps Only),Binary,,ptrComp,cmpo.Cfla,0,1,,,Competition > > Details > > Uses Squad Numbers (Inactive Comps Only),0:No | 1:Yes
+979,Competition,Details,Minimum Pitch Length,2 Bytes,,ptrComp,cmpo.Cmnl,,,,,Competition > > Details > > Minimum Pitch Length,
+982,Competition,Details,Minimum Pitch Width,2 Bytes,,ptrComp,cmpo.Cmnw,,,,,Competition > > Details > > Minimum Pitch Width,
+981,Competition,Details,Maximum Pitch Length,2 Bytes,,ptrComp,cmpo.Cmxl,,,,,Competition > > Details > > Maximum Pitch Length,
+980,Competition,Details,Maximum Pitch Width,2 Bytes,,ptrComp,cmpo.Cmxw,,,,,Competition > > Details > > Maximum Pitch Width,
+964,Competition,Details,Hex,4 Bytes,,ptrComp,cmpo.Cfcl,,,,,Competition > > Details > > Colour Setting > > Foreground Colour > > Hex,
+1141,Competition,Details,Red,Byte,,ptrComp,cmpo.Cfcl+2,,,,,Competition > > Details > > Colour Setting > > Foreground Colour > > Red,
+1140,Competition,Details,Green,Byte,,ptrComp,cmpo.Cfcl+1,,,,,Competition > > Details > > Colour Setting > > Foreground Colour > > Green,
+1139,Competition,Details,Blue,Byte,,ptrComp,cmpo.Cfcl,,,,,Competition > > Details > > Colour Setting > > Foreground Colour > > Blue,
+1142,Competition,Details,Opacity,Byte,,ptrComp,cmpo.Cfcl+3,,,,,Competition > > Details > > Colour Setting > > Foreground Colour > > Opacity,
+965,Competition,Details,Hex,4 Bytes,,ptrComp,cmpo.Cbcl,,,,,Competition > > Details > > Colour Setting > > Background Colour > > Hex,
+1137,Competition,Details,Red,Byte,,ptrComp,cmpo.Cbcl+2,,,,,Competition > > Details > > Colour Setting > > Background Colour > > Red,
+1136,Competition,Details,Green,Byte,,ptrComp,cmpo.Cbcl+1,,,,,Competition > > Details > > Colour Setting > > Background Colour > > Green,
+1135,Competition,Details,Blue,Byte,,ptrComp,cmpo.Cbcl,,,,,Competition > > Details > > Colour Setting > > Background Colour > > Blue,
+1138,Competition,Details,Opacity,Byte,,ptrComp,cmpo.Cbcl+3,,,,,Competition > > Details > > Colour Setting > > Background Colour > > Opacity,
+966,Competition,Details,Hex,4 Bytes,,ptrComp,cmpo.Ctcl,,,,,Competition > > Details > > Colour Setting > > Trim Colour > > Hex,
+1145,Competition,Details,Red,Byte,,ptrComp,cmpo.Ctcl+2,,,,,Competition > > Details > > Colour Setting > > Trim Colour > > Red,
+1144,Competition,Details,Green,Byte,,ptrComp,cmpo.Ctcl+1,,,,,Competition > > Details > > Colour Setting > > Trim Colour > > Green,
+1134,Competition,Details,Blue,Byte,,ptrComp,cmpo.Ctcl,,,,,Competition > > Details > > Colour Setting > > Trim Colour > > Blue,
+1146,Competition,Details,Opacity,Byte,,ptrComp,cmpo.Ctcl+3,,,,,Competition > > Details > > Colour Setting > > Trim Colour > > Opacity,
+963,Competition,Details,Hex,4 Bytes,,ptrComp,cmpo.Wbcl,,,,,Competition > > Details > > Colour Setting > > Winter Ball Colour > > Hex,
+1143,Competition,Details,Red,Byte,,ptrComp,cmpo.Wbcl+2,,,,,Competition > > Details > > Colour Setting > > Winter Ball Colour > > Red,
+1133,Competition,Details,Green,Byte,,ptrComp,cmpo.Wbcl+2,,,,,Competition > > Details > > Colour Setting > > Winter Ball Colour > > Green,
+1132,Competition,Details,Blue,Byte,,ptrComp,cmpo.Wbcl,,,,,Competition > > Details > > Colour Setting > > Winter Ball Colour > > Blue,
+1131,Competition,Details,Opacity,Byte,,ptrComp,cmpo.Wbcl+3,,,,,Competition > > Details > > Colour Setting > > Winter Ball Colour > > Opacity,
+11,Competition,Contract Types,Star Player,Byte,,ptrComp,cmpo.Ccss,,,,,Competition > > Contract Types > > Squad Status > > Star Player,
+19,Competition,Contract Types,Regular Starter,Byte,,ptrComp,cmpo.Ccss+1,,,,,Competition > > Contract Types > > Squad Status > > Regular Starter,
+18,Competition,Contract Types,Squad Player,Byte,,ptrComp,cmpo.Ccss+2,,,,,Competition > > Contract Types > > Squad Status > > Squad Player,
+17,Competition,Contract Types,Fringe Player,Byte,,ptrComp,cmpo.Ccss+3,,,,,Competition > > Contract Types > > Squad Status > > Fringe Player,
+16,Competition,Contract Types,Hot Prospect,Byte,,ptrComp,cmpo.Ccss+4,,,,,Competition > > Contract Types > > Squad Status > > Hot Prospect,
+15,Competition,Contract Types,Youngster,Byte,,ptrComp,cmpo.Ccss+5,,,,,Competition > > Contract Types > > Squad Status > > Youngster,
+20,Competition,Contract Types,Manager,Byte,,ptrComp,cmpo.Ccjt,,,,,Competition > > Contract Types > > Job Type > > Manager,
+27,Competition,Contract Types,Ast. Manager,Byte,,ptrComp,cmpo.Ccjt+1,,,,,Competition > > Contract Types > > Job Type > > Ast. Manager,
+26,Competition,Contract Types,Coach,Byte,,ptrComp,cmpo.Ccjt+2,,,,,Competition > > Contract Types > > Job Type > > Coach,
+25,Competition,Contract Types,Fitness Coach,Byte,,ptrComp,cmpo.Ccjt+4,,,,,Competition > > Contract Types > > Job Type > > Fitness Coach,
+24,Competition,Contract Types,Goalkeeping Coach,Byte,,ptrComp,cmpo.Ccjt+5,,,,,Competition > > Contract Types > > Job Type > > Goalkeeping Coach,
+23,Competition,Contract Types,Youth Team Coach,Byte,,ptrComp,cmpo.Ccjt+3,,,,,Competition > > Contract Types > > Job Type > > Youth Team Coach,
+22,Competition,Contract Types,Scout,Byte,,ptrComp,cmpo.Ccjt+7,,,,,Competition > > Contract Types > > Job Type > > Scout,
+21,Competition,Contract Types,Physio,Byte,,ptrComp,cmpo.Ccjt+6,,,,,Competition > > Contract Types > > Job Type > > Physio,
+12474,Competition,Contract Types,Director of Football,Byte,,ptrComp,cmpo.Ccjt+8,,,,,Competition > > Contract Types > > Job Type > > Director of Football,
+12475,Competition,Contract Types,Technical Director,Byte,,ptrComp,cmpo.Ccjt+C,,,,,Competition > > Contract Types > > Job Type > > Technical Director,
+12478,Competition,Contract Types,Loan Manager,Byte,,ptrComp,cmpo.Ccjt+D,,,,,Competition > > Contract Types > > Job Type > > Loan Manager,
+12479,Competition,Contract Types,Data Analyst,Byte,,ptrComp,cmpo.Ccjt+9,,,,,Competition > > Contract Types > > Job Type > > Data Analyst,
+12477,Competition,Contract Types,Sports Scientist,Byte,,ptrComp,cmpo.Ccjt+B,,,,,Competition > > Contract Types > > Job Type > > Sports Scientist,
+12476,Competition,Contract Types,Doctor,Byte,,ptrComp,cmpo.Ccjt+A,,,,,Competition > > Contract Types > > Job Type > > Doctor,
+18057,Competition,League Settings,Number of Rounds,Byte,,ptrLeagueStage,7A -> cmpo.Clst,,,,,Competition > > League Settings > > Number of Rounds,*:
+18058,Competition,League Settings,Number of Teams,Byte,,ptrLeagueStage,7B -> cmpo.Clst,,,,,Competition > > League Settings > > Number of Teams,*:
+18059,Competition,League Settings,Number of Promotion,Byte,,ptrLeagueStage,6F+0x18 -> cmpo.Clst,,,,,Competition > > League Settings > > Number of Promotion,
+18060,Competition,League Settings,Number of Relegation,Byte,,ptrLeagueStage,6E+0x18 -> cmpo.Clst,,,,,Competition > > League Settings > > Number of Relegation,
+18062,Competition,League Settings,Fixture Priority,Byte,,ptrLeagueStage,6E+0x18+0xB2 -> cmpo.Clst,,,,,Competition > > League Settings > > Fixture Priority,
+18061,Competition,League Settings,Substitution Rules,Byte,,ptrLeagueStage,6E+0x18+0xB4 -> cmpo.Clst,,,,,Competition > > League Settings > > Substitution Rules,
+23628,Competition,League Settings,No description,Byte,,ptrComp,F8,,,,,Competition > > League Settings > > Substitution Rules > No description,
+19862,Continent,Details,Row ID,4 Bytes,,ptrContinent,objo.Rwid,,,,,Continent > > Details > > Row ID,*:
+19863,Continent,Details,Unique ID,4 Bytes,,ptrContinent,objo.Duni,,,,,Continent > > Details > > Unique ID,*:
+19864,Continent,Details,Random ID,4 Bytes,,ptrContinent,objo.Rdui,,,,,Continent > > Details > > Random ID,*:
+19865,Continent,Details,Full Name,String,,ptrContinent,4 -> cono.Cnam,,,32,0,Continent > > Details > > Full Name,:
+19867,Continent,Details,Three Letter Name,String,,ptrContinent,4 -> cono.C3ln,,,3,0,Continent > > Details > > Three Letter Name,
+19868,Continent,Details,Continentality Name,String,,ptrContinent,4 -> cono.Ccty,,,32,0,Continent > > Details > > Continentality Name,
+19871,Continent,Details,Federation Name,String,,ptrContinent,4 -> cono.Cfdn,,,32,0,Continent > > Details > > Federation Name,
+19870,Continent,Details,Short Federation Name,String,,ptrContinent,4 -> cono.C6lf,,,32,0,Continent > > Details > > Short Federation Name,
+19869,Continent,Details,Three Letter Federation Name,String,,ptrContinent,4 -> cono.Csfn,,,32,0,Continent > > Details > > Three Letter Federation Name,
+20575,Continent,Details,Regional Strength,Float,,ptrContinent,cono.Crgs,,,,,Continent > > Details > > Regional Strength,
+19874,Continent,Details,Hex,4 Bytes,,ptrContinent,cono.CTfc,,,,,Continent > > Details > > Colour Setting > > Foreground Colour > > Hex,
+19876,Continent,Details,Red,Byte,,ptrContinent,cono.CTfc+0x2,,,,,Continent > > Details > > Colour Setting > > Foreground Colour > > Red,
+19877,Continent,Details,Green,Byte,,ptrContinent,cono.CTfc+0x1,,,,,Continent > > Details > > Colour Setting > > Foreground Colour > > Green,
+19878,Continent,Details,Blue,Byte,,ptrContinent,cono.CTfc,,,,,Continent > > Details > > Colour Setting > > Foreground Colour > > Blue,
+19879,Continent,Details,Opacity,Byte,,ptrContinent,cono.CTfc+0x3,,,,,Continent > > Details > > Colour Setting > > Foreground Colour > > Opacity,
+19881,Continent,Details,Hex,4 Bytes,,ptrContinent,cono.CTbc,,,,,Continent > > Details > > Colour Setting > > Background Colour > > Hex,
+19883,Continent,Details,Red,Byte,,ptrContinent,cono.CTbc+0x2,,,,,Continent > > Details > > Colour Setting > > Background Colour > > Red,
+19884,Continent,Details,Green,Byte,,ptrContinent,cono.CTbc+0x1,,,,,Continent > > Details > > Colour Setting > > Background Colour > > Green,
+19885,Continent,Details,Blue,Byte,,ptrContinent,cono.CTbc,,,,,Continent > > Details > > Colour Setting > > Background Colour > > Blue,
+19886,Continent,Details,Opacity,Byte,,ptrContinent,cono.CTbc+0x3,,,,,Continent > > Details > > Colour Setting > > Background Colour > > Opacity,
+19888,Continent,Details,Hex,4 Bytes,,ptrContinent,cono.CTtc,,,,,Continent > > Details > > Colour Setting > > Trim Colour > > Hex,
+19890,Continent,Details,Red,Byte,,ptrContinent,cono.CTtc+0x2,,,,,Continent > > Details > > Colour Setting > > Trim Colour > > Red,
+19891,Continent,Details,Green,Byte,,ptrContinent,cono.CTtc+0x1,,,,,Continent > > Details > > Colour Setting > > Trim Colour > > Green,
+19892,Continent,Details,Blue,Byte,,ptrContinent,cono.CTtc,,,,,Continent > > Details > > Colour Setting > > Trim Colour > > Blue,
+19893,Continent,Details,Opacity,Byte,,ptrContinent,cono.CTtc+0x3,,,,,Continent > > Details > > Colour Setting > > Trim Colour > > Opacity,
+20665,Derby,Details,Row ID,4 Bytes,,ptrDerby,objo.Rwid,,,,,Derby > > Details > > Row ID,*:
+20666,Derby,Details,Unique ID,4 Bytes,,ptrDerby,objo.Duni,,,,,Derby > > Details > > Unique ID,*:
+20667,Derby,Details,Random ID,4 Bytes,,ptrDerby,objo.Rdui,,,,,Derby > > Details > > Random ID,*:
+20627,Derby,Details,Name,String,,ptrDerby,4 -> drbr.Dnam,,,32,0,Derby > > Details > > Name,:
+20628,Derby,Details,Short Name,String,,ptrDerby,4 -> drbr.Dsnm,,,32,0,Derby > > Details > > Short Name,:
+20629,Derby,Details,Alternative Name,String,,ptrDerby,4 -> drbr.Danm,,,32,0,Derby > > Details > > Alternative Name,:
+20654,Derby,Details,Alternative Short Name,String,,ptrDerby,4 -> drbr.Dasn,,,32,0,Derby > > Details > > Alternative Short Name,:
+20635,Derby,Details,Team 1,String,,ptrDerby,4 -> cluo.Csnm -> teao.Tclu -> drbr.Dtm1,,,32,0,Derby > > Details > > Team 1,:
+20634,Derby,Details,Team 2,String,,ptrDerby,4 -> cluo.Csnm -> teao.Tclu -> drbr.Dtm2,,,32,0,Derby > > Details > > Team 2,:
+20633,Derby,Details,First Match Date,Custom,FM Date,ptrDerby,drbr.Dfmd,,,,,Derby > > Details > > First Match Date,*:
+20632,Derby,Details,First Match Competition,String,,ptrDerby,4 -> cmpo.Csnm -> drbr.Dfmc,,,32,0,Derby > > Details > > First Match Competition,:
+20631,Derby,Details,First Match Stadium,String,,ptrDerby,4 -> stao.Snam -> drbr.Dfms,,,32,0,Derby > > Details > > First Match Stadium,:
+20630,Derby,Details,First Match Attendance,2 Bytes,,ptrDerby,drbr.Dfma,,,,,Derby > > Details > > First Match Attendance,
+20637,Derby,Details,First Match Team 1 Goals,Byte,,ptrDerby,drbr.Dfg1,,,,,Derby > > Details > > First Match Team 1 Goals,
+20636,Derby,Details,First Match Team 2 Goals,Byte,,ptrDerby,drbr.Dfg2,,,,,Derby > > Details > > First Match Team 2 Goals,
+20639,Derby,Details,Team 1 Total Games Won,Byte,,ptrDerby,drbr.D1tw,,,,,Derby > > Details > > Team 1 Total Games Won,
+20638,Derby,Details,Team 1 Total Games Drawn,Byte,,ptrDerby,drbr.D1td,,,,,Derby > > Details > > Team 1 Total Games Drawn,
+20640,Derby,Details,Team 1 Total Games Lost ,Byte,,ptrDerby,drbr.D1tl,,,,,Derby > > Details > > Team 1 Total Games Lost ,
+20644,Derby,Details,World Reputation,Byte,,ptrDerby,drbr.Dwdr,,,,,Derby > > Details > > World Reputation,
+20643,Derby,Details,National Reputation,Byte,,ptrDerby,drbr.Dntr,,,,,Derby > > Details > > National Reputation,
+1527,Nation,Details,Row ID,4 Bytes,,ptrNation,objo.Rwid,,,,,Nation > > Details > > Row ID,*:
+1528,Nation,Details,Unique ID,4 Bytes,,ptrNation,objo.Duni,,,,,Nation > > Details > > Unique ID,*:
+17201,Nation,Details,Random ID,4 Bytes,,ptrNation,objo.Rdui,,,,,Nation > > Details > > Random ID,*:
+1529,Nation,Details,Name,String,,ptrNation,4 -> nato.Nnam,,,32,0,Nation > > Details > > Name,
+1531,Nation,Details,Short Name,String,,ptrNation,4 -> nato.Nsnm,,,32,0,Nation > > Details > > Short Name,
+1532,Nation,Details,Three Letter Name,String,,ptrNation,4 -> nato.N3ln,,,3,0,Nation > > Details > > Three Letter Name,
+24032,Nation,Details,Nickname,String,,ptrNation,4 -> nato.TCnn -> cluo.Cino -> nato.Ntct,,,32,0,Nation > > Details > > Nickname,
+1533,Nation,Details,Nationality Name,String,,ptrNation,4 -> nato.Nnty,,,32,0,Nation > > Details > > Nationality Name,
+1534,Nation,Details,Capital,String,,ptrNation,4 -> ctyo.Cnam -> nato.Ncpi,,,32,0,Nation > > Details > > Capital,
+1535,Nation,Details,Continent,String,,ptrNation,4 -> cono.Cnam -> nato.Ncti,,,32,0,Nation > > Details > > Continent,:
+20574,Nation,Details,National Stadium,String,,ptrNation,4 -> stao.Snam -> nato.Nnsi,,,32,0,Nation > > Details > > National Stadium,:
+1550,Nation,Details,Average Attendance,4 Bytes,,ptrNation,nato.Catd -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Average Attendance,
+1552,Nation,Details,Minimum Attendance,4 Bytes,,ptrNation,nato.Cmna -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Minimum Attendance,
+1551,Nation,Details,Maximum Attendance,4 Bytes,,ptrNation,nato.Cmxa -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Maximum Attendance,
+19913,Nation,Details,Hex,4 Bytes,,ptrNation,nato.ttcl -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Foreground Colour > > Hex,
+19915,Nation,Details,Red,Byte,,ptrNation,nato.ttcl+0x2 -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Foreground Colour > > Red,
+19916,Nation,Details,Green,Byte,,ptrNation,nato.ttcl+0x1 -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Foreground Colour > > Green,
+19917,Nation,Details,Blue,Byte,,ptrNation,nato.ttcl -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Foreground Colour > > Blue,
+19918,Nation,Details,Opacity,Byte,,ptrNation,nato.ttcl+0x3 -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Foreground Colour > > Opacity,
+19920,Nation,Details,Hex,4 Bytes,,ptrNation,nato.tbcl -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Background Colour > > Hex,
+19922,Nation,Details,Red,Byte,,ptrNation,nato.tbcl+0x2 -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Background Colour > > Red,
+19923,Nation,Details,Green,Byte,,ptrNation,nato.tbcl+0x1 -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Background Colour > > Green,
+19924,Nation,Details,Blue,Byte,,ptrNation,nato.tbcl -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Background Colour > > Blue,
+19925,Nation,Details,Opacity,Byte,,ptrNation,nato.tbcl+0x3 -> cluo.Cino -> nato.Ntct,,,,,Nation > > Details > > Colour Setting > > Background Colour > > Opacity,
+1554,Nation,Information,Economic Factor,Byte,,ptrNation,nato.Necf,,,,,Nation > > Information > > Economic Factor,
+1546,Nation,Information,FA Financial Power,Byte,,ptrNation,nato.Nfap -> nato.Ntct,,,,,Nation > > Information > > FA Financial Power,
+1547,Nation,Information,Years To Gain Nationality,Byte,,ptrNation,nato.Nygn,,,,,Nation > > Information > > Years To Gain Nationality,
+1537,Nation,Information,Gain Nationality Type,Byte,,ptrNation,nato.Ngct,,,,,Nation > > Information > > Gain Nationality Type,1:Continuous | 2:Accumulative
+11732,Nation,Information,Does Not Allow Dual Nationality,Binary,,ptrNation,nato.Nndn,1,1,,,Nation > > Information > > Does Not Allow Dual Nationality,0:No | 1:Yes
+1947,Nation,Information,Max Youth Age,Byte,,ptrNation,nato.Nmya -> nato.Ntct,,,,,Nation > > Information > > Max Youth Age,
+1545,Nation,Information,State Of Development,Byte,,ptrNation,nato.Nsod,,,,,Nation > > Information > > State Of Development,1:Developed | 2:Developing | 3:Third World
+1555,Nation,Information,Game Importance,Byte,,ptrNation,nato.Ngim -> nato.Ntct,,,,,Nation > > Information > > Game Importance,1:Very Important | 2:Important | 3:Unimportant | 4:Useless
+1557,Nation,Information,Allow Multiple Assistant Manager,Byte,,ptrNation,nato.Numa -> nato.Ntct,,,,,Nation > > Information > > Allow Multiple Assistant Manager,0:No | 1:Yes
+12578,Nation,Information,Worldwide Governing Body Full Member,Byte,,ptrNation,nato.Nffm -> nato.Ntct,,,,,Nation > > Information > > Worldwide Governing Body Full Member,0:No | 1:Yes
+1654,Nation,Information,Year Affiliated,2 Bytes,,ptrNation,nato.Nfay -> nato.Ntct,,,,,Nation > > Information > > Year Affiliated,
+1587,Nation,Information,Year Affiliated to Federation,2 Bytes,,ptrNation,nato.Nfdy -> nato.Ntct,,,,,Nation > > Information > > Year Affiliated to Federation,
+1586,Nation,Information,Year Association Formed,2 Bytes,,ptrNation,nato.Nafy -> nato.Ntct,,,,,Nation > > Information > > Year Association Formed,
+1541,Nation,Information,FIFA Position,2 Bytes,,ptrNation,nato.Nfps -> nato.Ntct,,,,,Nation > > Information > > FIFA Position,
+1540,Nation,Information,FIFA Ranking Points,2 Bytes,,ptrNation,nato.Nfrp -> nato.Ntct,,,,,Nation > > Information > > FIFA Ranking Points,
+1548,Nation,Information,Foreign Manager Likelihood,Byte,,ptrNation,nato.Nfml -> nato.Ntct,,,,,Nation > > Information > > Foreign Manager Likelihood,
+1558,Nation,Information,FA Patience,Byte,,ptrNation,nato.Nfpa -> nato.Ntct,,,,,Nation > > Information > > FA Patience,
+1556,Nation,Information,Youth Rating,Byte,,ptrNation,nato.NYRt -> nato.Ntct,,,,,Nation > > Information > > Youth Rating,
+1567,Nation,Tactical Attributes,Attacking,Byte,,ptrNation,nato.Ntat -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Attacking,
+1568,Nation,Tactical Attributes,Defensive Line,Byte,,ptrNation,nato.Ntat+0x1 -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Defensive Line,
+1569,Nation,Tactical Attributes,Directness,Byte,,ptrNation,nato.Ntat+0x2 -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Directness,
+1570,Nation,Tactical Attributes,Flamboyancy,Byte,,ptrNation,nato.Ntat+0x3 -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Flamboyancy,
+1571,Nation,Tactical Attributes,Fluidity,Byte,,ptrNation,nato.Ntat+0x4 -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Fluidity,
+1572,Nation,Tactical Attributes,Free Roles,Byte,,ptrNation,nato.Ntat+0x5 -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Free Roles,
+1573,Nation,Tactical Attributes,Marking,Byte,,ptrNation,nato.Ntat+0x6 -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Marking,
+1574,Nation,Tactical Attributes,Offside,Byte,,ptrNation,nato.Ntat+0x7 -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Offside,
+1575,Nation,Tactical Attributes,Pressing,Byte,,ptrNation,nato.Ntat+0x8 -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Pressing,
+1576,Nation,Tactical Attributes,Sitting Back,Byte,,ptrNation,nato.Ntat+0x9 -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Sitting Back,
+1577,Nation,Tactical Attributes,Tempo,Byte,,ptrNation,nato.Ntat+0xA -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Tempo,
+1578,Nation,Tactical Attributes,Use Of Playmaker,Byte,,ptrNation,nato.Ntat+0xB -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Use Of Playmaker,
+1579,Nation,Tactical Attributes,Width,Byte,,ptrNation,nato.Ntat+0xC -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Width,
+1580,Nation,Tactical Attributes,Preferred Formation,Byte,,ptrNation,nato.Nprf -> cluo.Cino -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Preferred Formation,
+1581,Nation,Tactical Attributes,Second Preferred Formation,Byte,,ptrNation,nato.Nspf -> cluo.Cino -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Second Preferred Formation,
+1582,Nation,Tactical Attributes,Defensive Formation,Byte,,ptrNation,nato.Ndfm -> cluo.Cino -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Defensive Formation,
+1583,Nation,Tactical Attributes,Attacking Formation,Byte,,ptrNation,nato.Nafm -> cluo.Cino -> nato.Ntct,,,,,Nation > > Tactical Attributes > > Attacking Formation,
+12872,Nation,Currency,Row ID,4 Bytes,,ptrNation,8 -> nato.Ncur,,,,,Nation > > Currency > > Row ID,*:
+12873,Nation,Currency,Unique ID,4 Bytes,,ptrNation,C -> nato.Ncur,,,,,Nation > > Currency > > Unique ID,*:
+19895,Nation,Currency,Random ID,4 Bytes,,ptrNation,10 -> nato.Ncur,,,,,Nation > > Currency > > Random ID,*:
+1536,Nation,Currency,Full Name,String,,ptrNation,4 -> 18 -> nato.Ncur,,,32,0,Nation > > Currency > > Full Name,:
+12870,Nation,Currency,Short Name,String,,ptrNation,4 -> 20 -> nato.Ncur,,,32,0,Nation > > Currency > > Short Name,:
+12871,Nation,Currency,Symbol,String,,ptrNation,4 -> 30 -> nato.Ncur,,,32,0,Nation > > Currency > > Symbol,:
+12874,Nation,Currency,Exchange Rate,Float,,ptrNation,38 -> nato.Ncur,,,,,Nation > > Currency > > Exchange Rate,
+1613,Nation,Transfers and Contracts,Reputation 50 - 549,Custom,United Kingdom Pound,ptrNation,0 -> nato.Ntfv -> nato.Ntct,,,,,Nation > > Transfers and Contracts > > Transfer Values > > Reputation 50 - 549,
+1632,Nation,Transfers and Contracts,"Reputation 550 - 1,049",Custom,United Kingdom Pound,ptrNation,4 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 550 - 1,049",
+1631,Nation,Transfers and Contracts,"Reputation 1,050 - 1,549",Custom,United Kingdom Pound,ptrNation,8 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 1,050 - 1,549",
+1630,Nation,Transfers and Contracts,"Reputation 1,550 - 2,049",Custom,United Kingdom Pound,ptrNation,C -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 1,550 - 2,049",
+1629,Nation,Transfers and Contracts,"Reputation 2,050 - 2,549",Custom,United Kingdom Pound,ptrNation,10 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 2,050 - 2,549",
+1628,Nation,Transfers and Contracts,"Reputation 2,550 - 3,049",Custom,United Kingdom Pound,ptrNation,14 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 2,550 - 3,049",
+1627,Nation,Transfers and Contracts,"Reputation 3,050 - 3,549",Custom,United Kingdom Pound,ptrNation,18 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 3,050 - 3,549",
+1626,Nation,Transfers and Contracts,"Reputation 3,550 - 4,049",Custom,United Kingdom Pound,ptrNation,1C -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 3,550 - 4,049",
+1625,Nation,Transfers and Contracts,"Reputation 4,050 - 4,549",Custom,United Kingdom Pound,ptrNation,20 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 4,050 - 4,549",
+1624,Nation,Transfers and Contracts,"Reputation 4,550 - 5,049",Custom,United Kingdom Pound,ptrNation,24 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 4,550 - 5,049",
+1623,Nation,Transfers and Contracts,"Reputation 5,050 - 5,549",Custom,United Kingdom Pound,ptrNation,28 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 5,050 - 5,549",
+1622,Nation,Transfers and Contracts,"Reputation 5,550 - 6,049",Custom,United Kingdom Pound,ptrNation,2C -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 5,550 - 6,049",
+1621,Nation,Transfers and Contracts,"Reputation 6,050 - 6,549",Custom,United Kingdom Pound,ptrNation,30 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 6,050 - 6,549",
+1620,Nation,Transfers and Contracts,"Reputation 6,550 - 7,049",Custom,United Kingdom Pound,ptrNation,34 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 6,550 - 7,049",
+1619,Nation,Transfers and Contracts,"Reputation 7,050 - 7,549",Custom,United Kingdom Pound,ptrNation,38 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 7,050 - 7,549",
+1618,Nation,Transfers and Contracts,"Reputation 7,550 - 8,049",Custom,United Kingdom Pound,ptrNation,3C -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 7,550 - 8,049",
+1617,Nation,Transfers and Contracts,"Reputation 8,050 - 8,549",Custom,United Kingdom Pound,ptrNation,40 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 8,050 - 8,549",
+1616,Nation,Transfers and Contracts,"Reputation 8,550 - 9,049",Custom,United Kingdom Pound,ptrNation,44 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 8,550 - 9,049",
+1615,Nation,Transfers and Contracts,"Reputation 9,050 - 9,549",Custom,United Kingdom Pound,ptrNation,48 -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 9,050 - 9,549",
+1614,Nation,Transfers and Contracts,"Reputation 9,550 - 10,000",Custom,United Kingdom Pound,ptrNation,4C -> nato.Ntfv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Transfer Values > > Reputation 9,550 - 10,000",
+1634,Nation,Transfers and Contracts,Reputation 50 - 549,Custom,United Kingdom Pound,ptrNation,0 -> nato.Nwgv -> nato.Ntct,,,,,Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 50 - 549,
+1635,Nation,Transfers and Contracts,"Reputation 550 - 1,049",Custom,United Kingdom Pound,ptrNation,4 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 550 - 1,049",
+1636,Nation,Transfers and Contracts,"Reputation 1,050 - 1,549",Custom,United Kingdom Pound,ptrNation,8 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 1,050 - 1,549",
+1637,Nation,Transfers and Contracts,"Reputation 1,550 - 2,049",Custom,United Kingdom Pound,ptrNation,C -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 1,550 - 2,049",
+1638,Nation,Transfers and Contracts,"Reputation 2,050 - 2,549",Custom,United Kingdom Pound,ptrNation,10 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 2,050 - 2,549",
+1639,Nation,Transfers and Contracts,"Reputation 2,550 - 3,049",Custom,United Kingdom Pound,ptrNation,14 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 2,550 - 3,049",
+1640,Nation,Transfers and Contracts,"Reputation 3,050 - 3,549",Custom,United Kingdom Pound,ptrNation,18 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 3,050 - 3,549",
+1641,Nation,Transfers and Contracts,"Reputation 3,550 - 4,049",Custom,United Kingdom Pound,ptrNation,1C -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 3,550 - 4,049",
+1642,Nation,Transfers and Contracts,"Reputation 4,050 - 4,549",Custom,United Kingdom Pound,ptrNation,20 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 4,050 - 4,549",
+1643,Nation,Transfers and Contracts,"Reputation 4,550 - 5,049",Custom,United Kingdom Pound,ptrNation,24 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 4,550 - 5,049",
+1644,Nation,Transfers and Contracts,"Reputation 5,050 - 5,549",Custom,United Kingdom Pound,ptrNation,28 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 5,050 - 5,549",
+1645,Nation,Transfers and Contracts,"Reputation 5,550 - 6,049",Custom,United Kingdom Pound,ptrNation,2C -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 5,550 - 6,049",
+1646,Nation,Transfers and Contracts,"Reputation 6,050 - 6,549",Custom,United Kingdom Pound,ptrNation,30 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 6,050 - 6,549",
+1647,Nation,Transfers and Contracts,"Reputation 6,550 - 7,049",Custom,United Kingdom Pound,ptrNation,34 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 6,550 - 7,049",
+1648,Nation,Transfers and Contracts,"Reputation 7,050 - 7,549",Custom,United Kingdom Pound,ptrNation,38 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 7,050 - 7,549",
+1649,Nation,Transfers and Contracts,"Reputation 7,550 - 8,049",Custom,United Kingdom Pound,ptrNation,3C -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 7,550 - 8,049",
+1650,Nation,Transfers and Contracts,"Reputation 8,050 - 8,549",Custom,United Kingdom Pound,ptrNation,40 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 8,050 - 8,549",
+1651,Nation,Transfers and Contracts,"Reputation 8,550 - 9,049",Custom,United Kingdom Pound,ptrNation,44 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 8,550 - 9,049",
+1652,Nation,Transfers and Contracts,"Reputation 9,050 - 9,549",Custom,United Kingdom Pound,ptrNation,48 -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 9,050 - 9,549",
+1653,Nation,Transfers and Contracts,"Reputation 9,550 - 10,000",Custom,United Kingdom Pound,ptrNation,4C -> nato.Nwgv -> nato.Ntct,,,,,"Nation > > Transfers and Contracts > > Weekly Wage Values > > Reputation 9,550 - 10,000",
+1716,Person,Details,Row ID,4 Bytes,,ptrPerson,objo.Rwid,,,,,Person > > Details > > Row ID,*:
+1717,Person,Details,Unique ID,4 Bytes,,ptrPerson,objo.Duni,,,,,Person > > Details > > Unique ID,*:
+17200,Person,Details,Random ID,4 Bytes,,ptrPerson,objo.Rdui,,,,,Person > > Details > > Random ID,*:
+1718,Person,Details,First Name,String,,ptrPerson,4 -> 0 -> pero.Pfna,,,255,0,Person > > Details > > First Name,:
+1779,Person,Details,Last Name,String,,ptrPerson,4 -> 0 -> pero.Psna,,,255,0,Person > > Details > > Last Name,:
+1778,Person,Details,Common Name,String,,ptrPerson,4 -> 0 -> pero.Pcna,,,255,0,Person > > Details > > Common Name,:
+1777,Person,Details,Full Name,String,,ptrPerson,4 -> pero.Pfln,,,255,0,Person > > Details > > Full Name,:
+17198,Person,Details,Nationality,String,,ptrPerson,4 -> nato.Nnty -> pero.Pnti,,,255,0,Person > > Details > > Nationality,:
+17199,Person,Details,Birth Place,String,,ptrPerson,4 -> ctyo.Cnam -> pero.Pcbi,,,255,0,Person > > Details > > Birth Place,:
+17812,Person,Details,Birth Date,Custom,FM Date,ptrPerson,pero.Pdob,,,,,Person > > Details > > Birth Date,*:
+12999,Person,Details,Female,Binary,,ptrPerson,pero.Pfl1,4,1,,,Person > > Details > > Female,
+1720,Person,Details,Ethnicity,Byte,,ptrPerson,pero.Peth,,,,,Person > > Details > > Ethnicity,-1:Unknown | 0:Northern European | 1:Mediterranean / Hispanic | 2:North African / Middle Eastern | 3:African / Caribbean | 4:Asian | 5:South East Asian | 6:Pacific Islander | 7:Native American | 8:Native Australian | 9:Mixed Race (Black / White) | 10:East Asian
+1725,Person,Details,Hair Colour,Byte,,ptrPerson,pero.Phcl,,,,,Person > > Details > > Hair Colour,0:Unknown | 1:Blond(e) 1 | 7:Blond(e) 1 | 8:Blond(e) 3 | 2:Light Brown 1 | 9:Light Brown 2 | 10:Light Brown 3 | 3:Dark Brown 1 | 11:Dark Brown 2 | 12:Dark Brown 3 | 4:Red 1 | 13:Red 2 | 14:Red 3 | 5:Black 1 | 15:Black 2 | 16:Black 3 | 6:Grey 1 | 17:Grey 2 | 18:Grey 3
+1724,Person,Details,Hair Length,Byte,,ptrPerson,pero.Phln,,,,,Person > > Details > > Hair Length,5:Unknown | 4:Bald | 0:Fuzz | 1:Short | 2:Medium | 3:Long
+1723,Person,Details,Skin Tone,Byte,,ptrPerson,pero.Pskt,,,,,Person > > Details > > Skin Tone,-1:Unknown | 0:Skin Tone 1 | 1:Skin Tone 2 | 2:Skin Tone 3 | 3:Skin Tone 4 | 4:Skin Tone 5 | 5:Skin Tone 6 | 6:Skin Tone 7 | 7:Skin Tone 8 | 8:Skin Tone 9 | 9:Skin Tone 10 | 10:Skin Tone 11 | 11:Skin Tone 12 | 12:Skin Tone 13 | 13:Skin Tone 14 | 14:Skin Tone 15 | 15:Skin Tone 16 | 16:Skin Tone 17 | 17:Skin Tone 18 | 18:Skin Tone 19 | 19:Skin Tone 20
+410,Person,Details,Nationality Info,Byte,,ptrPlayer,pero.Pdfn,,,,,Person > > Details > > Nationality Info,
+12664,Person,Details,Retiring After Spell At Current Club,Binary,,ptrPerson,pero.Pfl1,7,1,,,Person > > Details > > Retiring After Spell At Current Club,
+407,Person,Details,International Apps,Byte,,ptrPerson,pero.Piap,,,,,Person > > Details > > International Apps,
+406,Person,Details,International Goals,Byte,,ptrPerson,pero.Piap+0x2,,,,,Person > > Details > > International Goals,
+1515,Person,Details,Youth Apps,Byte,,ptrPerson,pero.Puia,,,,,Person > > Details > > Youth Apps,
+1516,Person,Details,Youth Goals,Byte,,ptrPerson,pero.Puia+0x2,,,,,Person > > Details > > Youth Goals,
+17816,Person,Details,Joined To Current Team Date,Custom,FM Date,ptrPerson,pero.Pjoi,,,,,Person > > Details > > Joined To Current Team Date,*:
+18016,Person,Details,Moved To Based Nation Date,Custom,FM Date,ptrPerson,pero.Pcnj,,,,,Person > > Details > > Moved To Based Nation Date,*:
+17826,Person,Details,Retire Date,Custom,FM Date,00000000,,,,,,Person > > Details > > Retire Date,*:
+24025,Person,Details,Freeze Attributes,Binary,,ptrPerson,pero.Pfl2,5,1,,,Person > > Details > > Freeze Attributes,0:False | 1:True
+180,Person,Contract,Club,String,,ptrPerson,4 -> cluo.Csnm -> teao.Tclu -> pero.Pcti -> pero.Pflc,,,32,0,Person > > Contract > > Full Contract > > Club,:
+172,Person,Contract,Job,Byte,,ptrPerson,pero.Pcjo -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Job,
+117,Person,Contract,Guide Value,Custom,United Kingdom Pound,ptrPlayer,pero.Pcgv,,,,,Person > > Contract > > Full Contract > > Guide Value,
+163,Person,Contract,Transfer Value,Custom,United Kingdom Pound,ptrPlayer,pero.Pcgv+0x4,,,,,Person > > Contract > > Full Contract > > Transfer Value,
+179,Person,Contract,Contract Type,Byte,,ptrPerson,pero.Pces -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Contract Type,
+170,Person,Contract,Weekly Wage,Custom,United Kingdom Pound,ptrPerson,pero.Pcwg -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Weekly Wage,
+178,Person,Contract,Loyalty Bonus,Custom,United Kingdom Pound,ptrPerson,pero.Pclb -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Loyalty Bonus,
+22727,Person,Contract,Agent Fees,Custom,United Kingdom Pound,ptrPerson,pero.Pcaf -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Agent Fees,
+17813,Person,Contract,Start Date,Custom,FM Date,ptrPerson,pero.Pcsd -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Start Date,*:
+17814,Person,Contract,End Date,Custom,FM Date,ptrPerson,pero.Pcex -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > End Date,*:
+17815,Person,Contract,Sign Date,Custom,FM Date,ptrPerson,pero.Pfta -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Sign Date,*:
+12570,Person,Contract,Listed,Binary,,ptrPerson,pero.Pffl -> pero.Pflc,0,1,,,Person > > Contract > > Full Contract > > Transfer Status > > Listed,
+12618,Person,Contract,Listed by Request,Binary,,ptrPerson,pero.Pffl -> pero.Pflc,3,1,,,Person > > Contract > > Full Contract > > Transfer Status > > Listed by Request,
+12682,Person,Contract,Not for Sale,Binary,,ptrPerson,pero.Pffl -> pero.Pflc,4,1,,,Person > > Contract > > Full Contract > > Transfer Status > > Not for Sale,
+12660,Person,Contract,Set for Release,Binary,,ptrPerson,pero.Pffl -> pero.Pflc,5,1,,,Person > > Contract > > Full Contract > > Transfer Status > > Set for Release,
+12619,Person,Contract,Available for Loan,Binary,,ptrPerson,pero.Pffl -> pero.Pflc,1,1,,,Person > > Contract > > Full Contract > > Loan Status > > Available for Loan,
+12617,Person,Contract,Unavailable for Loan,Binary,,ptrPerson,pero.Pffl -> pero.Pflc,6,1,,,Person > > Contract > > Full Contract > > Loan Status > > Unavailable for Loan,
+12680,Person,Contract,Transfer Offer Options,Byte,,ptrPerson,pero.Pmsq+0xA -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Transfer Offer Options,
+646,Person,Contract,Agreed Playing Time,Byte,,ptrPerson,pero.Pmsq -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Agreed Playing Time,
+647,Person,Contract,Previous Playing Time,Byte,,ptrPerson,pero.Pmsq+0x1 -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Previous Playing Time,
+22724,Person,Contract,Future Playing Time,Byte,,ptrPerson,pero.Pcfp -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Future Playing Time > > Future Playing Time,
+22725,Person,Contract,Future Playing Time Year,2 Bytes,,ptrPerson,pero.Pcfp+0x4 -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Future Playing Time > > Future Playing Time Year,
+24372,Person,Contract,Playing Time Happiness,Byte,,ptrPerson,pero.Pmsq+0x8 -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Playing Time Happiness,
+24371,Person,Contract,Happiness,Byte,,ptrPerson,pero.Pmsq+0x6 -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Happiness,
+12571,Person,Contract,Squad Number,Byte,,ptrPerson,pero.Psnu -> pero.Pflc,,,,,Person > > Contract > > Full Contract > > Squad Number,
+13002,Person,Contract,Preferred Squad Number,Byte,,ptrPerson,pero.Ppsq -> pero.Ppdt,,,,,Person > > Contract > > Full Contract > > Preferred Squad Number,
+12123,Person,Contract,Club,String,,ptrPerson,4 -> cluo.Csnm -> teao.Tclu -> pero.Pcti -> pero.Plnc -> pero.Potc,,,32,0,Person > > Contract > > Loan Contract > > Club,:
+12124,Person,Contract,Job,Byte,,ptrPerson,pero.Pcjo -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Job,
+12128,Person,Contract,Weekly Wage,Custom,United Kingdom Pound,ptrPerson,pero.Pcwg -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Weekly Wage,
+24050,Person,Contract,Unused Weekly Wage,Custom,United Kingdom Pound,ptrPerson,pero.PLmf+0x8 -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Unused Weekly Wage,
+17818,Person,Contract,Start Date,Custom,FM Date,ptrPerson,pero.Pcsd -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Start Date,*:
+17819,Person,Contract,End Date,Custom,FM Date,ptrPerson,pero.Pcex -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > End Date,*:
+17820,Person,Contract,Sign Date,Custom,FM Date,ptrPerson,pero.Pfta -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Sign Date,*:
+12147,Person,Contract,Agreed Playing Time,Byte,,ptrPerson,pero.Pmsq -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Agreed Playing Time,
+12148,Person,Contract,Previous Playing Time,Byte,,ptrPerson,pero.Pmsq+0x1 -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Previous Playing Time,
+12149,Person,Contract,Squad Number,Byte,,ptrPerson,pero.Psnu -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Squad Number,
+24386,Person,Contract,Agreed Squad Number,Byte,,ptrPerson,pero.PLsn -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Agreed Squad Number,
+20187,Person,Contract,Playing Monthly Fee,Custom,United Kingdom Pound,ptrPerson,pero.PLmf -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Playing Monthly Fee,
+20188,Person,Contract,Unused Monthly Fee,Custom,United Kingdom Pound,ptrPerson,pero.PLmf+0x4 -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Unused Monthly Fee,
+20176,Person,Contract,Fee To Buy,Custom,United Kingdom Pound,ptrPerson,pero.PLfb -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Fee To Buy,
+24051,Person,Contract,Purchase After Matches Played,Byte,,ptrPerson,pero.PLNG -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Purchase After Matches Played,
+24052,Person,Contract,Future Buy Back Fee,Custom,United Kingdom Pound,ptrPerson,pero.PLmf-0x4 -> pero.Plnc -> pero.Potc,,,,,Person > > Contract > > Loan Contract > > Future Buy Back Fee,
+20182,Person,Contract,Can Be Recalled,Binary,,ptrPerson,pero.PLfl -> pero.Plnc -> pero.Potc,2,1,,,Person > > Contract > > Loan Contract > > Loan Clauses > > Can Be Recalled,0:False | 1:True
+20183,Person,Contract,Can Play In Cup,Binary,,ptrPerson,pero.PLfl -> pero.Plnc -> pero.Potc,1,1,,,Person > > Contract > > Loan Contract > > Loan Clauses > > Can Play In Cup,0:False | 1:True
+20178,Person,Contract,Can Play Against Parent Club,Binary,,ptrPerson,pero.PLfl -> pero.Plnc -> pero.Potc,0,1,,,Person > > Contract > > Loan Contract > > Loan Clauses > > Can Play Against Parent Club,0:False | 1:True
+20186,Person,Contract,Can Play Against Parent Club B Team,Binary,,ptrPerson,pero.PLfl+0x1 -> pero.Plnc -> pero.Potc,7,1,,,Person > > Contract > > Loan Contract > > Loan Clauses > > Can Play Against Parent Club B Team,0:False | 1:True
+20181,Person,Contract,Can Play For Parent Club,Binary,,ptrPerson,pero.PLfl+0x2 -> pero.Plnc -> pero.Potc,0,1,,,Person > > Contract > > Loan Contract > > Loan Clauses > > Can Play For Parent Club,0:False | 1:True
+20185,Person,Contract,Can Play For Parent Club Reserve Team,Binary,,ptrPerson,pero.PLfl+0x1 -> pero.Plnc -> pero.Potc,5,1,,,Person > > Contract > > Loan Contract > > Loan Clauses > > Can Play For Parent Club Reserve Team,0:False | 1:True
+20180,Person,Contract,Can Play For Parent Club In Cup Matches,Binary,,ptrPerson,pero.PLfl+0x2 -> pero.Plnc -> pero.Potc,4,1,,,Person > > Contract > > Loan Contract > > Loan Clauses > > Can Play For Parent Club In Cup Matches,0:False | 1:True
+20184,Person,Contract,Loan Cannot Be Terminated,Binary,,ptrPerson,pero.PLfl+0x1 -> pero.Plnc -> pero.Potc,6,1,,,Person > > Contract > > Loan Contract > > Loan Clauses > > Loan Cannot Be Terminated,0:False | 1:True
+20179,Person,Contract,Loan cannot be terminated,Binary,,ptrPerson,pero.PLfl+0x1 -> pero.Plnc -> pero.Potc,4,1,,,Person > > Contract > > Loan Contract > > Loan Clauses > > Loan cannot be terminated,0:False | 1:True
+12640,Person,Contract,Club,String,,ptrPerson,4 -> cluo.Csnm -> teao.Tclu -> pero.Pcti -> pero.Pbcc -> pero.Potc,,,32,0,Person > > Contract > > B Club Contract > > Club,:
+12641,Person,Contract,Job,Byte,,ptrPerson,pero.Pcjo -> pero.Pbcc -> pero.Potc,,,,,Person > > Contract > > B Club Contract > > Job,
+12642,Person,Contract,Weekly Wage,Custom,United Kingdom Pound,ptrPerson,pero.Pcwg -> pero.Pbcc -> pero.Potc,,,,,Person > > Contract > > B Club Contract > > Weekly Wage,
+12907,Person,Contract,Nation,String,,ptrPerson,4 -> nato.Nnam -> nato.Nnat -> teao.Tclu -> pero.Pcti -> pero.Pnac -> pero.Potc,,,32,0,Person > > Contract > > Nation Contract > > Nation,:
+12908,Person,Contract,Job,Byte,,ptrPerson,pero.Pcjo -> pero.Pnac -> pero.Potc,,,,,Person > > Contract > > Nation Contract > > Job,
+12909,Person,Contract,Weekly Wage,Custom,United Kingdom Pound,ptrPerson,pero.Pcwg -> pero.Pnac -> pero.Potc,,,,,Person > > Contract > > Nation Contract > > Weekly Wage,
+24377,Person,Contract,Based Nation,String,,ptrPerson,4 -> nato.Nnam -> agto.Abnt -> pero.Pagt,,,255,0,Person > > Contract > > Agent > > Based Nation,:
+24378,Person,Contract,Scope,Byte,,ptrPerson,agto.Ascp -> pero.Pagt,,,,,Person > > Contract > > Agent > > Scope,0:National | 1:Regional | 2:Continental | 3:Worldwide
+24380,Person,Contract,Patience,Byte,,ptrPerson,agto.Apat -> pero.Pagt,,,,,Person > > Contract > > Agent > > Agent Data > > Patience,
+24381,Person,Contract,Business,Byte,,ptrPerson,agto.Apat+0x1 -> pero.Pagt,,,,,Person > > Contract > > Agent > > Agent Data > > Business,
+24383,Person,Contract,Size Of Agency,Byte,,ptrPerson,agto.Apat+0x2 -> pero.Pagt,,,,,Person > > Contract > > Agent > > Agent Data > > Size Of Agency,
+24382,Person,Contract,Touting Clients,Byte,,ptrPerson,agto.Apat+0x3 -> pero.Pagt,,,,,Person > > Contract > > Agent > > Agent Data > > Touting Clients,
+23644,Person,Person Data,Personality (Player-only),Byte,,ptrRCA+4,,,,,,Person > > Person Data > > Attributes > > Personality (Player-only),0:Ambitious | 1:Balanced | 2:Born Leader | 3:Casual | 4:Charismatic Leader | 5:Determined | 6:Very Loyal | 7:Driven | 8:Easily Discouraged | 9:Fairly Ambitious | 10:Fairly Determined | 11:Fairly Loyal | 12:Fairly Professional | 13:Fairly Sporting | 14:Fickle | 15:Honest | 16:Iron Willed | 17:Jovial | 18:Leader | 19:Light-Hearted | 20:Low Determination | 21:Low Self Belief | 22:Loyal | 23:Mercenary | 24:Model Citizen | 25:Model Professional | 26:Perfectionist | 27:Professional | 28:Realist | 29:Resilient | 30:Resolute | 31:Slack | 32:Spineless | 33:Spirited | 34:Sporting | 35:Temperamental | 36:Unambitious | 37:Unsporting | 38:Very Ambitious | -1:Not Set
+102,Person,Person Data,Adaptability,Byte,,ptrPerson,pero.Pada,,,,,Person > > Person Data > > Attributes > > Adaptability,
+109,Person,Person Data,Ambition,Byte,,ptrPerson,pero.Pada+0x1,,,,,Person > > Person Data > > Attributes > > Ambition,
+108,Person,Person Data,Loyalty,Byte,,ptrPerson,pero.Pada+0x2,,,,,Person > > Person Data > > Attributes > > Loyalty,
+107,Person,Person Data,Pressure,Byte,,ptrPerson,pero.Pada+0x3,,,,,Person > > Person Data > > Attributes > > Pressure,
+106,Person,Person Data,Professionalism,Byte,,ptrPerson,pero.Pada+0x4,,,,,Person > > Person Data > > Attributes > > Professionalism,
+105,Person,Person Data,Sportsmanship,Byte,,ptrPerson,pero.Pada+0x5,,,,,Person > > Person Data > > Attributes > > Sportsmanship,
+104,Person,Person Data,Temperament,Byte,,ptrPerson,pero.Pada+0x6,,,,,Person > > Person Data > > Attributes > > Temperament,
+103,Person,Person Data,Controversy,Byte,,ptrPerson,pero.Pada+0x7,,,,,Person > > Person Data > > Attributes > > Controversy,
+1703,Person,Person Data,Director of Football,Byte,,ptrPerson,9 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Director of Football,
+1705,Person,Person Data,Technical Director,Byte,,ptrPerson,E -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Technical Director,
+1683,Person,Person Data,Manager,Byte,,ptrPerson,0 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Manager,
+1711,Person,Person Data,Ast. Manager,Byte,,ptrPerson,1 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Ast. Manager,
+1710,Person,Person Data,Coach,Byte,,ptrPerson,2 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Coach,
+1709,Person,Person Data,Fitness Coach,Byte,,ptrPerson,6 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Fitness Coach,
+1708,Person,Person Data,Goalkeeping Coach,Byte,,ptrPerson,5 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Goalkeeping Coach,
+24031,Person,Person Data,Set Piece Coach,Byte,,ptrPerson,7 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Set Piece Coach,
+1702,Person,Person Data,Head of Youth Development,Byte,,ptrPerson,A -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Head of Youth Development,
+1706,Person,Person Data,Scout,Byte,,ptrPerson,4 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Scout,
+12486,Person,Person Data,Data Analyst,Byte,,ptrPerson,C -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Data Analyst,
+1707,Person,Person Data,Loan Manager,Byte,,ptrPerson,B -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Loan Manager,
+12485,Person,Person Data,Physio,Byte,,ptrPerson,3 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Physio,
+1704,Person,Person Data,Sports Scientist,Byte,,ptrPerson,D -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Sports Scientist,
+1701,Person,Person Data,Chairman,Byte,,ptrPerson,8 -> pero.Pjpr,,,,,Person > > Person Data > > Job Preferences > > Chairman,
+18097,Person,Player Data,Shirt Name,String,,ptrPlayer,4 -> plao.Pshn,,,16,0,Person > > Player Data > > General > > Shirt Name,*:
+7,Person,Player Data,CA,2 Bytes,,ptrPlayer,plao.Pcab,,,,,Person > > Player Data > > General > > CA,
+22728,Person,Player Data,RCA,4 Bytes,,ptrRCA,,,,,,Person > > Player Data > > General > > RCA,:
+8,Person,Player Data,PA,2 Bytes,,ptrPlayer,plao.Ppab,,,,,Person > > Player Data > > General > > PA,
+5,Person,Player Data,Current Rep.,2 Bytes,,ptrPlayer,plao.Pcrp,,,,,Person > > Player Data > > General > > Current Rep.,
+4,Person,Player Data,Home Rep.,2 Bytes,,ptrPlayer,plao.Phrp,,,,,Person > > Player Data > > General > > Home Rep.,
+6,Person,Player Data,World Rep.,2 Bytes,,ptrPlayer,plao.Pwrp,,,,,Person > > Player Data > > General > > World Rep.,
+408,Person,Player Data,Height,2 Bytes,,ptrPlayer,plao.Phes,,,,,Person > > Player Data > > General > > Height,
+409,Person,Player Data,Body Type,Byte,,ptrPlayer,pero.Pbdt,,,,,Person > > Player Data > > General > > Body Type,1:Ectomorph | 2:Ecto-Mesomorph | 3:Mesomorph | 4:Meso-Endomorph | 5:Endomorph
+68,Person,Player Data,Left Foot,Custom,FM Attribute,ptrPlayer,plao.Patr+0x18,,,,,Person > > Player Data > > General > > Left Foot,
+67,Person,Player Data,Right Foot,Custom,FM Attribute,ptrPlayer,plao.Patr+0x19,,,,,Person > > Player Data > > General > > Right Foot,
+1938,Person,Player Data,Has Work Permit,Binary,,ptrPerson,plao.Phnp,2,1,,,Person > > Player Data > > General > > Has Work Permit,0:No | 1:Yes
+1939,Person,Player Data,Treated As Non-EU In Italy,Binary,,ptrPlayer,plao.NEUI,3,1,,,Person > > Player Data > > General > > Treated As Non-EU In Italy,0:No | 1:Yes
+468,Person,Player Data,Morale,Byte,,ptrPlayer,plao.Pmor,,,,,Person > > Player Data > > Fitness & Morale > > Morale,20:Perfect | 19:Exceptional | 18:Superb | 17:Excellent | 16:Extremely Good | 15:Very Good | 14:Really Good | 13:Good | 12:Quite Good | 11:Fairly Good | 10:Okay | 9:Fairly Okay | 8:Fair | 7:Slightly Poor | 6:Fairly Poor | 5:Quite Poor | 4:Poor | 3:Very Poor | 2:Extremely Poor | 1:Abysmal
+3,Person,Player Data,Overall Physical Condition,2 Bytes,,ptrPlayer,plao.Popc,,,,,Person > > Player Data > > Fitness & Morale > > Overall Physical Condition,
+12676,Person,Player Data,Match Sharpness,2 Bytes,,ptrPlayer,plao.Pmsh,,,,,Person > > Player Data > > Fitness & Morale > > Match Sharpness,
+12677,Person,Player Data,Fatigue,2 Bytes,,ptrPlayer,plao.Pftg,,,,,Person > > Player Data > > Fitness & Morale > > Fatigue,
+1307,Person,Player Data,Role Used To Fill Empty Attributes,Byte,,ptrPlayer,plao.Plcp+0x1,,,,,Person > > Player Data > > Positions > > Role Used To Fill Empty Attributes,
+84,Person,Player Data,GK,Byte,,ptrPlayer,plao.Ppos+0,,,,,Person > > Player Data > > Positions > > GK,
+99,Person,Player Data,SW,Byte,,ptrPlayer,plao.Ppos+0x1,,,,,Person > > Player Data > > Positions > > SW,
+98,Person,Player Data,DL,Byte,,ptrPlayer,plao.Ppos+0x2,,,,,Person > > Player Data > > Positions > > DL,
+97,Person,Player Data,DC,Byte,,ptrPlayer,plao.Ppos+0x3,,,,,Person > > Player Data > > Positions > > DC,
+96,Person,Player Data,DR,Byte,,ptrPlayer,plao.Ppos+0x4,,,,,Person > > Player Data > > Positions > > DR,
+87,Person,Player Data,WBL,Byte,,ptrPlayer,plao.Ppos+0xD,,,,,Person > > Player Data > > Positions > > WBL,
+86,Person,Player Data,WBR,Byte,,ptrPlayer,plao.Ppos+0xE,,,,,Person > > Player Data > > Positions > > WBR,
+95,Person,Player Data,DM,Byte,,ptrPlayer,plao.Ppos+0x5,,,,,Person > > Player Data > > Positions > > DM,
+94,Person,Player Data,ML,Byte,,ptrPlayer,plao.Ppos+0x6,,,,,Person > > Player Data > > Positions > > ML,
+93,Person,Player Data,MC,Byte,,ptrPlayer,plao.Ppos+0x7,,,,,Person > > Player Data > > Positions > > MC,
+92,Person,Player Data,MR,Byte,,ptrPlayer,plao.Ppos+0x8,,,,,Person > > Player Data > > Positions > > MR,
+91,Person,Player Data,AML,Byte,,ptrPlayer,plao.Ppos+0x9,,,,,Person > > Player Data > > Positions > > AML,
+90,Person,Player Data,AMC,Byte,,ptrPlayer,plao.Ppos+0xA,,,,,Person > > Player Data > > Positions > > AMC,
+89,Person,Player Data,AMR,Byte,,ptrPlayer,plao.Ppos+0xB,,,,,Person > > Player Data > > Positions > > AMR,
+88,Person,Player Data,ST,Byte,,ptrPlayer,plao.Ppos+0xC,,,,,Person > > Player Data > > Positions > > ST,
+1305,Person,Player Data,Preferred Central Position,Byte,,ptrPlayer,plao.Plcp,,,,,Person > > Player Data > > Positions > > Preferred Central Position,0:Not Set | 1:Right | 2:Left | 3:Right Or Central When Three | 4:Left Or Central When Three | 5:Central When Three | 6:Right Of Two Or Right / Central When Three | 7:Left Of Two Or Left / Central When Three
+442,Person,Player Data,Acceleration,Custom,FM Attribute,ptrPlayer,plao.Patr+0x22,,,,,Person > > Player Data > > Attributes > > Physical Attributes > > Acceleration,
+453,Person,Player Data,Agility,Custom,FM Attribute,ptrPlayer,plao.Patr+0x2E,,,,,Person > > Player Data > > Attributes > > Physical Attributes > > Agility,
+452,Person,Player Data,Balance,Custom,FM Attribute,ptrPlayer,plao.Patr+0x2A,,,,,Person > > Player Data > > Attributes > > Physical Attributes > > Balance,
+451,Person,Player Data,Jumping Reach,Custom,FM Attribute,ptrPlayer,plao.Patr+0x27,,,,,Person > > Player Data > > Attributes > > Physical Attributes > > Jumping Reach,
+450,Person,Player Data,Natural Fitness,Custom,FM Attribute,ptrPlayer,plao.Patr+0x32,,,,,Person > > Player Data > > Attributes > > Physical Attributes > > Natural Fitness,
+449,Person,Player Data,Pace,Custom,FM Attribute,ptrPlayer,plao.Patr+0x26,,,,,Person > > Player Data > > Attributes > > Physical Attributes > > Pace,
+448,Person,Player Data,Stamina,Custom,FM Attribute,ptrPlayer,plao.Patr+0x25,,,,,Person > > Player Data > > Attributes > > Physical Attributes > > Stamina,
+447,Person,Player Data,Strength,Custom,FM Attribute,ptrPlayer,plao.Patr+0x24,,,,,Person > > Player Data > > Attributes > > Physical Attributes > > Strength,
+47,Person,Player Data,Aggression,Custom,FM Attribute,ptrPlayer,plao.Patr+0x2D,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Aggression,
+39,Person,Player Data,Anticipation,Custom,FM Attribute,ptrPlayer,plao.Patr+0x11,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Anticipation,
+49,Person,Player Data,Bravery,Custom,FM Attribute,ptrPlayer,plao.Patr+0x2B,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Bravery,
+73,Person,Player Data,Composure,Custom,FM Attribute,ptrPlayer,plao.Patr+0x34,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Composure,
+72,Person,Player Data,Concentration,Custom,FM Attribute,ptrPlayer,plao.Patr+0x35,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Concentration,
+38,Person,Player Data,Decision,Custom,FM Attribute,ptrPlayer,plao.Patr+0x12,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Decision,
+74,Person,Player Data,Determination,Custom,FM Attribute,ptrPlayer,plao.Patr+0x33,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Determination,
+66,Person,Player Data,Flair,Custom,FM Attribute,ptrPlayer,plao.Patr+0x1A,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Flair,
+52,Person,Player Data,Leadership,Custom,FM Attribute,ptrPlayer,plao.Patr+0x28,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Leadership,
+32,Person,Player Data,Off The Ball,Custom,FM Attribute,ptrPlayer,plao.Patr+0x6,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Off The Ball,
+36,Person,Player Data,Positioning,Custom,FM Attribute,ptrPlayer,plao.Patr+0x14,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Positioning,
+64,Person,Player Data,Teamwork,Custom,FM Attribute,ptrPlayer,plao.Patr+0x1C,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Teamwork,
+46,Person,Player Data,Vision,Custom,FM Attribute,ptrPlayer,plao.Patr+0xA,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Vision,
+63,Person,Player Data,Work Rate,Custom,FM Attribute,ptrPlayer,plao.Patr+0x1D,,,,,Person > > Player Data > > Attributes > > Mental Attributes > > Work Rate,
+428,Person,Player Data,Crossing,Custom,FM Attribute,ptrPlayer,plao.Patr+0x0,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > Crossing,
+427,Person,Player Data,Dribbling,Custom,FM Attribute,ptrPlayer,plao.Patr+0x1,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > Dribbling,
+426,Person,Player Data,Finishing,Custom,FM Attribute,ptrPlayer,plao.Patr+0x2,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > Finishing,
+425,Person,Player Data,First Touch,Custom,FM Attribute,ptrPlayer,plao.Patr+0x16,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > First Touch,
+423,Person,Player Data,Heading,Custom,FM Attribute,ptrPlayer,plao.Patr+0x3,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > Heading,
+422,Person,Player Data,Long Shots,Custom,FM Attribute,ptrPlayer,plao.Patr+0x4,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > Long Shots,
+420,Person,Player Data,Marking,Custom,FM Attribute,ptrPlayer,plao.Patr+0x5,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > Marking,
+419,Person,Player Data,Passing,Custom,FM Attribute,ptrPlayer,plao.Patr+0x7,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > Passing,
+417,Person,Player Data,Tackling,Custom,FM Attribute,ptrPlayer,plao.Patr+0x9,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > Tackling,
+416,Person,Player Data,Technique,Custom,FM Attribute,ptrPlayer,plao.Patr+0x17,,,,,Person > > Player Data > > Attributes > > Technical Attributes > > Technique,
+415,Person,Player Data,Corners,Custom,FM Attribute,ptrPlayer,plao.Patr+0x1B,,,,,Person > > Player Data > > Attributes > > Set Pieces > > Corners,
+424,Person,Player Data,Free Kick Taking,Custom,FM Attribute,ptrPlayer,plao.Patr+0x23,,,,,Person > > Player Data > > Attributes > > Set Pieces > > Free Kick Taking,
+421,Person,Player Data,Long Throws,Custom,FM Attribute,ptrPlayer,plao.Patr+0x1E,,,,,Person > > Player Data > > Attributes > > Set Pieces > > Long Throws,
+418,Person,Player Data,Penalty Taking,Custom,FM Attribute,ptrPlayer,plao.Patr+0x8,,,,,Person > > Player Data > > Attributes > > Set Pieces > > Penalty Taking,
+429,Person,Player Data,Aerial Reach,Custom,FM Attribute,ptrPlayer,plao.Patr+0xC,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Aerial Reach,
+439,Person,Player Data,Command Of Area,Custom,FM Attribute,ptrPlayer,plao.Patr+0xD,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Command Of Area,
+438,Person,Player Data,Communication,Custom,FM Attribute,ptrPlayer,plao.Patr+0xE,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Communication,
+437,Person,Player Data,Eccentricity,Custom,FM Attribute,ptrPlayer,plao.Patr+0x1F,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Eccentricity,
+436,Person,Player Data,Handling,Custom,FM Attribute,ptrPlayer,plao.Patr+0xB,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Handling,
+435,Person,Player Data,Kicking,Custom,FM Attribute,ptrPlayer,plao.Patr+0xF,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Kicking,
+434,Person,Player Data,One On Ones,Custom,FM Attribute,ptrPlayer,plao.Patr+0x13,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > One On Ones,
+431,Person,Player Data,Punching (Tendency),Custom,FM Attribute,ptrPlayer,plao.Patr+0x21,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Punching (Tendency),
+433,Person,Player Data,Reflexes,Custom,FM Attribute,ptrPlayer,plao.Patr+0x15,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Reflexes,
+432,Person,Player Data,Rushing Out (Tendency),Custom,FM Attribute,ptrPlayer,plao.Patr+0x20,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Rushing Out (Tendency),
+430,Person,Player Data,Throwing,Custom,FM Attribute,ptrPlayer,plao.Patr+0x10,,,,,Person > > Player Data > > Attributes > > Goalkeeping Attributes > > Throwing,
+446,Person,Player Data,Consistency,Custom,FM Attribute,ptrPlayer,plao.Patr+0x2C,,,,,Person > > Player Data > > Attributes > > Hidden Attributes > > Consistency,
+441,Person,Player Data,Dirtiness,Custom,FM Attribute,ptrPlayer,plao.Patr+0x29,,,,,Person > > Player Data > > Attributes > > Hidden Attributes > > Dirtiness,
+445,Person,Player Data,Imp. Matches,Custom,FM Attribute,ptrPlayer,plao.Patr+0x2F,,,,,Person > > Player Data > > Attributes > > Hidden Attributes > > Imp. Matches,
+444,Person,Player Data,Injury Proneness,Custom,FM Attribute,ptrPlayer,plao.Patr+0x30,,,,,Person > > Player Data > > Attributes > > Hidden Attributes > > Injury Proneness,
+443,Person,Player Data,Versatility,Custom,FM Attribute,ptrPlayer,plao.Patr+0x31,,,,,Person > > Player Data > > Attributes > > Hidden Attributes > > Versatility,
+11466,Person,Player Data,Runs With Ball Down Left,Binary,,ptrPerson,plao.Pprm+0,0,1,,,Person > > Player Data > > Player Traits > > Runs With Ball Down Left,
+11473,Person,Player Data,Runs With Ball Down Right,Binary,,ptrPerson,plao.Pprm+0,1,1,,,Person > > Player Data > > Player Traits > > Runs With Ball Down Right,
+11472,Person,Player Data,Runs With Ball Down Center,Binary,,ptrPerson,plao.Pprm+0,2,1,,,Person > > Player Data > > Player Traits > > Runs With Ball Down Center,
+11471,Person,Player Data,Gets Into Opposition Area,Binary,,ptrPerson,plao.Pprm+0,3,1,,,Person > > Player Data > > Player Traits > > Gets Into Opposition Area,
+11470,Person,Player Data,Moves Into Channels,Binary,,ptrPerson,plao.Pprm+0,4,1,,,Person > > Player Data > > Player Traits > > Moves Into Channels,
+11469,Person,Player Data,Gets Forward Whenever Possible,Binary,,ptrPerson,plao.Pprm+0,5,1,,,Person > > Player Data > > Player Traits > > Gets Forward Whenever Possible,
+11468,Person,Player Data,Plays Short Simple Passes,Binary,,ptrPerson,plao.Pprm+0,6,1,,,Person > > Player Data > > Player Traits > > Plays Short Simple Passes,
+11467,Person,Player Data,Tries Killer Balls Often,Binary,,ptrPerson,plao.Pprm+0,7,1,,,Person > > Player Data > > Player Traits > > Tries Killer Balls Often,
+11474,Person,Player Data,Shoots From Distance,Binary,,ptrPerson,plao.Pprm+1,0,1,,,Person > > Player Data > > Player Traits > > Shoots From Distance,
+11475,Person,Player Data,Shoots With Power,Binary,,ptrPerson,plao.Pprm+1,1,1,,,Person > > Player Data > > Player Traits > > Shoots With Power,
+11476,Person,Player Data,Places Shots,Binary,,ptrPerson,plao.Pprm+1,2,1,,,Person > > Player Data > > Player Traits > > Places Shots,
+11477,Person,Player Data,Curls Ball,Binary,,ptrPerson,plao.Pprm+1,3,1,,,Person > > Player Data > > Player Traits > > Curls Ball,
+11478,Person,Player Data,Likes to Round Keeper,Binary,,ptrPerson,plao.Pprm+1,4,1,,,Person > > Player Data > > Player Traits > > Likes to Round Keeper,
+11479,Person,Player Data,Likes to Try To Break Offside Trap,Binary,,ptrPerson,plao.Pprm+1,5,1,,,Person > > Player Data > > Player Traits > > Likes to Try To Break Offside Trap,
+11527,Person,Player Data,Uses Outside Of Foot,Binary,,ptrPerson,plao.Pprm+1,6,1,,,Person > > Player Data > > Player Traits > > Uses Outside Of Foot,
+11528,Person,Player Data,Marks Opponent Tightly,Binary,,ptrPerson,plao.Pprm+1,7,1,,,Person > > Player Data > > Player Traits > > Marks Opponent Tightly,
+11483,Person,Player Data,Winds Up Opponents,Binary,,ptrPerson,plao.Pprm+2,0,1,,,Person > > Player Data > > Player Traits > > Winds Up Opponents,
+11481,Person,Player Data,Argues With Officials,Binary,,ptrPerson,plao.Pprm+2,1,1,,,Person > > Player Data > > Player Traits > > Argues With Officials,
+11484,Person,Player Data,Plays with Back To Goal,Binary,,ptrPerson,plao.Pprm+2,2,1,,,Person > > Player Data > > Player Traits > > Plays with Back To Goal,
+11485,Person,Player Data,Comes Deep To Get Ball,Binary,,ptrPerson,plao.Pprm+2,3,1,,,Person > > Player Data > > Player Traits > > Comes Deep To Get Ball,
+11486,Person,Player Data,Plays One-Twos,Binary,,ptrPerson,plao.Pprm+2,4,1,,,Person > > Player Data > > Player Traits > > Plays One-Twos,
+11487,Person,Player Data,Likes To Lob Keeper,Binary,,ptrPerson,plao.Pprm+2,5,1,,,Person > > Player Data > > Player Traits > > Likes To Lob Keeper,
+11488,Person,Player Data,Dictates Tempo,Binary,,ptrPerson,plao.Pprm+2,6,1,,,Person > > Player Data > > Player Traits > > Dictates Tempo,
+11489,Person,Player Data,Attempts Overhead Kicks,Binary,,ptrPerson,plao.Pprm+2,7,1,,,Person > > Player Data > > Player Traits > > Attempts Overhead Kicks,
+11490,Person,Player Data,Looks For Pass Rather Than Attempting To Score,Binary,,ptrPerson,plao.Pprm+3,0,1,,,Person > > Player Data > > Player Traits > > Looks For Pass Rather Than Attempting To Score,
+11491,Person,Player Data,Plays No Through Balls,Binary,,ptrPerson,plao.Pprm+3,1,1,,,Person > > Player Data > > Player Traits > > Plays No Through Balls,
+11492,Person,Player Data,Stops Play,Binary,,ptrPerson,plao.Pprm+3,2,1,,,Person > > Player Data > > Player Traits > > Stops Play,
+11493,Person,Player Data,Knocks Ball Past Opponent,Binary,,ptrPerson,plao.Pprm+3,3,1,,,Person > > Player Data > > Player Traits > > Knocks Ball Past Opponent,
+11529,Person,Player Data,Moves Ball To Right Foot Before Dribble Attempt,Binary,,ptrPerson,plao.Pprm+3,4,1,,,Person > > Player Data > > Player Traits > > Moves Ball To Right Foot Before Dribble Attempt,
+11530,Person,Player Data,Moves Ball To Left Foot Before Dribble Attempt,Binary,,ptrPerson,plao.Pprm+3,5,1,,,Person > > Player Data > > Player Traits > > Moves Ball To Left Foot Before Dribble Attempt,
+11496,Person,Player Data,Dwells On Ball,Binary,,ptrPerson,plao.Pprm+3,6,1,,,Person > > Player Data > > Player Traits > > Dwells On Ball,
+11497,Person,Player Data,Arrives Late In Opponents' Area,Binary,,ptrPerson,plao.Pprm+3,7,1,,,Person > > Player Data > > Player Traits > > Arrives Late In Opponents' Area,
+11498,Person,Player Data,Tries To Play Way Out Of Trouble,Binary,,ptrPerson,plao.Pprm+4,0,1,,,Person > > Player Data > > Player Traits > > Tries To Play Way Out Of Trouble,
+11499,Person,Player Data,Stays Back At All Times,Binary,,ptrPerson,plao.Pprm+4,1,1,,,Person > > Player Data > > Player Traits > > Stays Back At All Times,
+11500,Person,Player Data,Avoids Using Weaker Foot,Binary,,ptrPerson,plao.Pprm+4,2,1,,,Person > > Player Data > > Player Traits > > Avoids Using Weaker Foot,
+11534,Person,Player Data,Tries Tricks,Binary,,ptrPerson,plao.Pprm+4,3,1,,,Person > > Player Data > > Player Traits > > Tries Tricks,
+11502,Person,Player Data,Tries Long Range Free Kicks,Binary,,ptrPerson,plao.Pprm+4,4,1,,,Person > > Player Data > > Player Traits > > Tries Long Range Free Kicks,
+11503,Person,Player Data,Dives Into Tackles,Binary,,ptrPerson,plao.Pprm+4,5,1,,,Person > > Player Data > > Player Traits > > Dives Into Tackles,
+11504,Person,Player Data,Does Not Dive Into Tackles,Binary,,ptrPerson,plao.Pprm+4,6,1,,,Person > > Player Data > > Player Traits > > Does Not Dive Into Tackles,
+11505,Person,Player Data,Cuts Inside From Both Wings,Binary,,ptrPerson,plao.Pprm+4,7,1,,,Person > > Player Data > > Player Traits > > Cuts Inside From Both Wings,
+11506,Person,Player Data,Hugs Line,Binary,,ptrPerson,plao.Pprm+5,0,1,,,Person > > Player Data > > Player Traits > > Hugs Line,
+11531,Person,Player Data,Gets Crowd Going,Binary,,ptrPerson,plao.Pprm+5,1,1,,,Person > > Player Data > > Player Traits > > Gets Crowd Going,
+11508,Person,Player Data,Tries First Time Shots,Binary,,ptrPerson,plao.Pprm+5,2,1,,,Person > > Player Data > > Player Traits > > Tries First Time Shots,
+11509,Person,Player Data,Tries Long Range Passes,Binary,,ptrPerson,plao.Pprm+5,3,1,,,Person > > Player Data > > Player Traits > > Tries Long Range Passes,
+11532,Person,Player Data,Likes Ball Played Into Feet,Binary,,ptrPerson,plao.Pprm+5,4,1,,,Person > > Player Data > > Player Traits > > Likes Ball Played Into Feet,
+11511,Person,Player Data,Hits Free Kick With Power,Binary,,ptrPerson,plao.Pprm+5,5,1,,,Person > > Player Data > > Player Traits > > Hits Free Kick With Power,
+11533,Person,Player Data,Likes To Beat Man Repeatedly,Binary,,ptrPerson,plao.Pprm+5,6,1,,,Person > > Player Data > > Player Traits > > Likes To Beat Man Repeatedly,
+11513,Person,Player Data,Likes To Switch Ball To Other Flank,Binary,,ptrPerson,plao.Pprm+5,7,1,,,Person > > Player Data > > Player Traits > > Likes To Switch Ball To Other Flank,
+11516,Person,Player Data,Possesses Long Flat Throw,Binary,,ptrPerson,plao.Pprm+6,2,1,,,Person > > Player Data > > Player Traits > > Possesses Long Flat Throw,
+11517,Person,Player Data,Runs With Ball Often,Binary,,ptrPerson,plao.Pprm+6,3,1,,,Person > > Player Data > > Player Traits > > Runs With Ball Often,
+11518,Person,Player Data,Runs With Ball Rarely,Binary,,ptrPerson,plao.Pprm+6,4,1,,,Person > > Player Data > > Player Traits > > Runs With Ball Rarely,
+11520,Person,Player Data,Does not Move Into Channels,Binary,,ptrPerson,plao.Pprm+6,6,1,,,Person > > Player Data > > Player Traits > > Does not Move Into Channels,
+11521,Person,Player Data,Uses Long Throw To Start Counter Attacks,Binary,,ptrPerson,plao.Pprm+6,7,1,,,Person > > Player Data > > Player Traits > > Uses Long Throw To Start Counter Attacks,
+11522,Person,Player Data,Refrains From Taking Long Shots,Binary,,ptrPerson,plao.Pprm+7,0,1,,,Person > > Player Data > > Player Traits > > Refrains From Taking Long Shots,
+11523,Person,Player Data,Cuts Inside From Left Wing,Binary,,ptrPerson,plao.Pprm+7,1,1,,,Person > > Player Data > > Player Traits > > Cuts Inside From Left Wing,
+11524,Person,Player Data,Cuts Inside From Right Wing,Binary,,ptrPerson,plao.Pprm+7,2,1,,,Person > > Player Data > > Player Traits > > Cuts Inside From Right Wing,
+11525,Person,Player Data,Crosses Early,Binary,,ptrPerson,plao.Pprm+7,3,1,,,Person > > Player Data > > Player Traits > > Crosses Early,
+11526,Person,Player Data,Brings Ball Out of Defense,Binary,,ptrPerson,plao.Pprm+7,4,1,,,Person > > Player Data > > Player Traits > > Brings Ball Out of Defense,
+12809,Person,Player Data,Plays Ball With Feet,Binary,,ptrPerson,plao.Pprm+7,7,1,,,Person > > Player Data > > Player Traits > > Plays Ball With Feet,
+11167,Person,Staff Data,CA,2 Bytes,,ptrStaff,nplo.Ncra,,,,,Person > > Staff Data > > General > > CA,
+11168,Person,Staff Data,PA,2 Bytes,,ptrStaff,nplo.Npta,,,,,Person > > Staff Data > > General > > PA,
+11169,Person,Staff Data,Current Rep.,2 Bytes,,ptrStaff,nplo.Ncrr,,,,,Person > > Staff Data > > General > > Current Rep.,
+11170,Person,Staff Data,Home Rep.,2 Bytes,,ptrStaff,nplo.Nhmr,,,,,Person > > Staff Data > > General > > Home Rep.,
+11171,Person,Staff Data,World Rep.,2 Bytes,,ptrStaff,nplo.Nwrr,,,,,Person > > Staff Data > > General > > World Rep.,
+11172,Person,Staff Data,In Possession,Byte,,ptrStaff,nplo.Nppf,,,,,Person > > Staff Data > > General > > Preferred Formations > > In Possession,
+24374,Person,Staff Data,Out of Possession,Byte,,ptrStaff,nplo.Nppf+0x4,,,,,Person > > Staff Data > > General > > Preferred Formations > > Out of Possession,0:Not Set | 65:3-2-5 DM 2AM Wide | 2:5-3-2 WB | 3:4-4-2 | 4:4-3-3 DM Wide | 6:3-5-2 | 7:4-4-2 Diamond Narrow | 8:4-5-1 | 9:3-4-3 | 10:3-4-1-2 | 11:3-4-2-1 | 12:4-3-2-1 Narrow | 14:4-3-1-2 Narrow | 15:5-4-1 Diamond WB | 16:4-4-1-1 | 18:4-2-3-1 Narrow | 19:4-1-3-1-1 DM AM Narrow | 20:4-1-3-2 DM Narrow | 21:4-2-3-1 Wide | 22:4-4-2 2DM | 23:4-3-3 2DM Wide | 24:4-2-2-2 DM Narrow | 25:3-1-3-1-2 DM | 26:4-3-3 DM Narrow | 27:4-3-2-1 DM AM Narrow | 28:4-2-4 DM Wide | 29:4-2-3-1 DM AM Wide | 30:5-3-2 DM WB | 31:3-4-2-1 DM | 32:4-1-4-1 DM | 33:4-4-1-1 2DM | 34:3-2-3-2 DM | 35:5-2-3 DM Wide | 36:4-3-3 Narrow | 38:5-4-1 | 40:4-2-3-1 DM AM Narrow | 41:5-2-1-2 WB | 42:5-1-2-2 DM Narrow | 47:5-2-3 Narrow | 64:5-2-1-2 DM AM | 50:4-1-4-1 DM Asm AM(R) | 51:4-2-4-0 DM Wide | 52:4-1-3-2 DM | 53:4-1-4-1 DM Asm AM(L) | 54:4-5-1 2DM | 55:4-5-1-0 2DM | 56:5-1-3-1 DM WB | 57:5-2-2-1 DM | 58:5-2-2-1-0 DM | 59:5-2-2-1 WB | 60:3-1-4-2 DM | 61:5-2-3 WB Wide | 62:4-2-2-2 DM AM Narrow | 63:5-2-2-1 DM AM
+11173,Person,Staff Data,In Possession,Byte,,ptrStaff,nplo.Npsf,,,,,Person > > Staff Data > > General > > Second Preferred Formation > > In Possession,
+24399,Person,Staff Data,Out of Possession,Byte,,ptrStaff,nplo.Npsf+0x4,,,,,Person > > Staff Data > > General > > Second Preferred Formation > > Out of Possession,0:Not Set | 2:5-3-2 WB | 3:4-4-2 | 4:4-3-3 DM Wide | 6:3-5-2 | 7:4-4-2 Diamond Narrow | 8:4-5-1 | 9:3-4-3 | 10:3-4-1-2 | 11:3-4-2-1 | 12:4-3-2-1 Narrow | 14:4-3-1-2 Narrow | 15:5-4-1 Diamond WB | 16:4-4-1-1 | 18:4-2-3-1 Narrow | 19:4-1-3-1-1 DM AM Narrow | 20:4-1-3-2 DM Narrow | 21:4-2-3-1 Wide | 22:4-4-2 2DM | 23:4-3-3 2DM Wide | 24:4-2-2-2 DM Narrow | 25:3-1-3-1-2 DM | 26:4-3-3 DM Narrow | 27:4-3-2-1 DM AM Narrow | 28:4-2-4 DM Wide | 29:4-2-3-1 DM AM Wide | 30:5-3-2 DM WB | 31:3-4-2-1 DM | 32:4-1-4-1 DM | 33:4-4-1-1 2DM | 34:3-2-3-2 DM | 35:5-2-3 DM Wide | 36:4-3-3 Narrow | 38:5-4-1 | 40:4-2-3-1 DM AM Narrow | 41:5-2-1-2 WB | 42:5-1-2-2 DM Narrow | 47:5-2-3 Narrow | 64:5-2-1-2 DM AM | 50:4-1-4-1 DM Asm AM(R) | 51:4-2-4-0 DM Wide | 52:4-1-3-2 DM | 53:4-1-4-1 DM Asm AM(L) | 54:4-5-1 2DM | 55:4-5-1-0 2DM | 56:5-1-3-1 DM WB | 57:5-2-2-1 DM | 58:5-2-2-1-0 DM | 59:5-2-2-1 WB | 60:3-1-4-2 DM | 61:5-2-3 WB Wide | 62:4-2-2-2 DM AM Narrow | 63:5-2-2-1 DM AM
+11174,Person,Staff Data,Defensive Formation,Byte,,ptrStaff,nplo.Npdf,,,,,Person > > Staff Data > > General > > Defensive Formation,
+11175,Person,Staff Data,Attacking Formation,Byte,,ptrStaff,nplo.Npaf,,,,,Person > > Staff Data > > General > > Attacking Formation,
+11176,Person,Staff Data,Coaching Style,Byte,,ptrStaff,nplo.Npcs,,,,,Person > > Staff Data > > General > > Coaching Style,0:Not Set | 1:General | 2:Goalkeeping | 3:Fitness | 4:Attacking | 5:Defending | 6:Tactical | 7:Technical | 8:Mental
+11177,Person,Staff Data,Coaching License,Byte,,ptrPerson,nplo.Npcl,,,,,Person > > Staff Data > > General > > Coaching License,0:None | 8:- | 7:National C License | 6:National B License | 5:National A License | 4:Continental C License | 3:Continental B License | 2:Continental A License | 1:Continental Pro License | 249:Studying To National C License | 250:Studying To National B License | 251:Studying To National A License | 252:Studying To Continental C License | 253:Studying To Continental B License | 254:Studying To Continental A License | 255:Studying To Continental Pro License
+11200,Person,Staff Data,Attacking,Custom,FM Attribute,ptrStaff,nplo.Npat+0x22,,,,,Person > > Staff Data > > Attributes > > Coaching Attributes > > Attacking,
+11201,Person,Staff Data,Defending,Custom,FM Attribute,ptrStaff,nplo.Npat+0x23,,,,,Person > > Staff Data > > Attributes > > Coaching Attributes > > Defending,
+11202,Person,Staff Data,Fitness,Custom,FM Attribute,ptrStaff,nplo.Npat+0x24,,,,,Person > > Staff Data > > Attributes > > Coaching Attributes > > Fitness,
+24030,Person,Staff Data,Set Pieces,Custom,FM Attribute,ptrStaff,nplo.Npat+0x33,,,,,Person > > Staff Data > > Attributes > > Coaching Attributes > > Set Pieces,
+11206,Person,Staff Data,Possession,Custom,FM Attribute,ptrStaff,nplo.Npat+0x25,,,,,Person > > Staff Data > > Attributes > > Coaching Attributes > > Possession,
+11208,Person,Staff Data,Tactical,Custom,FM Attribute,ptrStaff,nplo.Npat+0x27,,,,,Person > > Staff Data > > Attributes > > Coaching Attributes > > Tactical,
+11209,Person,Staff Data,Technical,Custom,FM Attribute,ptrStaff,nplo.Npat+0x26,,,,,Person > > Staff Data > > Attributes > > Coaching Attributes > > Technical,
+11199,Person,Staff Data,Working with Youngsters,Byte,,ptrStaff,nplo.Npat+0xC,,,,,Person > > Staff Data > > Attributes > > Coaching Attributes > > Working with Youngsters,
+12465,Person,Staff Data,GK Distribution,Custom,FM Attribute,ptrStaff,nplo.Npat+0x2A,,,,,Person > > Staff Data > > Attributes > > GK Coaching Attributes > > GK Distribution,
+12466,Person,Staff Data,GK Handling,Custom,FM Attribute,ptrStaff,nplo.Npat+0x29,,,,,Person > > Staff Data > > Attributes > > GK Coaching Attributes > > GK Handling,
+12467,Person,Staff Data,GK Shot Stopping,Custom,FM Attribute,ptrStaff,nplo.Npat+0x1B,,,,,Person > > Staff Data > > Attributes > > GK Coaching Attributes > > GK Shot Stopping,
+11214,Person,Staff Data,Adaptability,Byte,,ptrPerson,pero.Pada,,,,,Person > > Staff Data > > Attributes > > Mental Attributes > > Adaptability,
+11216,Person,Staff Data,Determination,Custom,FM Attribute,ptrStaff,nplo.Npat+0xD,,,,,Person > > Staff Data > > Attributes > > Mental Attributes > > Determination,
+11215,Person,Staff Data,Authority,Byte,,ptrStaff,nplo.Npat+0x4,,,,,Person > > Staff Data > > Attributes > > Mental Attributes > > Authority,
+11210,Person,Staff Data,People Management,Custom,FM Attribute,ptrStaff,nplo.Npat+0x1E,,,,,Person > > Staff Data > > Attributes > > Mental Attributes > > People Management,
+11219,Person,Staff Data,Motivating,Custom,FM Attribute,ptrStaff,nplo.Npat+0x1F,,,,,Person > > Staff Data > > Attributes > > Mental Attributes > > Motivating,
+12444,Person,Staff Data,Judging Player Ability,Custom,FM Attribute,ptrStaff,nplo.Npat+0x1C,,,,,Person > > Staff Data > > Attributes > > Knowledge Attributes > > Judging Player Ability,
+12445,Person,Staff Data,Judging Player Potential,Custom,FM Attribute,ptrStaff,nplo.Npat+0x1D,,,,,Person > > Staff Data > > Attributes > > Knowledge Attributes > > Judging Player Potential,
+12446,Person,Staff Data,Judging Staff Ability,Custom,FM Attribute,ptrStaff,nplo.Npat+0x32,,,,,Person > > Staff Data > > Attributes > > Knowledge Attributes > > Judging Staff Ability,
+12451,Person,Staff Data,Negotiating,Custom,FM Attribute,ptrStaff,nplo.Npat+0x31,,,,,Person > > Staff Data > > Attributes > > Knowledge Attributes > > Negotiating,
+12448,Person,Staff Data,Tactical Knowledge,Custom,FM Attribute,ptrStaff,nplo.Npat+0x21,,,,,Person > > Staff Data > > Attributes > > Knowledge Attributes > > Tactical Knowledge,
+12459,Person,Staff Data,Physiotherapy,Custom,FM Attribute,ptrStaff,nplo.Npat+0x20,,,,,Person > > Staff Data > > Attributes > > Medical Attributes > > Physiotherapy,
+12460,Person,Staff Data,Sports Science,Custom,FM Attribute,ptrStaff,nplo.Npat+0x2F,,,,,Person > > Staff Data > > Attributes > > Medical Attributes > > Sports Science,
+11229,Person,Staff Data,Analysing Data,Custom,FM Attribute,ptrStaff,nplo.Npat+0x2C,,,,,Person > > Staff Data > > Attributes > > Analyst Attributes > > Analysing Data,
+11224,Person,Staff Data,Business,Byte,,ptrStaff,nplo.Npat+0x1,,,,,Person > > Staff Data > > Attributes > > Chairman Attributes > > Business,
+11225,Person,Staff Data,Interference,Byte,,ptrStaff,nplo.Npat+0x6,,,,,Person > > Staff Data > > Attributes > > Chairman Attributes > > Interference,
+11227,Person,Staff Data,Resources,Byte,,ptrStaff,nplo.Npat+0xB,,,,,Person > > Staff Data > > Attributes > > Chairman Attributes > > Resources,
+11226,Person,Staff Data,Patience,Byte,,ptrStaff,nplo.Npat+0x9,,,,,Person > > Staff Data > > Attributes > > Chairman Attributes > > Patience,
+11179,Person,Staff Data,Attacking,Byte,,ptrStaff,nplo.Npat,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Attacking,
+12997,Person,Staff Data,Depth,Byte,,ptrStaff,nplo.Npat+0x2,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Depth,
+11180,Person,Staff Data,Defensive Line,Byte,,ptrStaff,nplo.Npat+0x13,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Defensive Line,
+11181,Person,Staff Data,Directness,Byte,,ptrStaff,nplo.Npat+0x3,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Directness,
+11211,Person,Staff Data,Dirtiness Allowance,Custom,FM Attribute,ptrStaff,nplo.Npat+0x28,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Dirtiness Allowance,
+13014,Person,Staff Data,Eccentricity,Custom,FM Attribute,ptrStaff,nplo.Npat+0x30,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Eccentricity,
+11182,Person,Staff Data,Fluidity,Byte,,ptrStaff,nplo.Npat+0x14,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Fluidity,
+11183,Person,Staff Data,Flexibility,Byte,,ptrStaff,nplo.Npat+0x15,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Flexibility,
+11184,Person,Staff Data,Free Roles,Byte,,ptrStaff,nplo.Npat+0x5,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Free Roles,
+11185,Person,Staff Data,Marking,Byte,,ptrStaff,nplo.Npat+0x7,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Marking,
+11186,Person,Staff Data,Offside,Byte,,ptrStaff,nplo.Npat+0x8,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Offside,
+11187,Person,Staff Data,Pressing Intensity,Byte,,ptrStaff,nplo.Npat+0xA,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Pressing Intensity,
+11188,Person,Staff Data,Sitting Back,Byte,,ptrStaff,nplo.Npat+0x10,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Sitting Back,
+13013,Person,Staff Data,Technique,Byte,,ptrStaff,nplo.Npat+0x2,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Technique,
+11189,Person,Staff Data,Tempo,Byte,,ptrStaff,nplo.Npat+0x18,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Tempo,
+11190,Person,Staff Data,Use Of Playmaker,Byte,,ptrStaff,nplo.Npat+0x11,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Use Of Playmaker,
+11191,Person,Staff Data,Use Of Subtitutions,Byte,,ptrStaff,nplo.Npat+0x12,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Use Of Subtitutions,
+11192,Person,Staff Data,Width,Byte,,ptrStaff,nplo.Npat+0x19,,,,,Person > > Staff Data > > Attributes > > Tactical Attributes > > Width,
+11194,Person,Staff Data,Buying Players,Byte,,ptrStaff,nplo.Npat+0xE,,,,,Person > > Staff Data > > Attributes > > Non Tactical Attributes > > Buying Players,
+11195,Person,Staff Data,Hardness Of Training,Byte,,ptrStaff,nplo.Npat+0x16,,,,,Person > > Staff Data > > Attributes > > Non Tactical Attributes > > Hardness Of Training,
+11196,Person,Staff Data,Mind Games,Byte,,ptrStaff,nplo.Npat+0xF,,,,,Person > > Staff Data > > Attributes > > Non Tactical Attributes > > Mind Games,
+11197,Person,Staff Data,Squad Rotation,Byte,,ptrStaff,nplo.Npat+0x17,,,,,Person > > Staff Data > > Attributes > > Non Tactical Attributes > > Squad Rotation,
+11212,Person,Staff Data,Versatility,Custom,FM Attribute,ptrStaff,nplo.Npat+0x2B,,,,,Person > > Staff Data > > Attributes > > Non Tactical Attributes > > Versatility,
+12673,Person,Manager Data,Media Handling,Byte,,ptrHumanStaff,mano.Mcha+0x6,,,,,Person > > Manager Data > > Characteristic > > Media Handling,
+12669,Person,Manager Data,Tactical Consistency,Byte,,ptrHumanStaff,mano.Mcha+0x3,,,,,Person > > Manager Data > > Characteristic > > Tactical Consistency,
+12667,Person,Manager Data,Hands On Approach,Byte,,ptrHumanStaff,mano.Mcha+0x5,,,,,Person > > Manager Data > > Characteristic > > Hands On Approach,
+12672,Person,Manager Data,Managing Finances,Byte,,ptrHumanStaff,mano.Mcha,,,,,Person > > Manager Data > > Characteristic > > Managing Finances,
+12671,Person,Manager Data,Handling Team Discipline,Byte,,ptrHumanStaff,mano.Mcha+0x1,,,,,Person > > Manager Data > > Characteristic > > Handling Team Discipline,
+12670,Person,Manager Data,Loyalty To Players,Byte,,ptrHumanStaff,mano.Mcha+0x2,,,,,Person > > Manager Data > > Characteristic > > Loyalty To Players,
+12668,Person,Manager Data,Domestic Player Bias,Byte,,ptrHumanStaff,mano.Mcha+0x4,,,,,Person > > Manager Data > > Characteristic > > Domestic Player Bias,
+17742,Person,Manager Data,Recruitment Package,Byte,,ptrHumanStaff,mano.Msrp -> mano.Mscc,,,,,Person > > Manager Data > > Scouting Centre > > Recruitment Package,1:None | 2:Own Division | 3:Surrounding Divisions | 4:Nation | 5:Region | 6:Continent | 7:World
+17743,Person,Manager Data,Scouting Budget (Season),4 Bytes,,ptrHumanStaff,mano.Mscb -> mano.Mscc,,,,,Person > > Manager Data > > Scouting Centre > > Scouting Budget (Season),
+17744,Person,Manager Data,Scouting Budget (Rem.),4 Bytes,,ptrHumanStaff,mano.Mscb+0x4 -> mano.Mscc,,,,,Person > > Manager Data > > Scouting Centre > > Scouting Budget (Rem.),
+11569,Person,Manager Data,Coaching Staff,Byte,,ptrHumanStaff,mano.Mest -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > First Team > > Coaching Staff,
+11578,Person,Manager Data,Physio,Byte,,ptrHumanStaff,mano.Mest+0x3 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > First Team > > Physio,
+11577,Person,Manager Data,Scouts,Byte,,ptrHumanStaff,mano.Mest+0x13 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > First Team > > Scouts,
+11576,Person,Manager Data,Sport Scientists,Byte,,ptrHumanStaff,mano.Mest+0x9 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > First Team > > Sport Scientists,
+11575,Person,Manager Data,Performance Analyst,Byte,,ptrHumanStaff,mano.Mest+0xC -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > First Team > > Performance Analyst,
+22760,Person,Manager Data,Recruitment Analyst,Byte,,ptrHumanStaff,mano.Mest+0x14 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > First Team > > Recruitment Analyst,
+11584,Person,Manager Data,Coaching Staff,Byte,,ptrHumanStaff,mano.Mest+0x1 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > Reserve Team > > Coaching Staff,
+22741,Person,Manager Data,Physio,Byte,,ptrHumanStaff,mano.Mest+0x3+0x1 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > Reserve Team > > Physio,
+11587,Person,Manager Data,Sport Scientists,Byte,,ptrHumanStaff,mano.Mest+0x9+0x1 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > Reserve Team > > Sport Scientists,
+11588,Person,Manager Data,Performance Analyst,Byte,,ptrHumanStaff,mano.Mest+0xC+0x1 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > Reserve Team > > Performance Analyst,
+24401,Person,Manager Data,Coaching Staff,Byte,,ptrHumanStaff,mano.Mest+0x2 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > Youth Team > > Coaching Staff,
+24402,Person,Manager Data,Physio,Byte,,ptrHumanStaff,mano.Mest+0x3+0x2 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > Youth Team > > Physio,
+24403,Person,Manager Data,Sport Scientists,Byte,,ptrHumanStaff,mano.Mest+0x9+0x2 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > Youth Team > > Sport Scientists,
+24404,Person,Manager Data,Performance Analyst,Byte,,ptrHumanStaff,mano.Mest+0xC+0x2 -> mano.Mscc,,,,,Person > > Manager Data > > Extra Staff > > Youth Team > > Performance Analyst,
+24022,Person,Manager Data,All Players Interested,Binary,,ptrHumanStaff,mano.Pfl1,0,1,,,Person > > Manager Data > > Unlockables > > All Players Interested,0:False | 1:True
+24024,Person,Manager Data,Become Unsackable,Binary,,ptrHumanStaff,mano.Pfl1,1,1,,,Person > > Manager Data > > Unlockables > > Become Unsackable,0:False | 1:True
+24023,Person,Manager Data,Unlimited Scouting,Binary,,ptrHumanStaff,mano.Pfl1,2,1,,,Person > > Manager Data > > Unlockables > > Unlimited Scouting,0:False | 1:True
+24026,Person,Manager Data,Attribute Masking,Binary,,ptrHumanStaff,mano.Pfl1,4,1,,,Person > > Manager Data > > Unlockables > > Attribute Masking,0:False | 1:True
+24027,Person,Manager Data,Squad Registration Anytime,Binary,,ptrHumanStaff,mano.Pfl2,0,1,,,Person > > Manager Data > > Unlockables > > Squad Registration Anytime,0:False | 1:True
+24028,Person,Manager Data,Squad Numbers Anytime,Binary,,ptrHumanStaff,mano.Pfl2,1,1,,,Person > > Manager Data > > Unlockables > > Squad Numbers Anytime,0:False | 1:True
+24040,Person,Manager Data,Show All Players In Search (Requires save and reload),Byte,,ptrHumanStaff,mano.Mrfl -> 0x0 -> mano.Mrfi,,,,,Person > > Manager Data > > Unlockables > > Show All Players In Search (Requires save and reload),0:False | 1:True
+24041,Person,Manager Data,Show All Staff In Search (Requires save and reload),Byte,,ptrHumanStaff,mano.Mrfl -> 0x8 -> mano.Mrfi,,,,,Person > > Manager Data > > Unlockables > > Show All Staff In Search (Requires save and reload),0:False | 1:True
+17206,Stadium,Details,Row ID,4 Bytes,,ptrStadium,objo.Rwid,,,,,Stadium > > Details > > Row ID,*:
+17207,Stadium,Details,Unique ID,4 Bytes,,ptrStadium,objo.Duni,,,,,Stadium > > Details > > Unique ID,*:
+17430,Stadium,Details,Random ID,4 Bytes,,ptrStadium,objo.Rdui,,,,,Stadium > > Details > > Random ID,*:
+17208,Stadium,Details,Name,String,,ptrStadium,4 -> stao.Snam,,,64,0,Stadium > > Details > > Name,:
+17209,Stadium,Details,City,String,,ptrStadium,4 -> ctyo.Cnam -> stao.Scti,,,32,0,Stadium > > Details > > City,:
+17210,Stadium,Details,Owner,String,,ptrStadium,4 -> cluo.Cnam -> stao.Sowi,,,32,0,Stadium > > Details > > Owner,:
+17211,Stadium,Details,Owner Type,Byte,,ptrStadium,stao.Soty,,,,,Stadium > > Details > > Owner Type,0:Not Set | 1:Club | 2:Council | 3:Private | 4:Chairman | 5:Fans
+17212,Stadium,Details,Is Training Ground,Binary,,ptrStadium,stao.Stf1,2,1,,,Stadium > > Details > > Is Training Ground,0:No | 1:Yes
+17214,Stadium,Details,Hex,4 Bytes,,ptrStadium,stao.Sscl,,,,,Stadium > > Details > > Seat Colour > > Hex,
+17216,Stadium,Details,Red,Byte,,ptrStadium,stao.Sscl+2,,,,,Stadium > > Details > > Seat Colour > > Red,
+17217,Stadium,Details,Green,Byte,,ptrStadium,stao.Sscl+1,,,,,Stadium > > Details > > Seat Colour > > Green,
+17218,Stadium,Details,Blue,Byte,,ptrStadium,stao.Sscl,,,,,Stadium > > Details > > Seat Colour > > Blue,
+17219,Stadium,Details,Opacity,Byte,,ptrStadium,stao.Sscl+3,,,,,Stadium > > Details > > Seat Colour > > Opacity,
+17317,Stadium,Details,Capacity,4 Bytes,,ptrStadium,stao.Scpy,,,,,Stadium > > Details > > Capacity,
+17318,Stadium,Details,Seating Capacity,4 Bytes,,ptrStadium,stao.Scpy+0x4,,,,,Stadium > > Details > > Seating Capacity,
+17319,Stadium,Details,Capacity for All-Seater Competitions,4 Bytes,,ptrStadium,stao.Scpy+0xC,,,,,Stadium > > Details > > Capacity for All-Seater Competitions,
+17320,Stadium,Details,Expansion Capacity,4 Bytes,,ptrStadium,stao.Scpy+0x10,,,,,Stadium > > Details > > Expansion Capacity,
+17321,Stadium,Details,Used Capacity,4 Bytes,,ptrStadium,stao.Scpy+0x8,,,,,Stadium > > Details > > Used Capacity,
+17322,Stadium,Details,Pitch Type,Byte,,ptrStadium,stao.Spty,,,,,Stadium > > Details > > Pitch Type,1:Grass | 2:Synthetic (New Type - Soft) | 3:Synthetic (New Type - Hard) | 4:Gravel/Clay/Sand | 5:Gravel | 6:Clay | 7:Sand | 8:Grass/Synthetic Mix
+17323,Stadium,Details,Pitch Condition,Byte,,ptrStadium,stao.Sptc,,,,,Stadium > > Details > > Pitch Condition,
+17324,Stadium,Details,Pitch Deterioration Rate,Byte,,ptrStadium,stao.Sdtr,,,,,Stadium > > Details > > Pitch Deterioration Rate,1:Slow | 2:Medium | 3:Fast
+17325,Stadium,Details,Pitch Recovery Rate,Byte,,ptrStadium,stao.Sprr,,,,,Stadium > > Details > > Pitch Recovery Rate,
+17326,Stadium,Details,Pitch Length,2 Bytes,,ptrStadium,stao.Spdm,,,,,Stadium > > Details > > Pitch Length,
+17327,Stadium,Details,Pitch Width,2 Bytes,,ptrStadium,stao.Spdm+0x2,,,,,Stadium > > Details > > Pitch Width,
+17328,Stadium,Details,Pitch Length for Int. Matches,2 Bytes,,ptrStadium,stao.Spdm+0x4,,,,,Stadium > > Details > > Pitch Length for Int. Matches,
+17329,Stadium,Details,Pitch Width for Int. Matches,2 Bytes,,ptrStadium,stao.Spdm+0x6,,,,,Stadium > > Details > > Pitch Width for Int. Matches,
+17330,Stadium,Details,Minimum Pitch Length,2 Bytes,,ptrStadium,stao.Spdm+0x8,,,,,Stadium > > Details > > Minimum Pitch Length,
+17331,Stadium,Details,Minimum Pitch Width,2 Bytes,,ptrStadium,stao.Spdm+0xA,,,,,Stadium > > Details > > Minimum Pitch Width,
+17332,Stadium,Details,Maximum Pitch Length,2 Bytes,,ptrStadium,stao.Spdm+0xC,,,,,Stadium > > Details > > Maximum Pitch Length,
+17333,Stadium,Details,Maximum Pitch Width,2 Bytes,,ptrStadium,stao.Spdm+0xE,,,,,Stadium > > Details > > Maximum Pitch Width,
+17827,Stadium,Details,Date Pitch Last Relaid,Custom,FM Date,ptrStadium,stao.Splr,,,,,Stadium > > Details > > Date Pitch Last Relaid,*:
+17828,Stadium,Details,Pitch Relay Required Date,Custom,FM Date,ptrStadium,stao.Sprl,,,,,Stadium > > Details > > Pitch Relay Required Date,*:
+17829,Stadium,Details,Built Date,Custom,FM Date,ptrStadium,stao.Sbld,,,,,Stadium > > Details > > Built Date,*:
+17830,Stadium,Details,Re-Built Date,Custom,FM Date,ptrStadium,stao.Srbd,,,,,Stadium > > Details > > Re-Built Date,*:
+18020,Stadium,Details,Current Owneship Date,Custom,FM Date,ptrStadium,stao.Doco,,,,,Stadium > > Details > > Current Owneship Date,*:
+17350,Stadium,Details,Latitude,Float,,ptrStadium,stao.Slat,,,,,Stadium > > Details > > Latitude,
+17351,Stadium,Details,Longitude,Float,,ptrStadium,stao.Slon,,,,,Stadium > > Details > > Longitude,
+17352,Stadium,Details,State,Byte,,ptrStadium,stao.Sste,,,,,Stadium > > Details > > State,16:Very Poor | 11:Poor | 6:Average | 2:Good | 1:Very Good
+17353,Stadium,Details,Decay,Byte,,ptrStadium,stao.Sdcy,,,,,Stadium > > Details > > Decay,
+17354,Stadium,Details,Environment,Byte,,ptrStadium,stao.Senv,,,,,Stadium > > Details > > Environment,0:Not Set | 1:Basic | 2:Standard | 3:High End | 4:State Of The Art
+17355,Stadium,Details,Used By National Team,Byte,,ptrStadium,stao.Sunt,,,,,Stadium > > Details > > Used By National Team,0:No Matches | 1:All Matches | 2:Major Matches | 3:Medium Matches | 4:Minor Matches | 5:Major Matches and Some Medium Matches | 6:Minor Matches and Some Medium Matches
+17356,Stadium,Details,Used By National U21 Team,Byte,,ptrStadium,stao.Su21,,,,,Stadium > > Details > > Used By National U21 Team,0:No Matches | 4:Minor Matches | 3:Medium Matches | 2:Major Matches | 1:All Matches
+17357,Stadium,Details,Used By National U19 Team,Byte,,ptrStadium,stao.Su19,,,,,Stadium > > Details > > Used By National U19 Team,0:No Matches | 4:Minor Matches | 3:Medium Matches | 2:Major Matches | 1:All Matches
+17358,Stadium,Details,Not Used In Continental Final,Binary,,ptrStadium,stao.Stf2,7,1,,,Stadium > > Details > > Not Used In Continental Final,0:No | 1:Yes
+17359,Stadium,Details,Extinct,Binary,,ptrStadium,stao.Stf1,0,1,,,Stadium > > Details > > Extinct,0:No | 1:Yes
+17360,Stadium,Details,Roof,Binary,,ptrStadium,stao.Stf2,0,1,,,Stadium > > Details > > Roof,0:No | 1:Yes
+17361,Stadium,Details,Retractable Roof,Binary,,ptrStadium,stao.Stf2,6,1,,,Stadium > > Details > > Retractable Roof,0:No | 1:Yes
+17362,Stadium,Details,Has Undersoil Heating,Binary,,ptrStadium,stao.Stf2,1,1,,,Stadium > > Details > > Has Undersoil Heating,0:No | 1:Yes
+17363,Stadium,Details,Has Digital Ad Hoarding,Binary,,ptrStadium,stao.Stf1,6,1,,,Stadium > > Details > > Has Digital Ad Hoarding,0:No | 1:Yes
+17364,Stadium,Details,Has Capacity Changes,Binary,,ptrStadium,stao.Stf1,5,1,,,Stadium > > Details > > Has Capacity Changes,0:No | 1:Yes
+17365,Stadium,Details,Nearby Stadium,String,,ptrStadium,4 -> stao.Snam -> stao.Snbs,,,64,0,Stadium > > Details > > Nearby Stadium,:
+17223,Stadium,Appereance,Capacity,4 Bytes,,ptrStadium,stao.Shts -> stao.Ssds,,,,,Stadium > > Appereance > > Top Stand > > Capacity,
+17224,Stadium,Appereance,Condition,Byte,,ptrStadium,stao.Shts+0x6 -> stao.Ssds,,,,,Stadium > > Appereance > > Top Stand > > Condition,
+17225,Stadium,Appereance,Age,Byte,,ptrStadium,stao.Shts+0x4 -> stao.Ssds,,,,,Stadium > > Appereance > > Top Stand > > Age,
+17226,Stadium,Appereance,In Use,Binary,,ptrStadium,stao.Shts+0x7 -> stao.Ssds,0,1,,,Stadium > > Appereance > > Top Stand > > In Use,0:No | 1:Yes
+17227,Stadium,Appereance,Seated,Binary,,ptrStadium,stao.Shts+0x7 -> stao.Ssds,1,1,,,Stadium > > Appereance > > Top Stand > > Seated,0:No | 1:Yes
+17228,Stadium,Appereance,Has Tunnel,Binary,,ptrStadium,stao.Shts+0x7 -> stao.Ssds,3,1,,,Stadium > > Appereance > > Top Stand > > Has Tunnel,0:No | 1:Yes
+17229,Stadium,Appereance,Has Roof,Binary,,ptrStadium,stao.Shts+0x7 -> stao.Ssds,4,1,,,Stadium > > Appereance > > Top Stand > > Has Roof,0:No | 1:Yes
+17230,Stadium,Appereance,Has Roof Support,Binary,,ptrStadium,stao.Shts+0x7 -> stao.Ssds,5,1,,,Stadium > > Appereance > > Top Stand > > Has Roof Support,0:No | 1:Yes
+17231,Stadium,Appereance,Temporarily Closed,Binary,,ptrStadium,stao.Shts+0x7 -> stao.Ssds,6,1,,,Stadium > > Appereance > > Top Stand > > Temporarily Closed,0:No | 1:Yes
+17232,Stadium,Appereance,Under Construction,Binary,,ptrStadium,stao.Shts+0x7 -> stao.Ssds,7,1,,,Stadium > > Appereance > > Top Stand > > Under Construction,0:No | 1:Yes
+17235,Stadium,Appereance,Capacity,4 Bytes,,ptrStadium,stao.Shbs -> stao.Ssds,,,,,Stadium > > Appereance > > Bottom Stand > > Capacity,
+17236,Stadium,Appereance,Condition,Byte,,ptrStadium,stao.Shbs+0x6 -> stao.Ssds,,,,,Stadium > > Appereance > > Bottom Stand > > Condition,
+17237,Stadium,Appereance,Age,Byte,,ptrStadium,stao.Shbs+0x4 -> stao.Ssds,,,,,Stadium > > Appereance > > Bottom Stand > > Age,
+17238,Stadium,Appereance,In Use,Binary,,ptrStadium,stao.Shbs+0x7 -> stao.Ssds,0,1,,,Stadium > > Appereance > > Bottom Stand > > In Use,0:No | 1:Yes
+17239,Stadium,Appereance,Seated,Binary,,ptrStadium,stao.Shbs+0x7 -> stao.Ssds,1,1,,,Stadium > > Appereance > > Bottom Stand > > Seated,0:No | 1:Yes
+17240,Stadium,Appereance,Has Tunnel,Binary,,ptrStadium,stao.Shbs+0x7 -> stao.Ssds,3,1,,,Stadium > > Appereance > > Bottom Stand > > Has Tunnel,0:No | 1:Yes
+17241,Stadium,Appereance,Has Roof,Binary,,ptrStadium,stao.Shbs+0x7 -> stao.Ssds,4,1,,,Stadium > > Appereance > > Bottom Stand > > Has Roof,0:No | 1:Yes
+17242,Stadium,Appereance,Has Roof Support,Binary,,ptrStadium,stao.Shbs+0x7 -> stao.Ssds,5,1,,,Stadium > > Appereance > > Bottom Stand > > Has Roof Support,0:No | 1:Yes
+17243,Stadium,Appereance,Temporarily Closed,Binary,,ptrStadium,stao.Shbs+0x7 -> stao.Ssds,6,1,,,Stadium > > Appereance > > Bottom Stand > > Temporarily Closed,0:No | 1:Yes
+17244,Stadium,Appereance,Under Construction,Binary,,ptrStadium,stao.Shbs+0x7 -> stao.Ssds,7,1,,,Stadium > > Appereance > > Bottom Stand > > Under Construction,0:No | 1:Yes
+17247,Stadium,Appereance,Capacity,4 Bytes,,ptrStadium,stao.Shrs -> stao.Ssds,,,,,Stadium > > Appereance > > Right Stand > > Capacity,
+17248,Stadium,Appereance,Condition,Byte,,ptrStadium,stao.Shrs+0x6 -> stao.Ssds,,,,,Stadium > > Appereance > > Right Stand > > Condition,
+17249,Stadium,Appereance,Age,Byte,,ptrStadium,stao.Shrs+0x4 -> stao.Ssds,,,,,Stadium > > Appereance > > Right Stand > > Age,
+17250,Stadium,Appereance,In Use,Binary,,ptrStadium,stao.Shrs+0x7 -> stao.Ssds,0,1,,,Stadium > > Appereance > > Right Stand > > In Use,0:No | 1:Yes
+17251,Stadium,Appereance,Seated,Binary,,ptrStadium,stao.Shrs+0x7 -> stao.Ssds,1,1,,,Stadium > > Appereance > > Right Stand > > Seated,0:No | 1:Yes
+17252,Stadium,Appereance,Has Tunnel,Binary,,ptrStadium,stao.Shrs+0x7 -> stao.Ssds,3,1,,,Stadium > > Appereance > > Right Stand > > Has Tunnel,0:No | 1:Yes
+17253,Stadium,Appereance,Has Roof,Binary,,ptrStadium,stao.Shrs+0x7 -> stao.Ssds,4,1,,,Stadium > > Appereance > > Right Stand > > Has Roof,0:No | 1:Yes
+17254,Stadium,Appereance,Has Roof Support,Binary,,ptrStadium,stao.Shrs+0x7 -> stao.Ssds,5,1,,,Stadium > > Appereance > > Right Stand > > Has Roof Support,0:No | 1:Yes
+17255,Stadium,Appereance,Temporarily Closed,Binary,,ptrStadium,stao.Shrs+0x7 -> stao.Ssds,6,1,,,Stadium > > Appereance > > Right Stand > > Temporarily Closed,0:No | 1:Yes
+17256,Stadium,Appereance,Under Construction,Binary,,ptrStadium,stao.Shrs+0x7 -> stao.Ssds,7,1,,,Stadium > > Appereance > > Right Stand > > Under Construction,0:No | 1:Yes
+17259,Stadium,Appereance,Capacity,4 Bytes,,ptrStadium,stao.Shls -> stao.Ssds,,,,,Stadium > > Appereance > > Left Stand > > Capacity,
+17260,Stadium,Appereance,Condition,Byte,,ptrStadium,stao.Shls+0x6 -> stao.Ssds,,,,,Stadium > > Appereance > > Left Stand > > Condition,
+17261,Stadium,Appereance,Age,Byte,,ptrStadium,stao.Shls+0x4 -> stao.Ssds,,,,,Stadium > > Appereance > > Left Stand > > Age,
+17262,Stadium,Appereance,In Use,Binary,,ptrStadium,stao.Shls+0x7 -> stao.Ssds,0,1,,,Stadium > > Appereance > > Left Stand > > In Use,0:No | 1:Yes
+17263,Stadium,Appereance,Seated,Binary,,ptrStadium,stao.Shls+0x7 -> stao.Ssds,1,1,,,Stadium > > Appereance > > Left Stand > > Seated,0:No | 1:Yes
+17264,Stadium,Appereance,Has Tunnel,Binary,,ptrStadium,stao.Shls+0x7 -> stao.Ssds,3,1,,,Stadium > > Appereance > > Left Stand > > Has Tunnel,0:No | 1:Yes
+17265,Stadium,Appereance,Has Roof,Binary,,ptrStadium,stao.Shls+0x7 -> stao.Ssds,4,1,,,Stadium > > Appereance > > Left Stand > > Has Roof,0:No | 1:Yes
+17266,Stadium,Appereance,Has Roof Support,Binary,,ptrStadium,stao.Shls+0x7 -> stao.Ssds,5,1,,,Stadium > > Appereance > > Left Stand > > Has Roof Support,0:No | 1:Yes
+17267,Stadium,Appereance,Temporarily Closed,Binary,,ptrStadium,stao.Shls+0x7 -> stao.Ssds,6,1,,,Stadium > > Appereance > > Left Stand > > Temporarily Closed,0:No | 1:Yes
+17268,Stadium,Appereance,Under Construction,Binary,,ptrStadium,stao.Shls+0x7 -> stao.Ssds,7,1,,,Stadium > > Appereance > > Left Stand > > Under Construction,0:No | 1:Yes
+17271,Stadium,Appereance,Capacity,4 Bytes,,ptrStadium,stao.Shtr -> stao.Ssds,,,,,Stadium > > Appereance > > Top Right Stand > > Capacity,
+17272,Stadium,Appereance,Condition,Byte,,ptrStadium,stao.Shtr+0x6 -> stao.Ssds,,,,,Stadium > > Appereance > > Top Right Stand > > Condition,
+17273,Stadium,Appereance,Age,Byte,,ptrStadium,stao.Shtr+0x4 -> stao.Ssds,,,,,Stadium > > Appereance > > Top Right Stand > > Age,
+17274,Stadium,Appereance,In Use,Binary,,ptrStadium,stao.Shtr+0x7 -> stao.Ssds,0,1,,,Stadium > > Appereance > > Top Right Stand > > In Use,0:No | 1:Yes
+17275,Stadium,Appereance,Seated,Binary,,ptrStadium,stao.Shtr+0x7 -> stao.Ssds,1,1,,,Stadium > > Appereance > > Top Right Stand > > Seated,0:No | 1:Yes
+17276,Stadium,Appereance,Has Tunnel,Binary,,ptrStadium,stao.Shtr+0x7 -> stao.Ssds,3,1,,,Stadium > > Appereance > > Top Right Stand > > Has Tunnel,0:No | 1:Yes
+17277,Stadium,Appereance,Has Roof,Binary,,ptrStadium,stao.Shtr+0x7 -> stao.Ssds,4,1,,,Stadium > > Appereance > > Top Right Stand > > Has Roof,0:No | 1:Yes
+17278,Stadium,Appereance,Has Roof Support,Binary,,ptrStadium,stao.Shtr+0x7 -> stao.Ssds,5,1,,,Stadium > > Appereance > > Top Right Stand > > Has Roof Support,0:No | 1:Yes
+17279,Stadium,Appereance,Temporarily Closed,Binary,,ptrStadium,stao.Shtr+0x7 -> stao.Ssds,6,1,,,Stadium > > Appereance > > Top Right Stand > > Temporarily Closed,0:No | 1:Yes
+17280,Stadium,Appereance,Under Construction,Binary,,ptrStadium,stao.Shtr+0x7 -> stao.Ssds,7,1,,,Stadium > > Appereance > > Top Right Stand > > Under Construction,0:No | 1:Yes
+17283,Stadium,Appereance,Capacity,4 Bytes,,ptrStadium,stao.Shbr -> stao.Ssds,,,,,Stadium > > Appereance > > Bottom Right Stand > > Capacity,
+17284,Stadium,Appereance,Condition,Byte,,ptrStadium,stao.Shbr+0x6 -> stao.Ssds,,,,,Stadium > > Appereance > > Bottom Right Stand > > Condition,
+17285,Stadium,Appereance,Age,Byte,,ptrStadium,stao.Shbr+0x4 -> stao.Ssds,,,,,Stadium > > Appereance > > Bottom Right Stand > > Age,
+17286,Stadium,Appereance,In Use,Binary,,ptrStadium,stao.Shbr+0x7 -> stao.Ssds,0,1,,,Stadium > > Appereance > > Bottom Right Stand > > In Use,0:No | 1:Yes
+17287,Stadium,Appereance,Seated,Binary,,ptrStadium,stao.Shbr+0x7 -> stao.Ssds,1,1,,,Stadium > > Appereance > > Bottom Right Stand > > Seated,0:No | 1:Yes
+17288,Stadium,Appereance,Has Tunnel,Binary,,ptrStadium,stao.Shbr+0x7 -> stao.Ssds,3,1,,,Stadium > > Appereance > > Bottom Right Stand > > Has Tunnel,0:No | 1:Yes
+17289,Stadium,Appereance,Has Roof,Binary,,ptrStadium,stao.Shbr+0x7 -> stao.Ssds,4,1,,,Stadium > > Appereance > > Bottom Right Stand > > Has Roof,0:No | 1:Yes
+17290,Stadium,Appereance,Has Roof Support,Binary,,ptrStadium,stao.Shbr+0x7 -> stao.Ssds,5,1,,,Stadium > > Appereance > > Bottom Right Stand > > Has Roof Support,0:No | 1:Yes
+17291,Stadium,Appereance,Temporarily Closed,Binary,,ptrStadium,stao.Shbr+0x7 -> stao.Ssds,6,1,,,Stadium > > Appereance > > Bottom Right Stand > > Temporarily Closed,0:No | 1:Yes
+17292,Stadium,Appereance,Under Construction,Binary,,ptrStadium,stao.Shbr+0x7 -> stao.Ssds,7,1,,,Stadium > > Appereance > > Bottom Right Stand > > Under Construction,0:No | 1:Yes
+17295,Stadium,Appereance,Capacity,4 Bytes,,ptrStadium,stao.Shtl -> stao.Ssds,,,,,Stadium > > Appereance > > Top Left Stand > > Capacity,
+17296,Stadium,Appereance,Condition,Byte,,ptrStadium,stao.Shtl+0x6 -> stao.Ssds,,,,,Stadium > > Appereance > > Top Left Stand > > Condition,
+17297,Stadium,Appereance,Age,Byte,,ptrStadium,stao.Shtl+0x4 -> stao.Ssds,,,,,Stadium > > Appereance > > Top Left Stand > > Age,
+17298,Stadium,Appereance,In Use,Binary,,ptrStadium,stao.Shtl+0x7 -> stao.Ssds,0,1,,,Stadium > > Appereance > > Top Left Stand > > In Use,0:No | 1:Yes
+17299,Stadium,Appereance,Seated,Binary,,ptrStadium,stao.Shtl+0x7 -> stao.Ssds,1,1,,,Stadium > > Appereance > > Top Left Stand > > Seated,0:No | 1:Yes
+17300,Stadium,Appereance,Has Tunnel,Binary,,ptrStadium,stao.Shtl+0x7 -> stao.Ssds,3,1,,,Stadium > > Appereance > > Top Left Stand > > Has Tunnel,0:No | 1:Yes
+17301,Stadium,Appereance,Has Roof,Binary,,ptrStadium,stao.Shtl+0x7 -> stao.Ssds,4,1,,,Stadium > > Appereance > > Top Left Stand > > Has Roof,0:No | 1:Yes
+17302,Stadium,Appereance,Has Roof Support,Binary,,ptrStadium,stao.Shtl+0x7 -> stao.Ssds,5,1,,,Stadium > > Appereance > > Top Left Stand > > Has Roof Support,0:No | 1:Yes
+17303,Stadium,Appereance,Temporarily Closed,Binary,,ptrStadium,stao.Shtl+0x7 -> stao.Ssds,6,1,,,Stadium > > Appereance > > Top Left Stand > > Temporarily Closed,0:No | 1:Yes
+17304,Stadium,Appereance,Under Construction,Binary,,ptrStadium,stao.Shtl+0x7 -> stao.Ssds,7,1,,,Stadium > > Appereance > > Top Left Stand > > Under Construction,0:No | 1:Yes
+17307,Stadium,Appereance,Capacity,4 Bytes,,ptrStadium,stao.Shbl -> stao.Ssds,,,,,Stadium > > Appereance > > Bottom Left Stand > > Capacity,
+17308,Stadium,Appereance,Condition,Byte,,ptrStadium,stao.Shbl+0x6 -> stao.Ssds,,,,,Stadium > > Appereance > > Bottom Left Stand > > Condition,
+17309,Stadium,Appereance,Age,Byte,,ptrStadium,stao.Shbl+0x4 -> stao.Ssds,,,,,Stadium > > Appereance > > Bottom Left Stand > > Age,
+17310,Stadium,Appereance,In Use,Binary,,ptrStadium,stao.Shbl+0x7 -> stao.Ssds,0,1,,,Stadium > > Appereance > > Bottom Left Stand > > In Use,0:No | 1:Yes
+17311,Stadium,Appereance,Seated,Binary,,ptrStadium,stao.Shbl+0x7 -> stao.Ssds,1,1,,,Stadium > > Appereance > > Bottom Left Stand > > Seated,0:No | 1:Yes
+17312,Stadium,Appereance,Has Tunnel,Binary,,ptrStadium,stao.Shbl+0x7 -> stao.Ssds,3,1,,,Stadium > > Appereance > > Bottom Left Stand > > Has Tunnel,0:No | 1:Yes
+17313,Stadium,Appereance,Has Roof,Binary,,ptrStadium,stao.Shbl+0x7 -> stao.Ssds,4,1,,,Stadium > > Appereance > > Bottom Left Stand > > Has Roof,0:No | 1:Yes
+17314,Stadium,Appereance,Has Roof Support,Binary,,ptrStadium,stao.Shbl+0x7 -> stao.Ssds,5,1,,,Stadium > > Appereance > > Bottom Left Stand > > Has Roof Support,0:No | 1:Yes
+17315,Stadium,Appereance,Temporarily Closed,Binary,,ptrStadium,stao.Shbl+0x7 -> stao.Ssds,6,1,,,Stadium > > Appereance > > Bottom Left Stand > > Temporarily Closed,0:No | 1:Yes
+17316,Stadium,Appereance,Under Construction,Binary,,ptrStadium,stao.Shbl+0x7 -> stao.Ssds,7,1,,,Stadium > > Appereance > > Bottom Left Stand > > Under Construction,0:No | 1:Yes
+23933,Presets (Global),Golden Generation,Generate Wonderkids,Byte,,hdeffxoa+0x2,,,,,,Presets (Global) > > Golden Generation > 2. Setup > Generate Wonderkids,0:False | 1:True
+23981,Presets (Global),Golden Generation,Modify the Number of Youth Intakes,Byte,,hdeffxoa+0x3,,,,,,Presets (Global) > > Golden Generation > 2. Setup > Modify the Number of Youth Intakes,0:False | 1:True
+23983,Presets (Global),Golden Generation,Number of Youth Intakes (Max. 100),Byte,,hdeffxoa+0x4,,,,,,Presets (Global) > > Golden Generation > 2. Setup > Modify the Number of Youth Intakes > Number of Youth Intakes (Max. 100),
+23921,Presets (Global),Golden Generation,Min PA,Byte,,hdeffxoa,,,,,,Presets (Global) > > Golden Generation > 2. Setup > Custom PA Range > > Min PA,
+23922,Presets (Global),Golden Generation,Max PA,Byte,,hdeffxoa+0x1,,,,,,Presets (Global) > > Golden Generation > 2. Setup > Custom PA Range > > Max PA,
+24116,Presets (Global),Golden Generation,Max Address To Scan,8 Bytes,,hdeffxoa+0x5,,,,,,Presets (Global) > > Golden Generation > 2. Setup > Item Address Setting > > Max Address To Scan,
+18898,Presets (Global),Ignore Player Retirement,Start Age (default: 32),Byte,,ignoreRet,,,,,,Presets (Global) > > Ignore Player Retirement > 1. Setup > Start Age (default: 32),
+18899,Presets (Global),Ignore Player Retirement,Start PA (default: 170),Byte,,ignoreRet+1,,,,,,Presets (Global) > > Ignore Player Retirement > 1. Setup > Start PA (default: 170),
+20738,Presets (Global),Ignore Player Retirement,Club UID,4 Bytes,,ignoreRet+2,,,,,,Presets (Global) > > Ignore Player Retirement > 1. Setup > Club UID,
+20054,Table Settings,Allocated Pointers,ptrAward,8 Bytes,,ptrAward,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrAward,
+20055,Table Settings,Allocated Pointers,ptrCity,8 Bytes,,ptrCity,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrCity,
+11144,Table Settings,Allocated Pointers,ptrClub,8 Bytes,,ptrClub,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrClub,
+11147,Table Settings,Allocated Pointers,ptrComp,8 Bytes,,ptrComp,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrComp,
+20056,Table Settings,Allocated Pointers,ptrContinent,8 Bytes,,ptrContinent,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrContinent,
+20057,Table Settings,Allocated Pointers,ptrFullContract,8 Bytes,,ptrFullContract,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrFullContract,
+20058,Table Settings,Allocated Pointers,ptrHumanStaff,8 Bytes,,ptrHumanStaff,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrHumanStaff,
+11585,Table Settings,Allocated Pointers,ptrLeagueStage,8 Bytes,,ptrLeagueStage,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrLeagueStage,
+20059,Table Settings,Allocated Pointers,ptrLoanContract,8 Bytes,,ptrLoanContract,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrLoanContract,
+11145,Table Settings,Allocated Pointers,ptrNation,8 Bytes,,ptrNation,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrNation,
+20060,Table Settings,Allocated Pointers,ptrNationContract,8 Bytes,,ptrNationContract,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrNationContract,
+20053,Table Settings,Allocated Pointers,ptrPerson,8 Bytes,,ptrPerson,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrPerson,
+11141,Table Settings,Allocated Pointers,ptrPlayer,8 Bytes,,ptrPlayer,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrPlayer,
+20062,Table Settings,Allocated Pointers,ptrRevClubContract,8 Bytes,,ptrRevClubContract,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrRevClubContract,
+20063,Table Settings,Allocated Pointers,ptrStadium,8 Bytes,,ptrStadium,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrStadium,
+11142,Table Settings,Allocated Pointers,ptrStaff,8 Bytes,,ptrStaff,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrStaff,
+11148,Table Settings,Allocated Pointers,ptrTeam,8 Bytes,,ptrTeam,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrTeam,
+11589,Table Settings,Allocated Pointers,ptrSelectedObj,8 Bytes,,ptrSelectedObj,,,,,,Table Settings > > Allocated Pointers > > Objects > > ptrSelectedObj,
+12095,Table Settings,Allocated Pointers,updSelect,Byte,,updSelect,,,,,,Table Settings > > Allocated Pointers > > Updates > > updSelect,
+20069,Table Settings,Allocated Pointers,updAward,Byte,,updAward,,,,,,Table Settings > > Allocated Pointers > > Updates > > updAward,
+20066,Table Settings,Allocated Pointers,updCity,Byte,,updCity,,,,,,Table Settings > > Allocated Pointers > > Updates > > updCity,
+12099,Table Settings,Allocated Pointers,updClub,Byte,,updClub,,,,,,Table Settings > > Allocated Pointers > > Updates > > updClub,
+12103,Table Settings,Allocated Pointers,updComp,Byte,,updComp,,,,,,Table Settings > > Allocated Pointers > > Updates > > updComp,
+20067,Table Settings,Allocated Pointers,updContinent,Byte,,updContinent,,,,,,Table Settings > > Allocated Pointers > > Updates > > updContinent,
+12101,Table Settings,Allocated Pointers,updNation,Byte,,updNation,,,,,,Table Settings > > Allocated Pointers > > Updates > > updNation,
+20065,Table Settings,Allocated Pointers,updPerson,Byte,,updPerson,,,,,,Table Settings > > Allocated Pointers > > Updates > > updPerson,
+20068,Table Settings,Allocated Pointers,updStadium,Byte,,updStadium,,,,,,Table Settings > > Allocated Pointers > > Updates > > updStadium,
+12100,Table Settings,Allocated Pointers,updTeam,Byte,,updTeam,,,,,,Table Settings > > Allocated Pointers > > Updates > > updTeam,
+20085,Table Settings,Allocated Pointers,db::AGREEMENT,8 Bytes,,vtbAgreement,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::AGREEMENT,
+20071,Table Settings,Allocated Pointers,db::AWARD,8 Bytes,,vtbAward,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::AWARD,
+20072,Table Settings,Allocated Pointers,db::CITY,8 Bytes,,vtbCity,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::CITY,
+20073,Table Settings,Allocated Pointers,db::CLUB,8 Bytes,,vtbClub,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::CLUB,
+20074,Table Settings,Allocated Pointers,db::COMP,8 Bytes,,vtbCompetition,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::COMP,
+20075,Table Settings,Allocated Pointers,db::CONTINENT,8 Bytes,,vtbContinent,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::CONTINENT,
+20080,Table Settings,Allocated Pointers,db::NATION,8 Bytes,,vtbNation,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::NATION,
+20090,Table Settings,Allocated Pointers,db::NATIONAL_TEAM,8 Bytes,,vtbNationalTeam,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::NATIONAL_TEAM,
+24054,Table Settings,Allocated Pointers,db::NATIONAL_TEAM_CONTAINER,8 Bytes,,vtbNationalTeaCont,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::NATIONAL_TEAM_CONTAINER,
+20087,Table Settings,Allocated Pointers,db::ACTUAL_NON_PLAYER,8 Bytes,,vtbNonPlayer,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::ACTUAL_NON_PLAYER,
+20084,Table Settings,Allocated Pointers,db::ACTUAL_PERSON,8 Bytes,,vtbPlayer,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::ACTUAL_PERSON,
+20089,Table Settings,Allocated Pointers,db::ACTUAL_PLAYER_AND_NON_PLAYER,8 Bytes,,vtbPlayerStaff,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::ACTUAL_PLAYER_AND_NON_PLAYER,
+20091,Table Settings,Allocated Pointers,db::REGION,8 Bytes,,vtbRegion,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::REGION,
+20086,Table Settings,Allocated Pointers,db::STADIUM,8 Bytes,,vtbStadium,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::STADIUM,
+20088,Table Settings,Allocated Pointers,db::TEAM,8 Bytes,,vtbTeam,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::TEAM,
+20077,Table Settings,Allocated Pointers,db::HUMAN_NON_PLAYER,8 Bytes,,vtbHumanNonPlayer,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::HUMAN_NON_PLAYER,
+20079,Table Settings,Allocated Pointers,db::RETIRED_PERSON_NAME_POINTERS,8 Bytes,,vtbRetiredPerson,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::RETIRED_PERSON_NAME_POINTERS,
+20081,Table Settings,Allocated Pointers,db::VIRTUAL_PLAYER,8 Bytes,,vtbPlaceholderPerson,,,,,,Table Settings > > Allocated Pointers > > VTables > > db::VIRTUAL_PLAYER,
+20078,Table Settings,Allocated Pointers,sicomps::LEAGUE_STAGE,8 Bytes,,vtbLeagueStage,,,,,,Table Settings > > Allocated Pointers > > VTables > > sicomps::LEAGUE_STAGE,
+11636,Table Settings,Useful Static Addresses,Current time (15 minute intervals after 6 AM),Binary,,datTimeRoot+1,,1,7,,,Table Settings > > Useful Static Addresses > > Current time (15 minute intervals after 6 AM),
+11611,Table Settings,Useful Static Addresses,Current Day,Custom,Mask 0x1FF,datTimeRoot,,,,,,Table Settings > > Useful Static Addresses > > Current Day,
+11612,Table Settings,Useful Static Addresses,Current Year,2 Bytes,,datTimeRoot+2,,,,,,Table Settings > > Useful Static Addresses > > Current Year,
+11328,Table Settings,Useful Static Addresses,ptrPerson vtable offset 0,4 Bytes,,ptrPerson,0 -> -8 -> 0,,,,,Table Settings > > Useful Static Addresses > > ptrPerson vtable offset 0,
+11329,Table Settings,Useful Static Addresses,ptrPerson vtable offset 1,4 Bytes,,ptrPerson,4 -> -8 -> 0,,,,,Table Settings > > Useful Static Addresses > > ptrPerson vtable offset 1,
+11330,Table Settings,Useful Static Addresses,ptrPerson vtable offset 2,4 Bytes,,ptrPerson,8 -> -8 -> 0,,,,,Table Settings > > Useful Static Addresses > > ptrPerson vtable offset 2,
+20579,Table Settings,Useful Static Addresses,ptrPlayer vtable offset,4 Bytes,,ptrPlayer,4 -> 8,,,,,Table Settings > > Useful Static Addresses > > ptrPlayer vtable offset,
+20580,Table Settings,Useful Static Addresses,ptrStaff vtable offset,4 Bytes,,ptrStaff,4 -> 8,,,,,Table Settings > > Useful Static Addresses > > ptrStaff vtable offset,
+20581,Table Settings,Useful Static Addresses,ptrHumanStaff vtable offset,4 Bytes,,ptrHumanStaff,4 -> 8,,,,,Table Settings > > Useful Static Addresses > > ptrHumanStaff vtable offset,
+23666,Table Settings,Useful Static Addresses,File Version (GamePass),String,,fm.exe+4A0F28E,,,,6,0,Table Settings > > Useful Static Addresses > > File Version (GamePass),
+23667,Table Settings,Useful Static Addresses,File Version (Steam),String,,fm.exe+4A05111,,,,6,0,Table Settings > > Useful Static Addresses > > File Version (Steam),

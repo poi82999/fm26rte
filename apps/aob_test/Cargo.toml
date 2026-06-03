@@ -1,0 +1,8 @@
+[package]
+name = "aob_test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sysinfo = "0.39.0"
+winapi = { version = "0.3.9", features = ["memoryapi", "processthreadsapi", "winnt"] }

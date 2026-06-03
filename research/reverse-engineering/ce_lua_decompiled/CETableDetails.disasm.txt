@@ -1,0 +1,864 @@
+.version	5.3
+
+.format	0
+.int_size	4
+.size_t_size	8
+.instruction_size	4
+.integer_format	8
+.float_format	8
+.endianness	LITTLE
+
+.function	main
+
+.source	null
+.linedefined	0
+.lastlinedefined	0
+.numparams	0
+.is_vararg	1
+.maxstacksize	198
+
+.upvalue	null	0	true
+
+.constant	k0	"Cheat Engine Table Details"
+.constant	k1	"CETableDetails"
+.constant	k2	"26.1.1.0"
+.constant	k3	"Figment; tdg6661"
+.constant	k4	""
+.constant	k5	"string"
+.constant	k6	"format"
+.constant	k7	"empty"
+.constant	k8	"STRING_EMPTY"
+.constant	k9	"translate"
+.constant	k10	"Name"
+.constant	k11	"ClassName"
+.constant	k12	"Version"
+.constant	k13	"Author"
+.constant	k14	"License"
+.constant	k15	"expectedExecutable"
+.constant	k16	"fm.exe"
+.constant	k17	"expectedExeVersion"
+.constant	k18	"26.3.0.0"
+.constant	k19	"expectedModule"
+.constant	k20	"game_plugin.dll"
+.constant	k21	"expectedModVersion"
+.constant	k22	"26.3.0"
+.constant	k23	"expectedVersion"
+.constant	k24	"gameName"
+.constant	k25	"Football Manager 26"
+.constant	k26	"gameShortName"
+.constant	k27	"FM26"
+.constant	k28	"requiredCE"
+.constant	k29	7.6
+.constant	k30	"tableVersion"
+.constant	k31	5
+.constant	k32	"tableIsPremium"
+.constant	k33	false
+.constant	k34	"tableTitle"
+.constant	k35	"%s [%s]"
+.constant	k36	"tableDesc"
+.constant	k37	"Cheat Table Update %d [FREE]"
+.constant	k38	"linkFRF"
+.constant	k39	L"https://fearlessrevolution.com/viewtopic.php?f=4&t=26304"
+.constant	k40	"linkSortitoutsi"
+.constant	k41	L"https://sortitoutsi.net/content/63837/football-manager-2024-egwssteam"
+.constant	k42	"linkPatreon"
+.constant	k43	"https://www.patreon.com/tdg6661"
+.constant	k44	"linkPayPal"
+.constant	k45	"https://paypal.me/tdg6661"
+.constant	k46	"linkKaryaKarsa"
+.constant	k47	"https://karyakarsa.com/tdg6661"
+.constant	k48	"firstMessage"
+.constant	k49	L"This table was designed for [%s] version [%s].\n\nDisable Symbols in Cheat Engine settings to avoid needing to activate Run Table twice.\n\nEdit -> Settings -> Symbols\n\nWhat's new:\n\nImprovements\n\n\xe2\x97\x8f Released for FM 26.3.0.\n\nFixed\n\n\xe2\x97\x8f Reactivated Golden Generation.\n\xe2\x97\x8f Fixed an issue where Extra Staff displayed incorrect values.\n\nHow to use:\n\n\xe2\x97\x8f Open the game.\n\xe2\x97\x8f Load or start a game.\n\xe2\x97\x8f Activate Run Table and wait.\n\xe2\x97\x8f Begin editing once setup is complete.\n"
+.constant	k50	"listDonators_0"
+.constant	k51	"000 hudou, "
+.constant	k52	"5e41, "
+.constant	k53	"1334 electric, "
+.constant	k54	"2000 taka, "
+.constant	k55	"A. Y., "
+.constant	k56	"Aditya Trisnawan, "
+.constant	k57	"Alfonso Angieri, "
+.constant	k58	"Andrii, "
+.constant	k59	"Angel, "
+.constant	k60	"Aviator, "
+.constant	k61	"Bagus Suryo, "
+.constant	k62	"Bartosz Maliszewki, "
+.constant	k63	"Batim Morrison, "
+.constant	k64	"Ben Kempthorne, "
+.constant	k65	"Boka Grynko, "
+.constant	k66	"B\xe1\xba\xa3o Nguy\xe1\xbb\x85n Kh\xe1\xba\xafc, "
+.constant	k67	"Caleo, "
+.constant	k68	"Carbon, "
+.constant	k69	"Comers Sila, "
+.constant	k70	"ComicEyes, "
+.constant	k71	"Conor, "
+.constant	k72	"Cris Gregory, "
+.constant	k73	"D-man B., "
+.constant	k74	"Dai Mon, "
+.constant	k75	"Damon Taylor, "
+.constant	k76	"Daniel Ristoh, "
+.constant	k77	"Darkedone02, "
+.constant	k78	"Darlington Bangura, "
+.constant	k79	"Deanne Carpenter, "
+.constant	k80	"Declan, "
+.constant	k81	"Deegie, "
+.constant	k82	"DemonAxe, "
+.constant	k83	"Desmond Lim, "
+.constant	k84	"Dominik Alb, "
+.constant	k85	"Douglas Hutchings, "
+.constant	k86	"Dr. P, "
+.constant	k87	"Drop Bear, "
+.constant	k88	"Eduard B, "
+.constant	k89	"Emir Zimi\xc4\x87, "
+.constant	k90	"Enzion Garcia, "
+.constant	k91	"Erman Ko\xc3\xa7um, "
+.constant	k92	"Fanda SomZz, "
+.constant	k93	"Fernando, "
+.constant	k94	"Four Ball, "
+.constant	k95	"Gacchaman, "
+.constant	k96	"Galia \xe2\x80\x9cGalkidd\xe2\x80\x9d Matadewa, "
+.constant	k97	"Ganet Codrin, "
+.constant	k98	"Go Cha, "
+.constant	k99	"Gumpton, "
+.constant	k100	"G\xc3\xb6ktu\xc4\x9f Ersan, "
+.constant	k101	"Hai Phu, "
+.constant	k102	"Hamza SARICA, "
+.constant	k103	"Hariz Ghifari, "
+.constant	k104	"Hike Anderson, "
+.constant	k105	"Hyo-Seoung Park, "
+.constant	k106	"Igy Txt, "
+.constant	k107	"Imam, "
+.constant	k108	"Imperias ., "
+.constant	k109	"J M., "
+.constant	k110	"JackoDelTaco, "
+.constant	k111	"Jasper De Boer, "
+.constant	k112	"Jasper Patterson, "
+.constant	k113	"Jawon Lee, "
+.constant	k114	"Jay Daniel, "
+.constant	k115	"Jeong ChoongHwan, "
+.constant	k116	"Jihoon Kim, "
+.constant	k117	"Jim Scholte, "
+.constant	k118	"Jin, "
+.constant	k119	"John Chen, "
+.constant	k120	"Jordan Grubb, "
+.constant	k121	"Joseph McCaffery, "
+.constant	k122	"Josh92, "
+.constant	k123	"Justin Ken, "
+.constant	k124	"KKK, "
+.constant	k125	"Kage Jin, "
+.constant	k126	"Karisa, "
+.constant	k127	"Karol Farbi\xc5\x9b, "
+.constant	k128	"Khan Naunko, "
+.constant	k129	"Khoirul Annas, "
+.constant	k130	"Kobe, "
+.constant	k131	"Kroekyut Sangpoo(Laska), "
+.constant	k132	"LIX, "
+.constant	k133	"Laercio Henrique, "
+.constant	k134	"Larbi Bessaci, "
+.constant	k135	"Lieon Thebed, "
+.constant	k136	"Luke Porter, "
+.constant	k137	"M K, "
+.constant	k138	"Maik Herrmann, "
+.constant	k139	"Manuel Matias, "
+.constant	k140	"Mateusz Edkin, "
+.constant	k141	"Matias Canale, "
+.constant	k142	"Michal Niedzielski, "
+.constant	k143	"Micha\xc3\xabl Prost, "
+.constant	k144	"Minmin Liu, "
+.constant	k145	"Mohammed Kasim, "
+.constant	k146	"Monsuru Alasi, "
+.constant	k147	"Motorbikeboy _yt, "
+.constant	k148	"Mr.Foxman, "
+.constant	k149	"Muhammad Yusuf, "
+.constant	k150	"Muhd Yusri Razali, "
+.constant	k151	"N W, "
+.constant	k152	"NDRBANG, "
+.constant	k153	"NIGEL ZEMBE, "
+.constant	k154	"N_OJE, "
+.constant	k155	"Nike \xc4\x8cedomir, "
+.constant	k156	"Noah van Holderbeke, "
+.constant	k157	"Noyzz Crew, "
+.constant	k158	"Oliver Elfert, "
+.constant	k159	"Pakorn Praang, "
+.constant	k160	"Paul, "
+.constant	k161	"Pawe\xc5\x82, "
+.constant	k162	"Pechy, "
+.constant	k163	"Pen Umbra, "
+.constant	k164	"PepeLaugh, "
+.constant	k165	"Pierre Artous, "
+.constant	k166	"Pine, "
+.constant	k167	"Qu\xc3\xbd D\xc6\xb0\xc6\xa1ng V\xc5\xa9, "
+.constant	k168	"RNes, "
+.constant	k169	"ROBIN YE, "
+.constant	k170	"Radek Blaho\xc5\xa1, "
+.constant	k171	"Radovan Hutera, "
+.constant	k172	"Raksit Chinnarakbumrung, "
+.constant	k173	"Rayan Benaouda, "
+.constant	k174	"Reece Watson, "
+.constant	k175	"Renan Krabbe, "
+.constant	k176	"Reverb Acustico - Moises Souza, "
+.constant	k177	"Ridho Hirzan, "
+.constant	k178	"Rifqi Agritama, "
+.constant	k179	"Rizky Evans, "
+.constant	k180	"Robert Brocki, "
+.constant	k181	"Romain VEURRIER, "
+.constant	k182	"Rui Lopes, "
+.constant	k183	"Runze Lei, "
+.constant	k184	"Ryan Morris, "
+.constant	k185	"SASGSG, "
+.constant	k186	"SEHOON \xec\x84\xb8\xed\x9b\x88, "
+.constant	k187	"Sakura_Sword, "
+.constant	k188	"Samu, "
+.constant	k189	"Seong Gyu Choi, "
+.constant	k190	"Shickey, "
+.constant	k191	"Silence112, "
+.constant	k192	"Simon Busch, "
+.constant	k193	"Skyline, "
+.constant	k194	"Snir bens shalom, "
+.constant	k195	"Stephan Schmitt, "
+.constant	k196	"Super Saian, "
+.constant	k197	"Swaziman, "
+.constant	k198	"Swon, "
+.constant	k199	"S\xc6\xa1n H\xe1\xbb\x93, "
+.constant	k200	"Taewoo Lee, "
+.constant	k201	"Taufik Hidayat, "
+.constant	k202	"Teng Wilson, "
+.constant	k203	"TheWelshWizard, "
+.constant	k204	"Throwaway Accou, "
+.constant	k205	"Tiago Pacheco, "
+.constant	k206	"Tobias31tv, "
+.constant	k207	"Tobias Gonzalez, "
+.constant	k208	"Tuturuga, "
+.constant	k209	"Vamsi Nammi, "
+.constant	k210	"Verfdrinker, "
+.constant	k211	"Vi Va, "
+.constant	k212	"Viktor V, "
+.constant	k213	"Vilko, "
+.constant	k214	"Vladimir Vladimirovich Tenov, "
+.constant	k215	"Willem, "
+.constant	k216	"WilliamGu, "
+.constant	k217	"XDogma TTsUK, "
+.constant	k218	"Xingjian Zhu, "
+.constant	k219	"YJ Kim, "
+.constant	k220	"Yannick Heumaier, "
+.constant	k221	"Yaonan Lin, "
+.constant	k222	"Yohanes Stephen, "
+.constant	k223	"Your Grandma, "
+.constant	k224	"Yu Gao, "
+.constant	k225	"Yuzhe Bai, "
+.constant	k226	"Zinqq, "
+.constant	k227	"ZorGah, "
+.constant	k228	"asd4766, "
+.constant	k229	"bananakicker, "
+.constant	k230	"bob19250, "
+.constant	k231	"bruh momentum, "
+.constant	k232	"calvin dolan, "
+.constant	k233	"can duran, "
+.constant	k234	"dPrudtkdgml, "
+.constant	k235	"daeho kim, "
+.constant	k236	"ddIVER, "
+.constant	k237	"dean nicholls, "
+.constant	k238	"donggun lee, "
+.constant	k239	"listDonators_1"
+.constant	k240	"dragonswall, "
+.constant	k241	"erik robinson, "
+.constant	k242	"ewwt, "
+.constant	k243	"firebourne, "
+.constant	k244	"fruitdiet, "
+.constant	k245	"gominho, "
+.constant	k246	"guanberdolfo, "
+.constant	k247	"hanabi hwang, "
+.constant	k248	"hd km, "
+.constant	k249	"henrylibre, "
+.constant	k250	"hvtaja, "
+.constant	k251	"jail112, "
+.constant	k252	"james 18pac, "
+.constant	k253	"james kale, "
+.constant	k254	"jamie smith, "
+.constant	k255	"jk lee, "
+.constant	k256	"juju, "
+.constant	k257	"kaan sermin, "
+.constant	k258	"kaka50, "
+.constant	k259	"karislee79, "
+.constant	k260	"kijun, "
+.constant	k261	"kkk k, "
+.constant	k262	"kopio, "
+.constant	k263	"lldkiyu, "
+.constant	k264	"llvllr30, "
+.constant	k265	"ls h, "
+.constant	k266	"luozidong, "
+.constant	k267	"lysmi, "
+.constant	k268	"ogzhnpcmn, "
+.constant	k269	"qwe rt, "
+.constant	k270	"ray9999, "
+.constant	k271	"Shnarf, "
+.constant	k272	"saveroo savero, "
+.constant	k273	"sd2002, "
+.constant	k274	"sin, "
+.constant	k275	"snowflake1105, "
+.constant	k276	"sonkwangho, "
+.constant	k277	"sooheuk, "
+.constant	k278	"steed blacke, "
+.constant	k279	"summerload, "
+.constant	k280	"thaimeojs, "
+.constant	k281	"tom m, "
+.constant	k282	"woo ssi, "
+.constant	k283	"xilong jing, "
+.constant	k284	"yeomprivate, "
+.constant	k285	"zino, "
+.constant	k286	"\xce\x93\xce\xb9\xce\xac\xce\xbd\xce\xbd\xce\xb7\xcf\x82 \xce\xa0\xce\xaf\xce\xb3\xce\xba\xce\xb1\xcf\x82, "
+.constant	k287	"\xce\xa3 \xce\xa1, "
+.constant	k288	"\xd0\x90\xd0\xbb\xd0\xb5\xd0\xba\xd1\x81\xd0\xb0\xd0\xbd\xd0\xb4\xd1\x80 \xd0\xa7\xd0\xb0\xd1\x86\xd0\xba\xd0\xb8\xd0\xb9, "
+.constant	k289	"\xe1\x84\x8b\xe1\x84\x8b, "
+.constant	k290	"\xe5\xae\x87\xe6\x96\x90 \xe5\xa4\x8f, "
+.constant	k291	"\xe9\x92\xb0\xe7\x82\xab \xe9\x83\xad, "
+.constant	k292	"\xe9\x98\xbf\xe8\x9d\xa6 \xe5\xbc\xb5, "
+.constant	k293	"\xea\xb0\x80\xeb\xb9\x88 \xeb\xb0\x95\t, "
+.constant	k294	"\xea\xb0\x95\xeb\x82\xa8 \xea\xb0\x93, "
+.constant	k295	"\xea\xb0\x95\xec\x9d\x80\xeb\xb9\x88, "
+.constant	k296	"\xea\xb2\xbd\xec\x88\x98 seol, "
+.constant	k297	"\xea\xb2\xbd\xec\x88\x98 \xec\x84\xa4, "
+.constant	k298	"\xea\xb2\xbd\xec\xb0\xac \xec\x9d\xb4, "
+.constant	k299	"\xea\xb8\xb0\xed\x98\x84 \xea\xb9\x80, "
+.constant	k300	"\xea\xb8\xb0\xed\x9b\x88 \xeb\xa7\x88, "
+.constant	k301	"\xea\xb8\xb8\xed\x98\xb8 \xec\xa1\xb0, "
+.constant	k302	"\xea\xb9\x80\xeb\xaf\xbc\xec\xa4\x80, "
+.constant	k303	"\xea\xb9\x80\xec\x9c\xa4\xec\xa0\x9c, "
+.constant	k304	"\xea\xb9\x80\xed\x98\x84\xec\x9a\xb0, "
+.constant	k305	"\xeb\x82\x98\xeb\x88\x84\xea\xb8\xb0 \xec\x8b\x9c\xec\x84\xa0, "
+.constant	k306	"\xeb\x82\xa8\xed\x98\x95\xec\x9a\xb1, "
+.constant	k307	"\xeb\x85\xb8\xeb\x9e\x91\xec\x96\x91\xeb\xa7\x90, "
+.constant	k308	"\xeb\x8b\x88\xec\x95\xa0\xeb\xaf\xb8, "
+.constant	k309	"\xeb\x8b\xac \xea\xb9\x80, "
+.constant	k310	"\xeb\x8f\x99\xec\x84\xad \xec\x9d\xb4, "
+.constant	k311	"\xeb\x8f\x99\xed\x99\x98 \xec\x9d\xb4, "
+.constant	k312	"\xeb\x91\x90\xed\x98\x84 \xec\xa0\x95, "
+.constant	k313	"\xeb\x9d\xbc\xec\xa7\x84, "
+.constant	k314	"\xeb\xa3\xa8 \xec\xb9\xb4\xec\xb9\xb4, "
+.constant	k315	"\xeb\xa5\x98\xeb\xa6\xbc \xed\x95\x98, "
+.constant	k316	"\xeb\xa5\xb4\xea\xbc\xb4\xeb\x9a\x9c\xea\xb8\xb0, "
+.constant	k317	"\xeb\xa7\x88\xeb\xa7\x88\xeb\xa7\x88 \xeb\x9d\xbc, "
+.constant	k318	"\xeb\xac\xb8\xec\x88\x98 \xeb\xb0\x95, "
+.constant	k319	"\xeb\xaf\xbc\xed\x98\x95 \xea\xb9\x80, "
+.constant	k320	"\xeb\xb3\x91\xea\xb7\x9c \xea\xb0\x95, "
+.constant	k321	"\xeb\xb3\x91\xec\x84\xb8 \xea\xb9\x80, "
+.constant	k322	"\xeb\xbf\x8c \xec\x9a\xb0, "
+.constant	k323	"\xec\x82\xb4\xeb\x9d\xbc\xec\x9e\x90\xeb\xa5\xb4, "
+.constant	k324	"\xec\x83\x81\xea\xb7\x9c \xec\x9d\xb4, "
+.constant	k325	"\xec\x84\xa0\xed\x98\x95 \xec\x9e\x84, "
+.constant	k326	"\xec\x84\xb1\xec\xa7\x84 \xeb\xb0\x95, "
+.constant	k327	"\xec\x84\xb1\xec\xa7\x84 \xec\x86\x90, "
+.constant	k328	"\xec\x84\xb1\xed\x9b\x88 \xec\x96\x91, "
+.constant	k329	"\xec\x88\x98\xeb\xaf\xbc \xea\xb9\x80, "
+.constant	k330	"\xec\x8a\xb9\xec\x9a\xb0 \xea\xb9\x80, "
+.constant	k331	"\xec\x8a\xb9\xec\x9e\xac \xec\x9d\xb4, "
+.constant	k332	"\xec\x8a\xb9\xed\x9b\x88 \xec\x9d\xb4, "
+.constant	k333	"\xec\x97\xb0\xeb\xb9\x88 \xea\xb0\x95, "
+.constant	k334	"\xec\x98\x81\xec\x84\x9d \xec\xb1\x84, "
+.constant	k335	"\xec\x98\x81\xed\x95\x9c \xeb\xb9\x88, "
+.constant	k336	"\xec\x9a\xa9\xec\x9a\xb0 \xec\xa0\x84, "
+.constant	k337	"\xec\x9a\xb0\xea\xb3\xa4 \xea\xb9\x80, "
+.constant	k338	"\xec\x9a\xb0\xec\x9c\xa0 \xeb\xac\xb4\xec\xa7\x80\xeb\xb0\xa9, "
+.constant	k339	"\xec\x9b\x85\xea\xb8\xb0 \xed\x99\x8d, "
+.constant	k340	"\xec\x9c\xa0\xec\x98\x81 \xec\xa0\x95, "
+.constant	k341	"\xec\x9d\xb4\xea\xb2\xbd\xed\x9d\xac stpprudgml0403, "
+.constant	k342	"\xec\x9d\xb4\xeb\xa5\x98, "
+.constant	k343	"\xec\x9d\xb4\xec\xa7\x80 \xec\xbc\x80, "
+.constant	k344	"\xec\x9d\xb4\xed\x98\x95\xec\x84\xb1, "
+.constant	k345	"\xec\x9d\xb5\xed\x9d\xac \xec\x8b\xa0, "
+.constant	k346	"\xec\x9e\xac\xeb\xaf\xbc \xec\x9d\xb4, "
+.constant	k347	"\xec\x9e\xac\xec\x84\xb1 \xec\x9d\xb4, "
+.constant	k348	"\xec\x9e\xac\xec\x84\xb1 \xec\xa1\xb0, "
+.constant	k349	"\xec\x9e\xac\xec\x9a\xb1 \xec\x95\x88, "
+.constant	k350	"\xec\x9e\xac\xec\x9d\xbc \xeb\xb0\x95, "
+.constant	k351	"\xec\x9e\xac\xed\x98\x84 \xec\x9d\xb4, "
+.constant	k352	"\xec\x9e\xac\xed\x98\x95 \xec\x8b\xac, "
+.constant	k353	"\xec\xa0\x95\xec\xa3\xbc \xec\xa1\xb0, "
+.constant	k354	"\xec\xa0\x95\xed\x98\x84 \xea\xb9\x80, "
+.constant	k355	"\xec\xa0\x95\xed\x99\x98 \xec\x95\x88, "
+.constant	k356	"\xec\xa2\x85\xea\xb6\x8c \xec\x9d\xb4\t, "
+.constant	k357	"\xec\xa2\x85\xec\x9b\x90 \xed\x95\x9c, "
+.constant	k358	"\xec\xa2\x85\xec\x9c\xa4 \xec\xa1\xb0, "
+.constant	k359	"\xec\xa2\x85\xed\x99\x94 \xec\x9d\xb4, "
+.constant	k360	"\xec\xa3\xbc\xed\x98\xb8 \xeb\xb0\x95, "
+.constant	k361	"\xec\xa4\x80\xec\x98\x81 \xeb\xb0\x95, "
+.constant	k362	"\xec\xa4\x80\xec\x98\x81 \xec\x84\x9c, "
+.constant	k363	"\xec\xa4\x80\xec\xb2\xa0 \xec\x9d\xb4, "
+.constant	k364	"\xec\xa4\x80\xed\x98\x81 \xec\xb5\x9c, "
+.constant	k365	"\xec\xa6\x90\xeb\x9d\xbc\xed\x83\x84\xed\x83\x84, "
+.constant	k366	"\xec\xa7\x80\xec\x84\xb1 \xea\xb9\x80, "
+.constant	k367	"\xec\xa7\x80\xec\x84\xb1 \xec\x9c\xa0, "
+.constant	k368	"\xec\xa7\x80\xec\x9d\x80\xec\x9c\xa8, "
+.constant	k369	"\xec\xa7\x84 \xea\xb9\x80, "
+.constant	k370	"\xec\xa7\x84\xec\x84\xb1 \xeb\xb0\xb0, "
+.constant	k371	"\xec\xa7\x84\xec\x98\x81 \xeb\xb0\x95, "
+.constant	k372	"\xec\xae\xb8, "
+.constant	k373	"\xec\xb0\xac\xea\xb7\x9c \xeb\xb0\x95, "
+.constant	k374	"\xec\xb0\xbd\xec\x9a\xb4 \xec\x9d\xb4, "
+.constant	k375	"\xec\xb0\xbd\xec\x9b\x90 \xec\x9e\x84, "
+.constant	k376	"\xec\xb6\x98\xec\x8b\x9d \xea\xb9\x80, "
+.constant	k377	"\xec\xbd\x94 \xeb\x82\x98, "
+.constant	k378	"\xed\x81\xac\xed\x81\xac\xeb\xa3\xa8\xec\x82\xa5\xeb\xbd\x95, "
+.constant	k379	"\xed\x83\x9d\xed\x98\x95 \xec\x9d\xb4, "
+.constant	k380	"\xed\x85\x8c\xec\x8a\xac\xeb\x9d\xbc \xeb\x84\x88\xeb\x9e\x91\xea\xb0\x88\xeb\x9e\x98, "
+.constant	k381	"\xed\x8c\x8c\xed\x8d\x84\xed\x8e\xb4\xed\x8d\xbc, "
+.constant	k382	"\xed\x94\x8c\xeb\xa1\x9c\xec\x9a\xb0, "
+.constant	k383	"\xed\x98\x84\xea\xb5\xac \xec\xa0\x95, "
+.constant	k384	"\xed\x98\x84\xeb\xaf\xbc \xea\xb9\x80, "
+.constant	k385	"\xed\x98\x84\xec\x9a\xb0 \xec\x9e\x84, "
+.constant	k386	"\xed\x98\x84\xec\xa4\x80 \xec\x95\x88, "
+.constant	k387	"\xed\x98\x84\xec\xa4\x91 \xea\xb9\x80, "
+.constant	k388	"\xed\x98\x95 \xeb\xb0\x95, "
+.constant	k389	"\xed\x98\xb8\xec\x9e\xac \xec\x9d\xb4, "
+.constant	k390	"\xed\x98\xb8\xec\xa7\x84 \xec\xa0\x95, "
+.constant	k391	"\xed\x99\x8d \xec\x84\xb1"
+.constant	k392	"listInfo"
+.constant	k393	L"Special Thanks to all Donators && Patrons: "
+.constant	k394	L"If you like this table and would like to support me, you can buy me some coffee by donating. So I can spare more time and motivation into this, although I can't offer too much aside from table and features request as I want to keep this table free of charge."
+.constant	k395	L"Tips: Always run the table after you loaded a game."
+.constant	k396	"tableChangelog"
+.constant	k397	L"CHANGELOG\n==========================================\nUPDATE 5\n\nImprovements\n\n\xe2\x97\x8f Released for FM 26.3.0.\n\nFixed\n\n\xe2\x97\x8f Reactivated Golden Generation.\n\xe2\x97\x8f Fixed an issue where Extra Staff displayed incorrect values.\n\nUPDATE 4\n\nImprovements\n\n\xe2\x97\x8f Released for FM 26.2.0.\n\xe2\x97\x8f Renamed preset \xe2\x80\x9cBoard Always Accepts Your Requests (Including Club Vision)\xe2\x80\x9d \xe2\x86\x92 \xe2\x80\x9cForce Board to Accept Your Requests (Including Club Vision)\xe2\x80\x9d.\n\xe2\x97\x8f Renamed preset \xe2\x80\x9cPlayers and Staff Always Accept Your Contract Offers\xe2\x80\x9d \xe2\x86\x92 \xe2\x80\x9cForce Players and Staff to Accept Your Contract Offers\xe2\x80\x9d.\n\xe2\x97\x8f Renamed preset \xe2\x80\x9cRecruit Players for Any Fee\xe2\x80\x9d \xe2\x86\x92 \xe2\x80\x9cForce Other Clubs to Accept Your Transfer Offers\xe2\x80\x9d.\n\nFixed\n\n\xe2\x97\x8f Reactivated Force Other Clubs to Accept Your Transfer Offers.\n\nUPDATE 3\n\nImprovements\n\n\xe2\x97\x8f Released for game version 26.1.3.\n\nFixed\n\n\xe2\x97\x8f Fixed an issue where object names were not displayed properly.\n\xe2\x97\x8f Reactivated On-Match Player Ability Modifier.\n\nUPDATE 2\n\nImprovements\n\n\xe2\x97\x8f Released for game version 26.1.2.\n\n\nUPDATE 1\n\nImprovements\n\n\xe2\x97\x8f Updated the notes for Global Presets.\n\nFixed\n\n\xe2\x97\x8f Reactivated Accelerate Player Development.\n\xe2\x97\x8f Reactivated Board Always Accepts Your Requests (Including Club Vision).\n\xe2\x97\x8f Reactivated Players and Staff Always Accept Your Contract Offers.\n\xe2\x97\x8f Reactivated No Work Permits.\n\xe2\x97\x8f Reactivated No Transfer Windows.\n\xe2\x97\x8f Reactivated No Loan Restrictions.\n\n\nINITIAL RELEASE\n\nImprovements\n\n\xe2\x97\x8f Released for game version 26.1.1.\n"
+.constant	k398	"tableReadme"
+.constant	k399	L"%s CHEAT TABLE\n========================================================================\nThis table was a collaboration between me (tdg6661) and tfigment.\n\nSupported Platforms: Epic Games, PC Game Pass, and Steam\n\nINSTRUCTION - HOW TO USE SEARCH FEATURE\n========================================================================\n1. Ensure that Main Script is selected and successfully loaded (no errors).\n2. Make sure Update Global Pointers (Table Settings -> Update Global Pointers) is selected and loaded successfully (no errors).\n3. Type something in the search box, choose an object type, then click on \"Search.\"\n4. The discovered items will be added to Search ->.\n5. To select an item, open the item name and click Set Focus to xxxxxx.\n\nINSTRUCTION - HOW TO USE FREEZER FEATURE\n========================================================================\nThis feature is currently only available for clubs and nations.\n\n1. Ensure that Main Script is selected and successfully loaded (with no errors).\n2. Go to the desired club or nation, open Presets, and then click Add to Freezer.\n3. Open Freezer, turn on freezer first.\n4. Select an item you added, turn on Switcher, and then choose any option available.\n\nINSTRUCTION - HOW TO USE ADVANCED FEATURES\n========================================================================\nThis setting will enable database listing and add a changeable pointer.\n\n1. Ensure that Main Script is selected and successfully loaded (no errors).\n2. Make sure Update Global Pointers (Table Settings -> Update Global Pointers) is selected and loaded successfully (no errors).\n3. Make sure you're loaded or start a game first, or this feature will not work well.\n4. Go to Table Settings and activate the Use Advanced Features script.\n5. Data will be loaded in 10\xe2\x80\x9340 seconds (depending on your CPU) and will consume more RAM. So, don't panic if the table gets frozen for a while.\n6. Go to a pointer value type (marked as blue), and press Space to open the Selection List window.\n7. From the Selection List, select an item and then click OK.\xc2\xa0\n\nINSTRUCTION - HOW TO USE DISSECT DATA\n========================================================================\n1. Open Memory View -> Tools -> Dissect data/structures (CTRL+D).\n2. Click File -> Import.\n3. Open structures folder, choose DisectDataStructures.CSX, click OK.\n4. Now open desire item (Club / Nation / Person / etc..).\n5. Open Presets -> Open in Dissect Data.\n\nINSTRUCTION - HOW TO CHANGE DATE\n========================================================================\nTip: The date 01/01/1900 or 1900 means \"not set\" (invalid) date / year in FM.\n\n1. Select FM Date data type value (e.g., 21/12/2021).\n2. Put [X] or simply press Space, and a window will appear.\n3. Change the date, month, and year, then click OK.\n\nINSTRUCTION - HOW TO CHANGE TABLE LANGUAGE\n========================================================================\n1. Go to Table Settings > More Settings.\n2. Look for Table.Language, then change value from available options.\n3. Click OK; activate More Settings.\n\nINSTRUCTION - HOW TO CHANGE TABLE CURRENCY\n========================================================================\n1. Go to Table Settings > More Settings.\n2. Look for Table.CurrencyType, then change value from available options.\n3. Click OK; activate More Settings.\n4. Note: This setting will not be applied to dynamic lists.\n\nSPECIAL THANKS TO\n========================================================================\n\xe2\x97\x8f Dark Byte\n\xe2\x97\x8f tfigment\n\xe2\x97\x8f TheyCallMeTim13\n\xe2\x97\x8f mece\n\xe2\x97\x8f EpicBirdi\n\xe2\x97\x8f aSwedishMagyar\n\xe2\x97\x8f All FM trainer creators\xc2\xa0\n\xe2\x97\x8f All Donators and Patrons\n\nSUPPORT & DONATION\n========================================================================\nIf you like this table and would like to support me, you can buy me some coffee by donating. So I can spare more time and motivation into this, although I can't offer too much aside from table and features request as I want to keep this table free of charge.\n\nWorld Wide:\n\xe2\x97\x8f Patreon - %s\n\xe2\x97\x8f PayPal - %s\n\nIndonesia:\n\xe2\x97\x8f KaryaKarsa - %s\n"
+.constant	k400	"upper"
+
+loadk         r0    k0 ; k0 = "Cheat Engine Table D" (truncated)
+loadkx        r1  c= 1
+loadbool      r2     0     2
+loadnil       r3     0  c= 3
+loadk         r4    k4 ; k4 = ""
+gettable      r5    r0    k5 ; k5 = "string"
+setupval      r5    u5 c= 262
+setupval      r6    u0 c= 261
+gettable      r6    r6    k7 ; k7 = "empty"
+testset       r6    r0     1
+lt             0    k0    r3 ; k0 = "Cheat Engine Table D" (truncated)
+setupval      r6    u0 c= 264
+test          r6     1
+eq             0    k0    r0 ; k0 = "Cheat Engine Table D" (truncated)
+loadbool      r6     0     4
+setupval      r7    u0 c= 265
+newtable      r8     0     5
+newtable      r8   266     0
+self          r8  r267    r1
+add           r8   k12    r2 ; k12 = "Version"
+settable      r8   k13    r3 ; k13 = "Author"
+newtable      r8   270     4
+settable      r0    k1    r8 ; k1 = "CETableDetails"
+newtable      r0   271   272
+settabup      u0   k17   k18 ; k18 = "26.3.0.0"
+setupval      r0  u275 c= 276
+settable      r0   k21   k22 ; k22 = "26.3.0"
+setupval      r8    u0 c= 273
+settabup      u0   k23    r8 ; k23 = "expectedVersion"
+setupval      r0  u280 c= 281
+settable      r0   k26   k27 ; k27 = "FM26"
+newtable      r0   284   285
+settabup      u0   k30   k31 ; k31 = 5
+setupval      r0  u288 c= 289
+settabup      u8    r0    k5 ; k5 = "string"
+settable      r8    r8    k6 ; k6 = "format"
+loadk         r9   k35 ; k35 = "%s [%s]"
+gettable     r10    r0   k24 ; k24 = "gameName"
+settabup     u11    r0   k21 ; k21 = "expectedModVersion"
+forloop       r8 -129021
+settabup      u0   k34    r8 ; k34 = "tableTitle"
+gettable      r8    r0    k5 ; k5 = "string"
+setupval      r8    u8 c= 262
+loadnil       r9     0 c= 37
+gettabup     r10    u0   k30 ; k30 = "tableVersion"
+tailcall      r8     3  c= 2
+settable      r0   k36    r8 ; k36 = "tableDesc"
+newtable      r0   294   295
+settabup      u0   k40   k41 ; k41 = L"https://sortitoutsi." (truncated)
+setupval      r0  u298 c= 299
+settable      r0   k44   k45 ; k45 = "https://paypal.me/td" (truncated)
+newtable      r0   302   303
+gettabup      r8    u0    k5 ; k5 = "string"
+settabup      u8    r8    k6 ; k6 = "format"
+loadbool      r9     0    49
+setupval     r10    u0 c= 271
+gettabup     r11    u0   k21 ; k21 = "expectedModVersion"
+tailcall      r8     4  c= 2
+settable      r0   k48    r8 ; k48 = "firstMessage"
+setupval      r8    u0 c= 261
+gettable      r8    r8    k6 ; k6 = "format"
+loadkx        r9 c= 51
+loadbool     r10     0    52
+loadnil      r11     0 c= 53
+loadk        r12   k54 ; k54 = "2000 taka, "
+loadkx       r13 c= 55
+loadbool     r14     0    56
+loadnil      r15     0 c= 57
+loadk        r16   k58 ; k58 = "Andrii, "
+loadkx       r17 c= 59
+loadbool     r18     0    60
+loadnil      r19     0 c= 61
+loadk        r20   k62 ; k62 = "Bartosz Maliszewki, "
+loadkx       r21 c= 63
+loadbool     r22     0    64
+loadnil      r23     0 c= 65
+loadk        r24   k66 ; k66 = "B\xe1\xba\xa3o Nguy\xe1\xbb\x85n Kh\xe1\xba\xaf" (truncated)
+loadkx       r25 c= 67
+loadbool     r26     0    68
+loadnil      r27     0 c= 69
+loadk        r28   k70 ; k70 = "ComicEyes, "
+loadkx       r29 c= 71
+loadbool     r30     0    72
+loadnil      r31     0 c= 73
+loadk        r32   k74 ; k74 = "Dai Mon, "
+loadkx       r33 c= 75
+loadbool     r34     0    76
+loadnil      r35     0 c= 77
+loadk        r36   k78 ; k78 = "Darlington Bangura, "
+loadkx       r37 c= 79
+loadbool     r38     0    80
+loadnil      r39     0 c= 81
+loadk        r40   k82 ; k82 = "DemonAxe, "
+loadkx       r41 c= 83
+loadbool     r42     0    84
+loadnil      r43     0 c= 85
+loadk        r44   k86 ; k86 = "Dr. P, "
+loadkx       r45 c= 87
+loadbool     r46     0    88
+loadnil      r47     0 c= 89
+loadk        r48   k90 ; k90 = "Enzion Garcia, "
+loadkx       r49 c= 91
+loadbool     r50     0    92
+loadnil      r51     0 c= 93
+loadk        r52   k94 ; k94 = "Four Ball, "
+loadkx       r53 c= 95
+loadbool     r54     0    96
+loadnil      r55     0 c= 97
+loadk        r56   k98 ; k98 = "Go Cha, "
+loadkx       r57 c= 99
+loadbool     r58     0   100
+loadnil      r59     0 c= 101
+loadk        r60  k102 ; k102 = "Hamza SARICA, "
+loadkx       r61 c= 103
+loadbool     r62     0   104
+loadnil      r63     0 c= 105
+loadk        r64  k106 ; k106 = "Igy Txt, "
+loadkx       r65 c= 107
+loadbool     r66     0   108
+loadnil      r67     0 c= 109
+loadk        r68  k110 ; k110 = "JackoDelTaco, "
+loadkx       r69 c= 111
+loadbool     r70     0   112
+loadnil      r71     0 c= 113
+loadk        r72  k114 ; k114 = "Jay Daniel, "
+loadkx       r73 c= 115
+loadbool     r74     0   116
+loadnil      r75     0 c= 117
+loadk        r76  k118 ; k118 = "Jin, "
+loadkx       r77 c= 119
+loadbool     r78     0   120
+loadnil      r79     0 c= 121
+loadk        r80  k122 ; k122 = "Josh92, "
+loadkx       r81 c= 123
+loadbool     r82     0   124
+loadnil      r83     0 c= 125
+loadk        r84  k126 ; k126 = "Karisa, "
+loadkx       r85 c= 127
+loadbool     r86     0   128
+loadnil      r87     0 c= 129
+loadk        r88  k130 ; k130 = "Kobe, "
+loadkx       r89 c= 131
+loadbool     r90     0   132
+loadnil      r91     0 c= 133
+loadk        r92  k134 ; k134 = "Larbi Bessaci, "
+loadkx       r93 c= 135
+loadbool     r94     0   136
+loadnil      r95     0 c= 137
+loadk        r96  k138 ; k138 = "Maik Herrmann, "
+loadkx       r97 c= 139
+loadbool     r98     0   140
+loadnil      r99     0 c= 141
+loadk       r100  k142 ; k142 = "Michal Niedzielski, "
+loadkx      r101 c= 143
+loadbool    r102     0   144
+loadnil     r103     0 c= 145
+loadk       r104  k146 ; k146 = "Monsuru Alasi, "
+loadkx      r105 c= 147
+loadbool    r106     0   148
+loadnil     r107     0 c= 149
+loadk       r108  k150 ; k150 = "Muhd Yusri Razali, "
+loadkx      r109 c= 151
+loadbool    r110     0   152
+loadnil     r111     0 c= 153
+loadk       r112  k154 ; k154 = "N_OJE, "
+loadkx      r113 c= 155
+loadbool    r114     0   156
+loadnil     r115     0 c= 157
+loadk       r116  k158 ; k158 = "Oliver Elfert, "
+loadkx      r117 c= 159
+loadbool    r118     0   160
+loadnil     r119     0 c= 160
+loadk       r120  k161 ; k161 = "Pawe\xc5\x82, "
+loadkx      r121 c= 162
+loadbool    r122     0   163
+loadnil     r123     0 c= 164
+loadk       r124  k165 ; k165 = "Pierre Artous, "
+loadkx      r125 c= 166
+loadbool    r126     0   167
+loadnil     r127     0 c= 168
+loadk       r128  k169 ; k169 = "ROBIN YE, "
+loadkx      r129 c= 170
+loadbool    r130     0   171
+loadnil     r131     0 c= 172
+loadk       r132  k173 ; k173 = "Rayan Benaouda, "
+loadkx      r133 c= 174
+loadbool    r134     0   175
+loadnil     r135     0 c= 176
+loadk       r136  k177 ; k177 = "Ridho Hirzan, "
+loadkx      r137 c= 178
+loadbool    r138     0   179
+loadnil     r139     0 c= 180
+loadk       r140  k181 ; k181 = "Romain VEURRIER, "
+loadkx      r141 c= 182
+loadbool    r142     0   183
+loadnil     r143     0 c= 184
+loadk       r144  k185 ; k185 = "SASGSG, "
+loadkx      r145 c= 186
+loadbool    r146     0   187
+loadnil     r147     0 c= 188
+loadk       r148  k189 ; k189 = "Seong Gyu Choi, "
+loadkx      r149 c= 190
+loadbool    r150     0   191
+loadnil     r151     0 c= 192
+loadk       r152  k193 ; k193 = "Skyline, "
+loadkx      r153 c= 194
+loadbool    r154     0   195
+loadnil     r155     0 c= 196
+loadk       r156  k197 ; k197 = "Swaziman, "
+loadkx      r157 c= 198
+loadbool    r158     0   199
+loadnil     r159     0 c= 200
+loadk       r160  k201 ; k201 = "Taufik Hidayat, "
+loadkx      r161 c= 202
+loadbool    r162     0   203
+loadnil     r163     0 c= 204
+loadk       r164  k205 ; k205 = "Tiago Pacheco, "
+loadkx      r165 c= 206
+loadbool    r166     0   207
+loadnil     r167     0 c= 208
+loadk       r168  k209 ; k209 = "Vamsi Nammi, "
+loadkx      r169 c= 210
+loadbool    r170     0   211
+loadnil     r171     0 c= 212
+loadk       r172  k213 ; k213 = "Vilko, "
+loadkx      r173 c= 214
+loadbool    r174     0   215
+loadnil     r175     0 c= 216
+loadk       r176  k217 ; k217 = "XDogma TTsUK, "
+loadkx      r177 c= 218
+loadbool    r178     0   219
+loadnil     r179     0 c= 220
+loadk       r180  k221 ; k221 = "Yaonan Lin, "
+loadkx      r181 c= 222
+loadbool    r182     0   223
+loadnil     r183     0 c= 224
+loadk       r184  k225 ; k225 = "Yuzhe Bai, "
+loadkx      r185 c= 226
+loadbool    r186     0   227
+loadnil     r187     0 c= 228
+loadk       r188  k229 ; k229 = "bananakicker, "
+loadkx      r189 c= 230
+loadbool    r190     0   231
+loadnil     r191     0 c= 232
+loadk       r192  k233 ; k233 = "can duran, "
+loadkx      r193 c= 234
+loadbool    r194     0   235
+loadnil     r195     0 c= 236
+loadk       r196  k237 ; k237 = "dean nicholls, "
+loadkx      r197 c= 238
+eq             9    r9  r197
+forloop       r8 -130045
+settabup      u0   k50    r8 ; k50 = "listDonators_0"
+gettable      r8    r0    k5 ; k5 = "string"
+setupval      r8    u8 c= 262
+loadnil       r9     0 c= 240
+loadk        r10  k241 ; k241 = "erik robinson, "
+loadkx       r11 c= 242
+loadbool     r12     0   243
+loadnil      r13     0 c= 244
+loadk        r14  k245 ; k245 = "gominho, "
+loadkx       r15 c= 246
+loadbool     r16     0   247
+loadnil      r17     0 c= 248
+loadk        r18  k249 ; k249 = "henrylibre, "
+loadkx       r19 c= 250
+loadbool     r20     0   251
+loadnil      r21     0 c= 252
+loadk        r22  k253 ; k253 = "james kale, "
+loadkx       r23 c= 254
+loadbool     r24     0   255
+loadnil      r25     0 c= 256
+loadk        r26  k257 ; k257 = "kaan sermin, "
+loadkx       r27 c= 258
+loadbool     r28     0   259
+loadnil      r29     0 c= 260
+loadk        r30  k261 ; k261 = "kkk k, "
+loadkx       r31 c= 262
+loadbool     r32     0   263
+loadnil      r33     0 c= 264
+loadk        r34  k265 ; k265 = "ls h, "
+loadkx       r35 c= 266
+loadbool     r36     0   267
+loadnil      r37     0 c= 268
+loadk        r38  k269 ; k269 = "qwe rt, "
+loadkx       r39 c= 270
+loadbool     r40     0   271
+loadnil      r41     0 c= 272
+loadk        r42  k273 ; k273 = "sd2002, "
+loadkx       r43 c= 274
+loadbool     r44     0   275
+loadnil      r45     0 c= 276
+loadk        r46  k277 ; k277 = "sooheuk, "
+loadkx       r47 c= 278
+loadbool     r48     0   279
+loadnil      r49     0 c= 280
+loadk        r50  k281 ; k281 = "tom m, "
+loadkx       r51 c= 282
+loadbool     r52     0   283
+loadnil      r53     0 c= 284
+loadk        r54  k285 ; k285 = "zino, "
+loadkx       r55 c= 286
+loadbool     r56     0   287
+loadnil      r57     0 c= 288
+loadk        r58  k289 ; k289 = "\xe1\x84\x8b\xe1\x84\x8b, "
+loadkx       r59 c= 290
+loadbool     r60     0   291
+loadnil      r61     0 c= 292
+loadk        r62  k293 ; k293 = "\xea\xb0\x80\xeb\xb9\x88 \xeb\xb0\x95\t, "
+loadkx       r63 c= 294
+loadbool     r64     0   295
+loadnil      r65     0 c= 296
+loadk        r66  k297 ; k297 = "\xea\xb2\xbd\xec\x88\x98 \xec\x84\xa4, "
+loadkx       r67 c= 298
+loadbool     r68     0   299
+loadnil      r69     0 c= 300
+loadk        r70  k301 ; k301 = "\xea\xb8\xb8\xed\x98\xb8 \xec\xa1\xb0, "
+loadkx       r71 c= 302
+loadbool     r72     0   303
+loadnil      r73     0 c= 304
+loadk        r74  k305 ; k305 = "\xeb\x82\x98\xeb\x88\x84\xea\xb8\xb0 \xec\x8b\x9c\xec\x84\xa0, "
+loadkx       r75 c= 306
+loadbool     r76     0   307
+loadnil      r77     0 c= 308
+loadk        r78  k309 ; k309 = "\xeb\x8b\xac \xea\xb9\x80, "
+loadkx       r79 c= 310
+loadbool     r80     0   311
+loadnil      r81     0 c= 312
+loadk        r82  k313 ; k313 = "\xeb\x9d\xbc\xec\xa7\x84, "
+loadkx       r83 c= 314
+loadbool     r84     0   315
+loadnil      r85     0 c= 316
+loadk        r86  k317 ; k317 = "\xeb\xa7\x88\xeb\xa7\x88\xeb\xa7\x88 \xeb\x9d\xbc, "
+loadkx       r87 c= 318
+loadbool     r88     0   319
+loadnil      r89     0 c= 320
+loadk        r90  k321 ; k321 = "\xeb\xb3\x91\xec\x84\xb8 \xea\xb9\x80, "
+loadkx       r91 c= 322
+loadbool     r92     0   323
+loadnil      r93     0 c= 324
+loadk        r94  k325 ; k325 = "\xec\x84\xa0\xed\x98\x95 \xec\x9e\x84, "
+loadkx       r95 c= 326
+loadbool     r96     0   327
+loadnil      r97     0 c= 328
+loadk        r98  k329 ; k329 = "\xec\x88\x98\xeb\xaf\xbc \xea\xb9\x80, "
+loadkx       r99 c= 330
+loadbool    r100     0   331
+loadnil     r101     0 c= 332
+loadk       r102  k333 ; k333 = "\xec\x97\xb0\xeb\xb9\x88 \xea\xb0\x95, "
+loadkx      r103 c= 334
+loadbool    r104     0   335
+loadnil     r105     0 c= 336
+loadk       r106  k337 ; k337 = "\xec\x9a\xb0\xea\xb3\xa4 \xea\xb9\x80, "
+loadkx      r107 c= 338
+loadbool    r108     0   339
+loadnil     r109     0 c= 340
+loadk       r110  k341 ; k341 = "\xec\x9d\xb4\xea\xb2\xbd\xed\x9d\xac stpprudgml" (truncated)
+loadkx      r111 c= 342
+loadbool    r112     0   343
+loadnil     r113     0 c= 344
+loadk       r114  k345 ; k345 = "\xec\x9d\xb5\xed\x9d\xac \xec\x8b\xa0, "
+loadkx      r115 c= 346
+loadbool    r116     0   347
+loadnil     r117     0 c= 348
+loadk       r118  k349 ; k349 = "\xec\x9e\xac\xec\x9a\xb1 \xec\x95\x88, "
+loadkx      r119 c= 350
+loadbool    r120     0   351
+loadnil     r121     0 c= 352
+loadk       r122  k353 ; k353 = "\xec\xa0\x95\xec\xa3\xbc \xec\xa1\xb0, "
+loadkx      r123 c= 354
+loadbool    r124     0   355
+loadnil     r125     0 c= 356
+loadk       r126  k357 ; k357 = "\xec\xa2\x85\xec\x9b\x90 \xed\x95\x9c, "
+loadkx      r127 c= 358
+loadbool    r128     0   359
+loadnil     r129     0 c= 360
+loadk       r130  k361 ; k361 = "\xec\xa4\x80\xec\x98\x81 \xeb\xb0\x95, "
+loadkx      r131 c= 362
+loadbool    r132     0   363
+loadnil     r133     0 c= 364
+loadk       r134  k365 ; k365 = "\xec\xa6\x90\xeb\x9d\xbc\xed\x83\x84\xed\x83\x84, "
+loadkx      r135 c= 366
+loadbool    r136     0   367
+loadnil     r137     0 c= 368
+loadk       r138  k369 ; k369 = "\xec\xa7\x84 \xea\xb9\x80, "
+loadkx      r139 c= 370
+loadbool    r140     0   371
+loadnil     r141     0 c= 372
+loadk       r142  k373 ; k373 = "\xec\xb0\xac\xea\xb7\x9c \xeb\xb0\x95, "
+loadkx      r143 c= 374
+loadbool    r144     0   375
+loadnil     r145     0 c= 376
+loadk       r146  k377 ; k377 = "\xec\xbd\x94 \xeb\x82\x98, "
+loadkx      r147 c= 378
+loadbool    r148     0   379
+loadnil     r149     0 c= 380
+loadk       r150  k381 ; k381 = "\xed\x8c\x8c\xed\x8d\x84\xed\x8e\xb4\xed\x8d\xbc, "
+loadkx      r151 c= 382
+loadbool    r152     0   383
+loadnil     r153     0 c= 384
+loadk       r154  k385 ; k385 = "\xed\x98\x84\xec\x9a\xb0 \xec\x9e\x84, "
+loadkx      r155 c= 386
+loadbool    r156     0   387
+loadnil     r157     0 c= 388
+loadk       r158  k389 ; k389 = "\xed\x98\xb8\xec\x9e\xac \xec\x9d\xb4, "
+loadkx      r159 c= 390
+loadbool    r160     0   391
+lt             9    r9  r160
+call          r8     2     2
+setupval      r0  u495  c= 8
+loadbool      r8     0   392
+sub           r9    r3    r0
+loadk        r10  k393 ; k393 = L"Special Thanks to al" (truncated)
+gettable     r11    r0   k50 ; k50 = "listDonators_0"
+settabup     u12    r0  k239 ; k239 = "listDonators_1"
+lt            10   r10   r12
+loadk        r11  k394 ; k394 = L"If you like this tab" (truncated)
+loadkx       r12 c= 395
+vararg        r9     3  c= 1
+newtable      r0     8     9
+loadk         r8  k396 ; k396 = "tableChangelog"
+loadkx        r9 c= 397
+settable      r0    r8    r9
+loadnil       r8     0 c= 398
+gettabup      r9    u0    k5 ; k5 = "string"
+settabup      u9    r9    k6 ; k6 = "format"
+loadbool     r10     0   399
+setupval     r11    u0 c= 261
+loadk        r12  k400 ; k400 = "upper"
+settabup     u11   r11   r12
+settabup     u12    r0   k24 ; k24 = "gameName"
+forloop      r11 -130045
+gettabup     r12    u0   k42 ; k42 = "linkPatreon"
+gettable     r13    r0   k44 ; k44 = "linkPayPal"
+settabup     u14    r0   k46 ; k46 = "linkKaryaKarsa"
+forloop       r9 -127997
+settabup      u0    r8    r9
+gettable      r8    r0    k1 ; k1 = "CETableDetails"
+forprep       r8 -130047
+tforcall      r0     0  b= 1
+

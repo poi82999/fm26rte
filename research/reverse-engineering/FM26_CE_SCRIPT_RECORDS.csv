@@ -1,0 +1,660 @@
+﻿id,object,group,description,kind,path
+0,(root),,Run Table,"Lua, focus/select, symbol",
+17652,Award,,Award >,"Lua, write",Award >
+22767,Award,Presets,Change Competition,Lua,Award > > Presets > > Change Competition
+22766,Award,Presets,Change Continent,Lua,Award > > Presets > > Change Continent
+22765,Award,Presets,Change Nation,Lua,Award > > Presets > > Change Nation
+19666,City,,City >,"Lua, write",City >
+1000,Club,,Club >,"Lua, write",Club >
+18989,Club,Presets,Maximise Existing Tactical Familiarity,Lua,Club > > Presets > > Maximise Existing Tactical Familiarity
+18981,Club,Presets,Maximise Existing Training Happiness,Lua,Club > > Presets > > Maximise Existing Training Happiness
+18052,Club,Presets,Improve Team Cohesion,Lua,Club > > Presets > > Improve Team Cohesion
+23747,Club,Presets,Improve Team Condition,Lua,Club > > Presets > > Improve Team Condition
+17835,Club,Presets,Destroy Team,Lua,Club > > Presets > > Destroy Team
+23650,Club,Presets,Remove All Bans,Lua,Club > > Presets > > Remove All Bans
+17772,Club,Presets,Remove All Injuries,Lua,Club > > Presets > > Remove All Injuries
+18916,Club,Presets,Remove All Unhappiness,Lua,Club > > Presets > > Remove All Unhappiness
+20572,Club,Presets,Register All Players for X Competition,Lua,Club > > Presets > > Register All Players for X Competition
+20573,Club,Presets,Register All Players for Domestic Division,Lua,Club > > Presets > > Register All Players for Domestic Division
+20208,Club,Presets,Register All Players for UEFA,Lua,Club > > Presets > > Register All Players for UEFA
+17981,Club,Presets,Match Player CA / PA,Lua,Club > > Presets > > Match Player CA / PA
+20207,Club,Presets,Randomize Professionalism (Restore Hacked Professionalism),Lua,Club > > Presets > > Randomize Professionalism (Restore Hacked Professionalism)
+18993,Club,Presets,Cancel Team Transfer,Lua,Club > > Presets > > Cancel Team Transfer
+23820,Club,Presets,Complete Ongoing Board Requests,Lua,Club > > Presets > > Complete Ongoing Board Requests
+18990,Club,Presets,Boost Bank Balance,Lua,Club > > Presets > > Boost Bank Balance
+20203,Club,Presets,Boost Bank Balance by 50%,Lua,Club > > Presets > > Boost Bank Balance by 50%
+12859,Club,Presets,Boost Bank Balance by 75%,Lua,Club > > Presets > > Boost Bank Balance by 75%
+12789,Club,Presets,Clear Financial Expenditures,Lua,Club > > Presets > > Clear Financial Expenditures
+23746,Club,Presets,Remove Debts & Loans,Lua,Club > > Presets > > Remove Debts & Loans
+12858,Club,Presets,Average Attendance X% of Stadium Capacity,Lua,Club > > Presets > > Average Attendance X% of Stadium Capacity
+19967,Club,Presets,Average Attendance 50% of Stadium Capacity,Lua,Club > > Presets > > Average Attendance 50% of Stadium Capacity
+19968,Club,Presets,Average Attendance 75% of Stadium Capacity,Lua,Club > > Presets > > Average Attendance 75% of Stadium Capacity
+23821,Club,Presets,Change Stadium,Lua,Club > > Presets > > Change Stadium
+23822,Club,Presets,Change Training Ground,Lua,Club > > Presets > > Change Training Ground
+18019,Club,Presets,Make This Club As Stadium Owner,Lua,Club > > Presets > > Make This Club As Stadium Owner
+24078,Club,Presets,Maximize All Staff Scouting Knowledge Level,Lua,Club > > Presets > > Maximize All Staff Scouting Knowledge Level
+18910,Club,Presets,Adjust All Players Salary to Nation's Weekly Wage Values by CA,Lua,Club > > Presets > > Player Contract > > Adjust All Players Salary to Nation's Weekly Wage Values by CA
+18911,Club,Presets,Adjust All Players Salary to Nation's Weekly Wage Values by Reputation,Lua,Club > > Presets > > Player Contract > > Adjust All Players Salary to Nation's Weekly Wage Values by Reputation
+18904,Club,Presets,Cut All Players Salary by X%,Lua,Club > > Presets > > Player Contract > > Cut All Players Salary by X%
+18900,Club,Presets,Cut All Players Salary by 50%,Lua,Club > > Presets > > Player Contract > > Cut All Players Salary by 50%
+18903,Club,Presets,Cut All Players Salary by 75%,Lua,Club > > Presets > > Player Contract > > Cut All Players Salary by 75%
+23900,Club,Presets,Remove Bonus or Clause,Lua,Club > > Presets > > Player Contract > > Remove Bonus or Clause
+23901,Club,Presets,Remove All Release Clauses,Lua,Club > > Presets > > Player Contract > > Remove All Release Clauses
+23902,Club,Presets,Remove Exploring Options Clause,Lua,Club > > Presets > > Player Contract > > Remove Exploring Options Clause
+23903,Club,Presets,Remove Match Highest Earner Clause,Lua,Club > > Presets > > Player Contract > > Remove Match Highest Earner Clause
+18070,Club,Presets,Extend All Players Contract Length by X Years,Lua,Club > > Presets > > Player Contract > > Extend All Players Contract Length by X Years
+18068,Club,Presets,Extend All Players Contract Length by 5 Years,Lua,Club > > Presets > > Player Contract > > Extend All Players Contract Length by 5 Years
+18069,Club,Presets,Extend All Players Contract Length by 50 Years,Lua,Club > > Presets > > Player Contract > > Extend All Players Contract Length by 50 Years
+20204,Club,Presets,Lifetime Contract All Players,Lua,Club > > Presets > > Player Contract > > Lifetime Contract All Players
+18912,Club,Presets,Adjust All Staff Salary to Nation's Weekly Wage Values by CA,Lua,Club > > Presets > > Staff Contract > > Adjust All Staff Salary to Nation's Weekly Wage Values by CA
+18913,Club,Presets,Adjust All Staff Salary to Nation's Weekly Wage Values by Reputation,Lua,Club > > Presets > > Staff Contract > > Adjust All Staff Salary to Nation's Weekly Wage Values by Reputation
+18905,Club,Presets,Cut All Staff Salary by X%,Lua,Club > > Presets > > Staff Contract > > Cut All Staff Salary by X%
+18902,Club,Presets,Cut All Staff Salary by 50%,Lua,Club > > Presets > > Staff Contract > > Cut All Staff Salary by 50%
+18901,Club,Presets,Cut All Staff Salary by 75%,Lua,Club > > Presets > > Staff Contract > > Cut All Staff Salary by 75%
+18071,Club,Presets,Extend All Staff Contract Length by X Years,Lua,Club > > Presets > > Staff Contract > > Extend All Staff Contract Length by X Years
+18066,Club,Presets,Extend All Staff Contract Length by 5 Years,Lua,Club > > Presets > > Staff Contract > > Extend All Staff Contract Length by 5 Years
+18067,Club,Presets,Extend All Staff Contract Length by 50 Years,Lua,Club > > Presets > > Staff Contract > > Extend All Staff Contract Length by 50 Years
+20205,Club,Presets,Lifetime Contract All Staff,Lua,Club > > Presets > > Staff Contract > > Lifetime Contract All Staff
+19857,Club,Presets,Add to Freezer,"Lua, freeze",Club > > Presets > > Add to Freezer
+13016,Club,Presets,Open in Dissect Data,Lua,Club > > Presets > > Open in Dissect Data
+12910,Club,Finances,Sponsors >,Lua,Club > > Finances > > Sponsors >
+22846,Club,Finances,Add Club Sponsor,Lua,Club > > Finances > > Sponsors > > Add Club Sponsor
+23744,Club,Finances,Debts & Loans >,Lua,Club > > Finances > > Debts & Loans >
+23773,Club,Club Culture ->,Board Requests >,Lua,Club > > Club Culture -> > Board Requests >
+24003,Club,Club Culture ->,Objectives >,Lua,Club > > Club Culture -> > Objectives >
+24000,Club,Club Culture ->,Relationships >,Lua,Club > > Club Culture -> > Relationships >
+23815,Club,Club Culture ->,Training Camp >,Lua,Club > > Club Culture -> > Training Camp >
+13042,Club,Staff,Board Members >,Lua,Club > > Staff > > Board Members >
+1011,Club,Staff,Medical Team >,Lua,Club > > Staff > > Medical Team >
+1012,Club,Staff,Coaching Team >,Lua,Club > > Staff > > Coaching Team >
+1013,Club,Staff,Recruitment Team >,Lua,Club > > Staff > > Recruitment Team >
+1010,Club,Teams,Teams >,Lua,Club > > Teams >
+12885,Club,Affiliations,Affiliations >,Lua,Club > > Affiliations >
+23130,Club,Affiliations,Add Club Affiliation,"Lua, symbol",Club > > Affiliations > > Add Club Affiliation
+13041,Club,Responsibilities,Responsibilities >,Lua,Club > > Responsibilities >
+4000,Competition,,Competition >,"Lua, write",Competition >
+13027,Competition,Presets,Open in Dissect Data,Lua,Competition > > Presets > > Open in Dissect Data
+18064,Competition,League Table,League Table >,Lua,Competition > > League Table >
+12681,Competition,Prize Money,Prize Money >,Lua,Competition > > Prize Money >
+19860,Continent,,Continent >,"Lua, write",Continent >
+20698,Continent,Fixture Rules,Fixture Rules >,Lua,Continent > > Fixture Rules >
+20641,Derby,,Derby >,"Lua, write",Derby >
+20646,Derby,Presets,Change Name,Lua,Derby > > Presets > > Change Name
+20650,Derby,Presets,Change Team 1,Lua,Derby > > Presets > > Change Team 1
+20649,Derby,Presets,Change Team 2,Lua,Derby > > Presets > > Change Team 2
+20652,Derby,Presets,Change First Match Competition,Lua,Derby > > Presets > > Change First Match Competition
+20651,Derby,Presets,Change First Match Stadium,Lua,Derby > > Presets > > Change First Match Stadium
+20648,Derby,Presets,Open in Dissect Data,Lua,Derby > > Presets > > Open in Dissect Data
+3000,Nation,,Nation >,"Lua, write",Nation >
+23651,Nation,Presets,Maximise Existing Tactical Familiarity,Lua,Nation > > Presets > > Maximise Existing Tactical Familiarity
+23652,Nation,Presets,Improve Team Cohesion,Lua,Nation > > Presets > > Improve Team Cohesion
+23645,Nation,Presets,Destroy Team,Lua,Nation > > Presets > > Destroy Team
+23653,Nation,Presets,Remove All Bans,Lua,Nation > > Presets > > Remove All Bans
+23646,Nation,Presets,Remove All Injuries,Lua,Nation > > Presets > > Remove All Injuries
+23647,Nation,Presets,Remove All Unhappiness,Lua,Nation > > Presets > > Remove All Unhappiness
+22731,Nation,Presets,Add EU Rules,Lua,Nation > > Presets > > Add EU Rules
+22730,Nation,Presets,Add Foreign Rules,Lua,Nation > > Presets > > Add Foreign Rules
+23665,Nation,Presets,Add to Freezer,"Lua, freeze",Nation > > Presets > > Add to Freezer
+13026,Nation,Presets,Open in Dissect Data,Lua,Nation > > Presets > > Open in Dissect Data
+13017,Nation,Staff,Medical Staff >,Lua,Nation > > Staff > > Medical Staff >
+3007,Nation,Staff,Coaching Staff >,Lua,Nation > > Staff > > Coaching Staff >
+3006,Nation,Teams,Teams >,Lua,Nation > > Teams >
+24267,Nation,Relationships,Rival Nations >,Lua,Nation > > Relationships > > Rival Nations >
+18095,Nation,Relationships,Nations Treated as EU >,Lua,Nation > > Relationships > > Nations Treated as EU >
+13044,Nation,Relationships,Nations Treated as Non-Foreign >,Lua,Nation > > Relationships > > Nations Treated as Non-Foreign >
+24268,Nation,Relationships,Languages >,Lua,Nation > > Relationships > > Languages >
+13043,Nation,Responsibilities,Responsibilities >,Lua,Nation > > Responsibilities >
+2000,Person,,Person >,"Lua, write",Person >
+17833,Person,Presets,Change Nationality,Lua,Person > > Presets > > General > > Change Nationality
+20571,Person,Presets,Add Other Nationality,Lua,Person > > Presets > > General > > Add Other Nationality
+23765,Person,Presets,Change Birth Place,Lua,Person > > Presets > > General > > Change Birth Place
+12675,Person,Presets,Change Birth Date,Lua,Person > > Presets > > General > > Change Birth Date
+17990,Person,Presets,Generate Random Personality,Lua,Person > > Presets > > General > > Generate Random Personality
+12553,Person,Presets,Match CA / PA,Lua,Person > > Presets > > General > > Match CA / PA
+12674,Person,Presets,Extend Contract Length by X Years,Lua,Person > > Presets > > General > > Extend Contract Length by X Years
+12585,Person,Presets,Extend Contract Length by 5 Years,Lua,Person > > Presets > > General > > Extend Contract Length by 5 Years
+12555,Person,Presets,Extend Contract Length by 50 Years,Lua,Person > > Presets > > General > > Extend Contract Length by 50 Years
+17988,Person,Presets,Adjust Salary to Nation's Weekly Wage Values by CA,Lua,Person > > Presets > > General > > Adjust Salary to Nation's Weekly Wage Values by CA
+18909,Person,Presets,Adjust Salary to Nation's Weekly Wage Values by Reputation,Lua,Person > > Presets > > General > > Adjust Salary to Nation's Weekly Wage Values by Reputation
+18906,Person,Presets,Cut Salary by X%,Lua,Person > > Presets > > General > > Cut Salary by X%
+18907,Person,Presets,Cut Salary by 50%,Lua,Person > > Presets > > General > > Cut Salary by 50%
+18908,Person,Presets,Cut Salary by 75%,Lua,Person > > Presets > > General > > Cut Salary by 75%
+23899,Person,Presets,Remove Bonus or Clause,Lua,Person > > Presets > > General > > Remove Bonus or Clause
+23848,Person,Presets,Remove All Release Clauses,Lua,Person > > Presets > > General > > Remove All Release Clauses
+23865,Person,Presets,Remove Exploring Options Clause,Lua,Person > > Presets > > General > > Remove Exploring Options Clause
+23898,Person,Presets,Remove Match Highest Earner Clause,Lua,Person > > Presets > > General > > Remove Match Highest Earner Clause
+12551,Person,Presets,Set Contract Start Date to Current Date,Lua,Person > > Presets > > General > > Set Contract Start Date to Current Date
+12628,Person,Presets,Set Contract to Expired,Lua,Person > > Presets > > General > > Set Contract to Expired
+20191,Person,Presets,Lifetime Contract,Lua,Person > > Presets > > General > > Lifetime Contract
+18098,Person,Presets,Terminate Contract,Lua,Person > > Presets > > General > > Terminate Contract
+18099,Person,Presets,Terminate Loan,Lua,Person > > Presets > > General > > Terminate Loan
+17771,Person,Presets,Cancel All Transfer Offers,Lua,Person > > Presets > > General > > Cancel All Transfer Offers
+13015,Person,Presets,Open in Dissect Data,Lua,Person > > Presets > > General > > Open in Dissect Data
+23649,Person,Presets,Remove All Bans,Lua,Person > > Presets > > Player > > Remove All Bans
+13045,Person,Presets,Remove All Injuries,Lua,Person > > Presets > > Player > > Remove All Injuries
+17810,Person,Presets,Remove All Unhappiness,Lua,Person > > Presets > > Player > > Remove All Unhappiness
+11399,Person,Presets,Maximise Existing Training Happiness,Lua,Person > > Presets > > Player > > Maximise Existing Training Happiness
+17989,Person,Presets,Improve Hidden Attributes,Lua,Person > > Presets > > Player > > Improve Hidden Attributes
+20110,Person,Presets,Register Player for X Competition,Lua,Person > > Presets > > Player > > Register Player for X Competition
+20209,Person,Presets,Register Player for Domestic Division,Lua,Person > > Presets > > Player > > Register Player for Domestic Division
+20175,Person,Presets,Register Player for UEFA,Lua,Person > > Presets > > Player > > Register Player for UEFA
+23920,Person,Presets,Remove All Traits,Lua,Person > > Presets > > Player > > Remove All Traits
+24384,Person,Presets,Improve Agent - Club Manager Relationship,Lua,Person > > Presets > > Player > > Improve Agent - Club Manager Relationship
+24385,Person,Presets,Improve Agent - Human Manager Relationship,Lua,Person > > Presets > > Player > > Improve Agent - Human Manager Relationship
+13048,Person,Presets,Role Scores,Lua,Person > > Presets > > Player > > Role Scores
+19107,Person,Presets,Amadeo Carrizo (24 years old) - ARG - 162/182,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Amadeo Carrizo (24 years old) - ARG - 162/182
+19119,Person,Presets,Andreas Köpke (20 years old) - GER - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Andreas Köpke (20 years old) - GER - 131/176
+23831,Person,Presets,Dida (21 years old) - BRA - 161/186,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Dida (21 years old) - BRA - 161/186
+19101,Person,Presets,Dino Zoff (22 years old) - ITA - 157/192,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Dino Zoff (22 years old) - ITA - 157/192
+19094,Person,Presets,Edwin van der Sar (19 years old) - NED - 132/182,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Edwin van der Sar (19 years old) - NED - 132/182
+19104,Person,Presets,Frantisek Planicka (26 years old) - CZE - 179/184,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Frantisek Planicka (26 years old) - CZE - 179/184
+19102,Person,Presets,Gianluigi Buffon (19 years old) - ITA - 147/192,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Gianluigi Buffon (19 years old) - ITA - 147/192
+19100,Person,Presets,Gordon Banks (23 years old) - ENG - 165/190,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Gordon Banks (23 years old) - ENG - 165/190
+19115,Person,Presets,Gyula Grosics (24 years old) - HUN - 158/178,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Gyula Grosics (24 years old) - HUN - 158/178
+19108,Person,Presets,Harald Schumacher (21 years old) - GER - 154/184,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Harald Schumacher (21 years old) - GER - 154/184
+19095,Person,Presets,Iker Casillas (18 years old) - ESP - 139/184,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Iker Casillas (18 years old) - ESP - 139/184
+19114,Person,Presets,Jan Oblak (17 years old) - SVN - 123/178,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Jan Oblak (17 years old) - SVN - 123/178
+19243,Person,Presets,Jan Tomaszewski (22 years old) - POL - 140/170,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Jan Tomaszewski (22 years old) - POL - 140/170
+19109,Person,Presets,Jean-Marie Pfaff (21 years old) - BEL - 144/184,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Jean-Marie Pfaff (21 years old) - BEL - 144/184
+19246,Person,Presets,Jens Lehmann (20 years old) - GER - 123/168,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Jens Lehmann (20 years old) - GER - 123/168
+19236,Person,Presets,José Luis Chilavert (20 years old) - PAR - 135/180,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > José Luis Chilavert (20 years old) - PAR - 135/180
+19242,Person,Presets,Józef Młynarczyk (21 years old) - POL - 135/170,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Józef Młynarczyk (21 years old) - POL - 135/170
+19118,Person,Presets,Júlio César (19 years old) - BRA - 129/174,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Júlio César (19 years old) - BRA - 129/174
+19105,Person,Presets,Ladislao Mazurkiewicz (22 years old) - URU - 159/184,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Ladislao Mazurkiewicz (22 years old) - URU - 159/184
+19090,Person,Presets,Lev Yashin (24 years old) - RUS - 169/194,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Lev Yashin (24 years old) - RUS - 169/194
+19097,Person,Presets,Manuel Neuer (18 years old) - GER - 142/193,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Manuel Neuer (18 years old) - GER - 142/193
+19239,Person,Presets,Marc-André ter Stegen (17 years old) - GER - 119/174,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Marc-André ter Stegen (17 years old) - GER - 119/174
+19244,Person,Presets,Milutin Šoškić (23 years old) - KVX - 145/170,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Milutin Šoškić (23 years old) - KVX - 145/170
+19116,Person,Presets,Neville Southall (21 years old) - WAL - 141/176,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Neville Southall (21 years old) - WAL - 141/176
+19092,Person,Presets,Oliver Kahn (20 years old) - GER - 155/190,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Oliver Kahn (20 years old) - GER - 155/190
+19110,Person,Presets,Pat Jennings (22 years old) - NIR - 152/182,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Pat Jennings (22 years old) - NIR - 152/182
+19103,Person,Presets,Peter Schmeichel (20 years old) - DEN - 147/192,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Peter Schmeichel (20 years old) - DEN - 147/192
+19106,Person,Presets,Peter Shilton (22 years old) - ENG - 161/186,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Peter Shilton (22 years old) - ENG - 161/186
+19113,Person,Presets,Petr Cech (18 years old) - CZE - 130/180,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Petr Cech (18 years old) - CZE - 130/180
+19099,Person,Presets,Ricardo Zamora (26 years old) - ESP - 175/190,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Ricardo Zamora (26 years old) - ESP - 175/190
+19235,Person,Presets,Rinat Dasaev (21 years old) - RUS - 147/182,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Rinat Dasaev (21 years old) - RUS - 147/182
+19237,Person,Presets,Ronnie Hellström (22 years old) - SWE - 155/180,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Ronnie Hellström (22 years old) - SWE - 155/180
+19096,Person,Presets,Rudolf Hiden (26 years old) - FRA - 173/178,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Rudolf Hiden (26 years old) - FRA - 173/178
+19245,Person,Presets,Rüştü Reçber (19 years old) - TUR - 125/170,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Rüştü Reçber (19 years old) - TUR - 125/170
+19093,Person,Presets,Sepp Maier (22 years old) - GER - 154/184,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Sepp Maier (22 years old) - GER - 154/184
+19120,Person,Presets,Taffarel (20 years old) - BRA - 134/174,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Taffarel (20 years old) - BRA - 134/174
+19240,Person,Presets,Thibaut Courtois (17 years old) - BEL - 117/172,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Thibaut Courtois (17 years old) - BEL - 117/172
+19238,Person,Presets,Thomas Ravelli (21 years old) - SWE - 150/180,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Thomas Ravelli (21 years old) - SWE - 150/180
+19234,Person,Presets,Ubaldo Fillol (21 years old) - ARG - 152/182,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Ubaldo Fillol (21 years old) - ARG - 152/182
+19241,Person,Presets,Uli Stein (21 years old) - GER - 137/172,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Uli Stein (21 years old) - GER - 137/172
+19117,Person,Presets,Viliam Schrojf (23 years old) - SVK - 151/176,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Viliam Schrojf (23 years old) - SVK - 151/176
+19111,Person,Presets,Vladimir Beara (24 years old) - CRO - 162/182,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Vladimir Beara (24 years old) - CRO - 162/182
+19112,Person,Presets,Walter Zenga (20 years old) - ITA - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Goalkeepers (GK) > > Walter Zenga (20 years old) - ITA - 142/182
+19255,Person,Presets,Alan Hansen (21 years old) - SCO - 138/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Alan Hansen (21 years old) - SCO - 138/178
+19135,Person,Presets,Alessandro Nesta (19 years old) - ITA - 146/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Alessandro Nesta (19 years old) - ITA - 146/186
+19256,Person,Presets,Billy Wright (24 years old) - ENG - 163/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Billy Wright (24 years old) - ENG - 163/178
+19127,Person,Presets,Bobby Moore (22 years old) - ENG - 158/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Bobby Moore (22 years old) - ENG - 158/188
+19151,Person,Presets,Carles Puyol (19 years old) - ESP - 135/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Carles Puyol (19 years old) - ESP - 135/180
+19258,Person,Presets,Ciro Ferrara (20 years old) - ITA - 138/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Ciro Ferrara (20 years old) - ITA - 138/178
+19137,Person,Presets,Claudio Gentile (21 years old) - ITA - 147/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Claudio Gentile (21 years old) - ITA - 147/182
+19134,Person,Presets,Daniel Passarella (21 years old) - ARG - 151/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Daniel Passarella (21 years old) - ARG - 151/186
+19271,Person,Presets,Diego Godín (18 years old) - URU - 124/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Diego Godín (18 years old) - URU - 124/174
+19279,Person,Presets,Dimitar Penev (22 years old) - BUL - 138/168,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Dimitar Penev (22 years old) - BUL - 138/168
+19254,Person,Presets,Domingos da Guia (25 years old) - BRA - 163/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Domingos da Guia (25 years old) - BRA - 163/178
+19125,Person,Presets,Elías Figueroa (22 years old) - CHI - 163/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Elías Figueroa (22 years old) - CHI - 163/188
+19139,Person,Presets,Fabio Cannavaro (19 years old) - ITA - 134/184,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Fabio Cannavaro (19 years old) - ITA - 134/184
+19128,Person,Presets,Franco Baresi (20 years old) - ITA - 152/192,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Franco Baresi (20 years old) - ITA - 152/192
+19273,Person,Presets,Frank de Boer (19 years old) - NED - 132/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Frank de Boer (19 years old) - NED - 132/172
+19122,Person,Presets,Franz Beckenbauer (22 years old) - GER - 171/196,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Franz Beckenbauer (22 years old) - GER - 171/196
+19126,Person,Presets,Gaetano Scirea (21 years old) - ITA - 153/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Gaetano Scirea (21 years old) - ITA - 153/188
+19270,Person,Presets,Gerard Piqué (18 years old) - ESP - 124/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Gerard Piqué (18 years old) - ESP - 124/174
+19264,Person,Presets,Gică Popescu (20 years old) - ROU - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Gică Popescu (20 years old) - ROU - 133/178
+19269,Person,Presets,Giorgio Chiellini (18 years old) - ITA - 124/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Giorgio Chiellini (18 years old) - ITA - 124/174
+19143,Person,Presets,Giuseppe Bergomi (20 years old) - ITA - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Giuseppe Bergomi (20 years old) - ITA - 142/182
+19132,Person,Presets,Héctor Chumpitaz (22 years old) - PER - 154/184,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Héctor Chumpitaz (22 years old) - PER - 154/184
+23837,Person,Presets,Hong Myung-Bo (21 years old) - KOR - 127/162,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Hong Myung-Bo (21 years old) - KOR - 127/162
+19263,Person,Presets,Jaap Stam (19 years old) - NED - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Jaap Stam (19 years old) - NED - 133/178
+19249,Person,Presets,Jan Popluhar (23 years old) - SVK - 155/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Jan Popluhar (23 years old) - SVK - 155/180
+19262,Person,Presets,John Terry (18 years old) - ENG - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > John Terry (18 years old) - ENG - 128/178
+19138,Person,Presets,José Nasazzi (26 years old) - URU - 172/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > José Nasazzi (26 years old) - URU - 172/182
+19248,Person,Presets,José Santamaría (24 years old) - URU - 160/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > José Santamaría (24 years old) - URU - 160/180
+19278,Person,Presets,Josip Katalinski (22 years old) - BIH - 138/168,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Josip Katalinski (22 years old) - BIH - 138/168
+19145,Person,Presets,Jürgen Kohler (20 years old) - GER - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Jürgen Kohler (20 years old) - GER - 142/182
+19150,Person,Presets,Laurent Blanc (20 years old) - FRA - 140/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Laurent Blanc (20 years old) - FRA - 140/180
+19275,Person,Presets,Leonardo Bonucci (18 years old) - ITA - 122/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Leonardo Bonucci (18 years old) - ITA - 122/172
+19493,Person,Presets,Lúcio (19 years old) - BRA - 129/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Lúcio (19 years old) - BRA - 129/174
+19152,Person,Presets,Mats Hummels (18 years old) - GER - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Mats Hummels (18 years old) - GER - 128/178
+19123,Person,Presets,Matthias Sammer (20 years old) - GER - 146/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Matthias Sammer (20 years old) - GER - 146/186
+19274,Person,Presets,Miodrag Belodedici (20 years old) - ROU - 132/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Miodrag Belodedici (20 years old) - ROU - 132/172
+19261,Person,Presets,Morten Olsen (22 years old) - DEN - 153/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Morten Olsen (22 years old) - DEN - 153/178
+19259,Person,Presets,Murtaz Khurtsilava (22 years old) - GEO - 148/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Murtaz Khurtsilava (22 years old) - GEO - 148/178
+19142,Person,Presets,Nemanja Vidić (18 years old) - SRB - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Nemanja Vidić (18 years old) - SRB - 128/178
+19253,Person,Presets,Obdulio Varela (25 years old) - URU - 163/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Obdulio Varela (25 years old) - URU - 163/178
+23842,Person,Presets,Rafael Márquez (20 years old) - MEX - 135/164,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Rafael Márquez (20 years old) - MEX - 135/164
+19272,Person,Presets,Ricardo Carvalho (19 years old) - POR - 127/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Ricardo Carvalho (19 years old) - POR - 127/172
+19260,Person,Presets,Rio Ferdinand (19 years old) - ENG - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Rio Ferdinand (19 years old) - ENG - 133/178
+19267,Person,Presets,Roberto Ayala (19 years old) - ARG - 129/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Roberto Ayala (19 years old) - ARG - 129/174
+19141,Person,Presets,Ronald Koeman (20 years old) - NED - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Ronald Koeman (20 years old) - NED - 142/182
+19277,Person,Presets,Sami Hyypiä (19 years old) - FIN - 118/168,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Sami Hyypiä (19 years old) - FIN - 118/168
+19252,Person,Presets,Sergio Ramos (18 years old) - ESP - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Sergio Ramos (18 years old) - ESP - 128/178
+19265,Person,Presets,Sol Campbell (19 years old) - ENG - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Sol Campbell (19 years old) - ENG - 131/176
+19153,Person,Presets,Thiago Silva (18 years old) - BRA - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Thiago Silva (18 years old) - BRA - 128/178
+19257,Person,Presets,Velibor Vasović (23 years old) - SRB - 153/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Velibor Vasović (23 years old) - SRB - 153/178
+19276,Person,Presets,Vincent Kompany (18 years old) - BEL - 120/170,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Vincent Kompany (18 years old) - BEL - 120/170
+19147,Person,Presets,Virgil van Dijk (17 years old) - NED - 115/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Virgil van Dijk (17 years old) - NED - 115/180
+19250,Person,Presets,Walter Samuel (19 years old) - ARG - 120/170,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Walter Samuel (19 years old) - ARG - 120/170
+19494,Person,Presets,Willi Schulz (23 years old) - GER - 155/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Willi Schulz (23 years old) - GER - 155/180
+19266,Person,Presets,Władysław Żmuda (21 years old) - POL - 139/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Defenders (DC) > > Władysław Żmuda (21 years old) - POL - 139/174
+19475,Person,Presets,Alfredo Foni (25 years old) - ITA - 157/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Alfredo Foni (25 years old) - ITA - 157/172
+19478,Person,Presets,Anatoliy Demyanenko (21 years old) - UKR - 139/174,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Anatoliy Demyanenko (21 years old) - UKR - 139/174
+19144,Person,Presets,Andreas Brehme (20 years old) - GER - 147/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Andreas Brehme (20 years old) - GER - 147/182
+19474,Person,Presets,Antonio Cabrini (21 years old) - ITA - 143/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Antonio Cabrini (21 years old) - ITA - 143/178
+19482,Person,Presets,Ashley Cole (18 years old) - ENG - 122/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Ashley Cole (18 years old) - ENG - 122/172
+19461,Person,Presets,Berti Vogts (22 years old) - GER - 150/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Berti Vogts (22 years old) - GER - 150/180
+19480,Person,Presets,Bixente Lizarazu (20 years old) - FRA - 132/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Bixente Lizarazu (20 years old) - FRA - 132/172
+19490,Person,Presets,Branislav Ivanović (18 years old) - SRB - 114/164,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Branislav Ivanović (18 years old) - SRB - 114/164
+19488,Person,Presets,Branko Stanković (24 years old) - SRB - 150/170,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Branko Stanković (24 years old) - SRB - 150/170
+19148,Person,Presets,Cafu (19 years old) - 130/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Cafu (19 years old) - 130/180
+19460,Person,Presets,Carlos Alberto (22 years old) - BRA - 148/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Carlos Alberto (22 years old) - BRA - 148/178
+23845,Person,Presets,Dan Petrescu (25 years old) - ROU - 154/161,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Dan Petrescu (25 years old) - ROU - 154/161
+19472,Person,Presets,Daniel Alves (18 years old) - BRA - 126/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Daniel Alves (18 years old) - BRA - 126/176
+19483,Person,Presets,David Alaba (17 years old) - AUT - 117/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > David Alaba (17 years old) - AUT - 117/172
+19468,Person,Presets,Djalma Santos (24 years old) - BRA - 151/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Djalma Santos (24 years old) - BRA - 151/176
+19477,Person,Presets,Éric Gerets (21 years old) - BEL - 137/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Éric Gerets (21 years old) - BEL - 137/172
+19487,Person,Presets,Erik Nilsson (25 years old) - SWE - 153/168,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Erik Nilsson (25 years old) - SWE - 153/168
+19464,Person,Presets,Fahrudin Jusufi (23 years old) - KVX - 154/174,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Fahrudin Jusufi (23 years old) - KVX - 154/174
+19465,Person,Presets,Fritz Tarp (27 years old) - DEN - 169/174,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Fritz Tarp (27 years old) - DEN - 169/174
+19124,Person,Presets,Giacinto Facchetti (22 years old) - ITA - 156/186,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Giacinto Facchetti (22 years old) - ITA - 156/186
+19466,Person,Presets,Gianluca Zambrotta (19 years old) - ITA - 129/174,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Gianluca Zambrotta (19 years old) - ITA - 129/174
+19459,Person,Presets,Hans-Peter Briegel (21 years old) - GER - 143/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Hans-Peter Briegel (21 years old) - GER - 143/178
+19146,Person,Presets,Javier Zanetti (19 years old) - ARG - 135/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Javier Zanetti (19 years old) - ARG - 135/180
+19471,Person,Presets,Joan Segarra (24 years old) - ESP - 156/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Joan Segarra (24 years old) - ESP - 156/176
+19491,Person,Presets,Jordi Alba (18 years old) - ESP - 121/166,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Jordi Alba (18 years old) - ESP - 121/166
+19467,Person,Presets,José Antonio Camacho (21 years old) - ESP - 146/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > José Antonio Camacho (21 years old) - ESP - 146/176
+19469,Person,Presets,Juan Evaristo (26 years old) - ARG - 166/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Juan Evaristo (26 years old) - ARG - 166/176
+19149,Person,Presets,Júnior (21 years old) - BRA - 147/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Júnior (21 years old) - BRA - 147/182
+19462,Person,Presets,Karl-Heinz Schnellinger (23 years old) - GER - 155/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Karl-Heinz Schnellinger (23 years old) - GER - 155/180
+19268,Person,Presets,Károly Fogl (27 years old) - HUN - 169/174,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Károly Fogl (27 years old) - HUN - 169/174
+19484,Person,Presets,Maicon (18 years old) - BRA - 122/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Maicon (18 years old) - BRA - 122/172
+19479,Person,Presets,Manfred Kaltz (21 years old) - GER - 139/174,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Manfred Kaltz (21 years old) - GER - 139/174
+19463,Person,Presets,Manuel Amoros (20 years old) - FRA - 140/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Manuel Amoros (20 years old) - FRA - 140/180
+19486,Person,Presets,Marcelo (18 years old) - BRA - 125/170,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Marcelo (18 years old) - BRA - 125/170
+19131,Person,Presets,Lilian Thuram (19 years old) - FRA - 139/184,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Lilian Thuram (19 years old) - FRA - 139/184
+19251,Person,Presets,Nílton Santos (24 years old) - BRA - 157/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Nílton Santos (24 years old) - BRA - 157/182
+19458,Person,Presets,Paul Breitner (21 years old) - GER - 154/184,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Paul Breitner (21 years old) - GER - 154/184
+19473,Person,Presets,Paul Janes (25 years old) - GER - 163/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Paul Janes (25 years old) - GER - 163/178
+19129,Person,Presets,Paolo Maldini (20 years old) - 154/194,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Paolo Maldini (20 years old) - 154/194
+19489,Person,Presets,Patrice Evra (18 years old) - FRA - 118/168,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Patrice Evra (18 years old) - FRA - 118/168
+19140,Person,Presets,Philipp Lahm (18 years old) - 130/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Philipp Lahm (18 years old) - 130/180
+19130,Person,Presets,Roberto Carlos (19 years old) - 139/184,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Roberto Carlos (19 years old) - 139/184
+19485,Person,Presets,Rudolf Ramseyer (27 years old) - SUI - 163/168,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Rudolf Ramseyer (27 years old) - SUI - 163/168
+19133,Person,Presets,Ruud Krol (22 years old) - NED - 154/184,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Ruud Krol (22 years old) - NED - 154/184
+19476,Person,Presets,Sergio Cervato (24 years old) - ITA - 152/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Sergio Cervato (24 years old) - ITA - 152/172
+19481,Person,Presets,Severino Minelli (26 years old) - SUI - 162/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Severino Minelli (26 years old) - SUI - 162/172
+19470,Person,Presets,Víctor Andrade (24 years old) - URU - 156/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Defenders (D/WB RL) > > Víctor Andrade (24 years old) - URU - 156/176
+19336,Person,Presets,Abedi Pelé (20 years old) - GHA - 136/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Abedi Pelé (20 years old) - GHA - 136/176
+19161,Person,Presets,Adolfo Pedernera (25 years old) - ARG - 171/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Adolfo Pedernera (25 years old) - ARG - 171/186
+19306,Person,Presets,Andrea Pirlo (19 years old) - ITA - 137/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Andrea Pirlo (19 years old) - ITA - 137/182
+19280,Person,Presets,Andrés Iniesta (18 years old) - ESP - 136/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Andrés Iniesta (18 years old) - ESP - 136/186
+19356,Person,Presets,Antonin Panenka (22 years old) - CZE - 140/170,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Antonin Panenka (22 years old) - CZE - 140/170
+19346,Person,Presets,Arturo Vidal (18 years old) - CHI - 124/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Arturo Vidal (18 years old) - CHI - 124/174
+19348,Person,Presets,Bastian Schweinsteiger (18 years old) - GER - 122/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Bastian Schweinsteiger (18 years old) - GER - 122/172
+19312,Person,Presets,Bernd Schuster (21 years old) - GER - 150/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Bernd Schuster (21 years old) - GER - 150/180
+19171,Person,Presets,Bobby Charlton (23 years old) - ENG - 167/192,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Bobby Charlton (23 years old) - ENG - 167/192
+19344,Person,Presets,Branko Oblak (22 years old) - SVN - 142/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Branko Oblak (22 years old) - SVN - 142/172
+19340,Person,Presets,Cesc Fàbregas (18 years old) - ESP - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Cesc Fàbregas (18 years old) - ESP - 131/176
+19313,Person,Presets,Clarence Seedorf (19 years old) - NED - 140/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Clarence Seedorf (19 years old) - NED - 140/180
+19343,Person,Presets,Claude Makélélé (19 years old) - FRA - 122/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Claude Makélélé (19 years old) - FRA - 122/172
+19355,Person,Presets,Daniele De Rossi (18 years old) - ITA - 120/170,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Daniele De Rossi (18 years old) - ITA - 120/170
+19308,Person,Presets,Danny Blanchflower (24 years old) - NIR - 162/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Danny Blanchflower (24 years old) - NIR - 162/182
+19322,Person,Presets,Dave Mackay (23 years old) - SCO - 153/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Dave Mackay (23 years old) - SCO - 153/178
+19323,Person,Presets,David Kipiani (21 years old) - GEO - 141/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > David Kipiani (21 years old) - GEO - 141/176
+19326,Person,Presets,David Silva (18 years old) - ESP - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > David Silva (18 years old) - ESP - 128/178
+19495,Person,Presets,Deco (19 years old) - POR - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Deco (19 years old) - POR - 131/176
+23835,Person,Presets,Dennis Wise (22 years old) - ENG - 160/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Dennis Wise (22 years old) - ENG - 160/180
+19186,Person,Presets,Didi (24 years old) - BRA - 163/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Didi (24 years old) - BRA - 163/188
+19342,Person,Presets,Didier Deschamps (20 years old) - FRA - 132/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Didier Deschamps (20 years old) - FRA - 132/172
+19162,Person,Presets,Diego Maradona (20 years old) - ARG - 173/198,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Diego Maradona (20 years old) - ARG - 173/198
+19352,Person,Presets,Diego Simeone (19 years old) - ARG - 130/170,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Diego Simeone (19 years old) - ARG - 130/170
+19317,Person,Presets,Dragan Stojković (20 years old) - SRB - 143/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Dragan Stojković (20 years old) - SRB - 143/178
+19338,Person,Presets,Edgar Davids (19 years old) - NED - 134/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Edgar Davids (19 years old) - NED - 134/174
+19351,Person,Presets,Emerson (19 years old) - BRA - 125/170,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Emerson (19 years old) - BRA - 125/170
+19281,Person,Presets,Ernst Ocwirk (24 years old) - AUT - 166/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Ernst Ocwirk (24 years old) - AUT - 166/186
+19361,Person,Presets,Esteban Cambiasso (18 years old) - ARG - 118/168,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Esteban Cambiasso (18 years old) - ARG - 118/168
+19209,Person,Presets,Falcão (21 years old) - BRA - 146/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Falcão (21 years old) - BRA - 146/186
+19283,Person,Presets,Francesco Totti (19 years old) - ITA - 139/184,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Francesco Totti (19 years old) - ITA - 139/184
+19299,Person,Presets,Frank Lampard (19 years old) - ENG - 137/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Frank Lampard (19 years old) - ENG - 137/182
+19182,Person,Presets,Frank Rijkaard (20 years old) - NED - 148/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Frank Rijkaard (20 years old) - NED - 148/188
+19177,Person,Presets,Fritz Walter (24 years old) - GER - 175/190,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Fritz Walter (24 years old) - GER - 175/190
+19319,Person,Presets,Fulvio Bernardini (26 years old) - ITA - 168/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Fulvio Bernardini (26 years old) - ITA - 168/178
+19353,Person,Presets,Gennaro Gattuso (19 years old) - ITA - 125/170,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Gennaro Gattuso (19 years old) - ITA - 125/170
+19287,Person,Presets,Gheorghe Hagi (20 years old) - ROU - 146/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Gheorghe Hagi (20 years old) - ROU - 146/186
+19332,Person,Presets,Gianfranco Zola (20 years old) - ITA - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Gianfranco Zola (20 years old) - ITA - 131/176
+19173,Person,Presets,Gianni Rivera (22 years old) - ITA - 165/190,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Gianni Rivera (22 years old) - ITA - 165/190
+19300,Person,Presets,György Orth (26 years old) - HUN - 177/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > György Orth (26 years old) - HUN - 177/182
+19183,Person,Presets,György Sárosi (25 years old) - HUN - 173/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > György Sárosi (25 years old) - HUN - 173/188
+19215,Person,Presets,Héctor Scarone (27 years old) - URU - 181/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Héctor Scarone (27 years old) - URU - 181/186
+19337,Person,Presets,Igor Belanov (20 years old) - UKR - 134/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Igor Belanov (20 years old) - UKR - 134/174
+19297,Person,Presets,Igor Netto (23 years old) - RUS - 157/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Igor Netto (23 years old) - RUS - 157/182
+19354,Person,Presets,Jari Litmanen (19 years old) - FIN - 132/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Jari Litmanen (19 years old) - FIN - 132/172
+19347,Person,Presets,Javier Mascherano (18 years old) - ARG - 122/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Javier Mascherano (18 years old) - ARG - 122/172
+19163,Person,Presets,Johan Cruijff (22 years old) - NED - 168/198,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Johan Cruijff (22 years old) - NED - 168/198
+19167,Person,Presets,José Manuel Moreno (25 years old) - ARG - 182/192,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > José Manuel Moreno (25 years old) - ARG - 182/192
+19311,Person,Presets,Josef Smistik (26 years old) - AUT - 168/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Josef Smistik (26 years old) - AUT - 168/178
+19293,Person,Presets,József Bozsik (24 years old) - HUN - 166/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > József Bozsik (24 years old) - HUN - 166/186
+19288,Person,Presets,Juan Alberto Schiaffino (24 years old) - URU - 166/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Juan Alberto Schiaffino (24 years old) - URU - 166/186
+19185,Person,Presets,Kaká (18 years old) - BRA - 138/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Kaká (18 years old) - BRA - 138/188
+19285,Person,Presets,Kevin De Bruyne (17 years old) - BEL - 136/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Kevin De Bruyne (17 years old) - BEL - 136/186
+19290,Person,Presets,Kevin Keegan (21 years old) - ENG - 151/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Kevin Keegan (21 years old) - ENG - 151/186
+19295,Person,Presets,Larbi Ben Barek (25 years old) - FRA - 162/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Larbi Ben Barek (25 years old) - FRA - 162/182
+19334,Person,Presets,Liam Brady (21 years old) - IRL - 141/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Liam Brady (21 years old) - IRL - 141/176
+19157,Person,Presets,Lothar Matthäus (20 years old) - GER - 147/192,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Lothar Matthäus (20 years old) - GER - 147/192
+19330,Person,Presets,Luis Enrique (19 years old) - ESP - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Luis Enrique (19 years old) - ESP - 131/176
+19307,Person,Presets,Luis Monti (26 years old) - ARG - 177/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Luis Monti (26 years old) - ARG - 177/182
+19180,Person,Presets,Luis Suárez (23 years old) - ESP - 168/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Luis Suárez (23 years old) - ESP - 168/188
+19314,Person,Presets,Luka Modrić (18 years old) - CRO - 130/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Luka Modrić (18 years old) - CRO - 130/180
+23841,Person,Presets,Mágico González (22 years old) - SLV - 138/168,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Mágico González (22 years old) - SLV - 138/168
+19303,Person,Presets,Marco Tardelli (21 years old) - ITA - 147/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Marco Tardelli (21 years old) - ITA - 147/182
+19321,Person,Presets,Mesut Özil (18 years old) - GER - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Mesut Özil (18 years old) - GER - 128/178
+19329,Person,Presets,Michael Ballack (19 years old) - GER - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Michael Ballack (19 years old) - GER - 131/176
+19318,Person,Presets,Michael Essien (18 years old) - GHA - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Michael Essien (18 years old) - GHA - 128/178
+19175,Person,Presets,Michael Laudrup (20 years old) - DEN - 150/190,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Michael Laudrup (20 years old) - DEN - 150/190
+19159,Person,Presets,Michel Platini (21 years old) - FRA - 159/194,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Michel Platini (21 years old) - FRA - 159/194
+19350,Person,Presets,N'Golo Kanté (17 years old) - FRA - 112/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > N'Golo Kanté (17 years old) - FRA - 112/172
+19309,Person,Presets,Néstor Rossi (24 years old) - ARG - 158/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Néstor Rossi (24 years old) - ARG - 158/178
+23829,Person,Presets,Owen Hargreaves (21 years old) - CAN - 152/179,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Owen Hargreaves (21 years old) - CAN - 152/179
+19305,Person,Presets,Patrick Vieira (19 years old) - FRA - 135/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Patrick Vieira (19 years old) - FRA - 135/180
+19316,Person,Presets,Paul Scholes (19 years old) - ENG - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Paul Scholes (19 years old) - ENG - 133/178
+19324,Person,Presets,Paul Pogba (17 years old) - FRA - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Paul Pogba (17 years old) - FRA - 128/178
+19360,Person,Presets,Paulo Sousa (19 years old) - POR - 123/168,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Paulo Sousa (19 years old) - POR - 123/168
+19187,Person,Presets,Pavel Nedved (19 years old) - CZE - 136/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Pavel Nedved (19 years old) - CZE - 136/186
+19331,Person,Presets,Pep Guardiola (19 years old) - ESP - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Pep Guardiola (19 years old) - ESP - 131/176
+19301,Person,Presets,Pirri (22 years old) - ESP - 157/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Pirri (22 years old) - ESP - 157/182
+19345,Person,Presets,Rainer Bonhof (21 years old) - GER - 139/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Rainer Bonhof (21 years old) - GER - 139/174
+19179,Person,Presets,Raymond Kopa (23 years old) - FRA - 165/190,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Raymond Kopa (23 years old) - FRA - 165/190
+19176,Person,Presets,Rivellino (22 years old) - BRA - 158/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Rivellino (22 years old) - BRA - 158/188
+19339,Person,Presets,Roberto Mancini (20 years old) - ITA - 134/174,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Roberto Mancini (20 years old) - ITA - 134/174
+19327,Person,Presets,Romerito (20 years old) - PAR - 136/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Romerito (20 years old) - PAR - 136/176
+19168,Person,Presets,Ronaldinho (18 years old) - BRA - 142/192,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Ronaldinho (18 years old) - BRA - 142/192
+19320,Person,Presets,Roy Keane (19 years old) - IRL - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Roy Keane (19 years old) - IRL - 133/178
+19359,Person,Presets,Rubén Paz (21 years old) - URU - 133/168,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Rubén Paz (21 years old) - URU - 133/168
+19325,Person,Presets,Rui Costa (19 years old) - POR - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Rui Costa (19 years old) - POR - 133/178
+19156,Person,Presets,Ruud Gullit (20 years old) - NED - 152/192,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Ruud Gullit (20 years old) - NED - 152/192
+19291,Person,Presets,Sandro Mazzola (22 years old) - ITA - 161/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Sandro Mazzola (22 years old) - ITA - 161/186
+19349,Person,Presets,Sergio Busquets (18 years old) - ESP - 122/172,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Sergio Busquets (18 years old) - ESP - 122/172
+19292,Person,Presets,Sócrates (21 years old) - BRA - 149/184,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Sócrates (21 years old) - BRA - 149/184
+19298,Person,Presets,Steven Gerrard (18 years old) - ENG - 134/184,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Steven Gerrard (18 years old) - ENG - 134/184
+19296,Person,Presets,Teófilo Cubillas (22 years old) - PER - 159/184,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Teófilo Cubillas (22 years old) - PER - 159/184
+19386,Person,Presets,Thomas Häßler (20 years old) - GER - 140/180,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Thomas Häßler (20 years old) - GER - 140/180
+23840,Person,Presets,Tim Cahill (20 years old) - AUS - 120/160,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Tim Cahill (20 years old) - AUS - 120/160
+19335,Person,Presets,Toni Kroos (17 years old) - GER - 126/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Toni Kroos (17 years old) - GER - 126/176
+19184,Person,Presets,Valentino Mazzola (25 years old) - ITA - 173/188,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Valentino Mazzola (25 years old) - ITA - 173/188
+19328,Person,Presets,Valery Voronin (23 years old) - RUS - 151/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Valery Voronin (23 years old) - RUS - 151/176
+19357,Person,Presets,Vladimir Petrović (21 years old) - SRB - 133/168,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Vladimir Petrović (21 years old) - SRB - 133/168
+19315,Person,Presets,Wesley Sneijder (18 years old) - NED - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Wesley Sneijder (18 years old) - NED - 128/178
+19302,Person,Presets,Willem van Hanegem (22 years old) - NED - 152/182,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Willem van Hanegem (22 years old) - NED - 152/182
+19333,Person,Presets,Xabi Alonso (18 years old) - ESP - 126/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Xabi Alonso (18 years old) - ESP - 126/176
+19289,Person,Presets,Xavi (18 years old) - ESP - 136/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Xavi (18 years old) - ESP - 136/186
+19341,Person,Presets,Yaya Touré (18 years old) - CIV - 121/176,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Yaya Touré (18 years old) - CIV - 121/176
+19294,Person,Presets,Zbigniew Boniek (21 years old) - POL - 151/186,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Zbigniew Boniek (21 years old) - POL - 151/186
+19160,Person,Presets,Zico (21 years old) - BRA - 159/194,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Zico (21 years old) - BRA - 159/194
+19158,Person,Presets,Zinedine Zidane (19 years old) - FRA - 149/194,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Zinedine Zidane (19 years old) - FRA - 149/194
+19169,Person,Presets,Zizinho (24 years old) - BRA - 172/192,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Zizinho (24 years old) - BRA - 172/192
+19310,Person,Presets,Zlatko Čajkovski (24 years old) - CRO - 158/178,Lua,Person > > Presets > > Player > > Legend Players > > Central Midfielders (DM/M/AM C) > > Zlatko Čajkovski (24 years old) - CRO - 158/178
+19377,Person,Presets,Alan Morton (27 years old) - SCO - 168/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Alan Morton (27 years old) - SCO - 168/178
+19388,Person,Presets,Alexis Sánchez (18 years old) - CHI - 130/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Alexis Sánchez (18 years old) - CHI - 130/180
+19375,Person,Presets,Amancio (23 years old) - ESP - 153/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Amancio (23 years old) - ESP - 153/178
+19395,Person,Presets,Ángel Di María (18 years old) - ARG - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Ángel Di María (18 years old) - ARG - 131/176
+19390,Person,Presets,Antoine Griezmann (17 years old) - FRA - 127/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Antoine Griezmann (17 years old) - FRA - 127/182
+19385,Person,Presets,Allan Simonsen (21 years old) - DEN - 145/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Allan Simonsen (21 years old) - DEN - 145/180
+19231,Person,Presets,Arjen Robben (18 years old) - NED - 132/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Arjen Robben (18 years old) - NED - 132/182
+19373,Person,Presets,Bernard Vukas (24 years old) - CRO - 164/184,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Bernard Vukas (24 years old) - CRO - 164/184
+19384,Person,Presets,Billy Meredith (29 years old) - WAL - 180/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Billy Meredith (29 years old) - WAL - 180/180
+23847,Person,Presets,Boaz (19 years old) - IDN - 110/126,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Boaz (19 years old) - IDN - 110/126
+19374,Person,Presets,Brian Laudrup (20 years old) - DEN - 138/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Brian Laudrup (20 years old) - DEN - 138/178
+19379,Person,Presets,Bruno Conti (21 years old) - ITA - 143/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Bruno Conti (21 years old) - ITA - 143/178
+19402,Person,Presets,Caju (22 years old) - BRA - 147/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Caju (22 years old) - BRA - 147/172
+19405,Person,Presets,Cliff Jones (23 years old) - WAL - 147/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Cliff Jones (23 years old) - WAL - 147/172
+19398,Person,Presets,Coen Moulijn (23 years old) - NED - 151/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Coen Moulijn (23 years old) - NED - 151/176
+19230,Person,Presets,Cristiano Ronaldo (18 years old) - POR - 148/198,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Cristiano Ronaldo (18 years old) - POR - 148/198
+19155,Person,Presets,David Beckham (19 years old) - ENG - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > David Beckham (19 years old) - ENG - 133/178
+19367,Person,Presets,Dragan Džajić (22 years old) - SRB - 168/188,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Dragan Džajić (22 years old) - SRB - 168/188
+19370,Person,Presets,Eden Hazard (17 years old) - BEL - 127/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Eden Hazard (17 years old) - BEL - 127/182
+19372,Person,Presets,Ferenc Bene (22 years old) - HUN - 154/184,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Ferenc Bene (22 years old) - HUN - 154/184
+19380,Person,Presets,Franck Ribéry (18 years old) - FRA - 130/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Franck Ribéry (18 years old) - FRA - 130/180
+19383,Person,Presets,Franco Causio (22 years old) - ITA - 150/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Franco Causio (22 years old) - ITA - 150/180
+19364,Person,Presets,Gareth Bale (18 years old) - WAL - 134/184,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Gareth Bale (18 years old) - WAL - 134/184
+19228,Person,Presets,Garrincha (23 years old) - BRA - 167/192,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Garrincha (23 years old) - BRA - 167/192
+19227,Person,Presets,George Best (22 years old) - NIR - 167/192,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > George Best (22 years old) - NIR - 167/192
+19387,Person,Presets,Giampiero Boniperti (24 years old) - ITA - 160/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Giampiero Boniperti (24 years old) - ITA - 160/180
+19382,Person,Presets,Grzegorz Lato (21 years old) - POL - 145/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Grzegorz Lato (21 years old) - POL - 145/180
+23836,Person,Presets,Heung-Min Son (18 years old) - KOR - 115/170,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Heung-Min Son (18 years old) - KOR - 115/170
+19404,Person,Presets,Ivan Kolev (23 years old) - BUL - 147/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Ivan Kolev (23 years old) - BUL - 147/172
+19381,Person,Presets,Jair da Rosa (24 years old) - BRA - 160/180,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Jair da Rosa (24 years old) - BRA - 160/180
+19366,Person,Presets,Jairzinho (22 years old) - BRA - 156/186,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Jairzinho (22 years old) - BRA - 156/186
+23838,Person,Presets,Ji-Sung Park (19 years old) - KOR - 115/160,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Ji-Sung Park (19 years old) - KOR - 115/160
+19397,Person,Presets,Juan Joya (23 years old) - PER - 151/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Juan Joya (23 years old) - PER - 151/176
+19378,Person,Presets,Kálmán Konrád (27 years old) - HUN - 178/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Kálmán Konrád (27 years old) - HUN - 178/178
+19369,Person,Presets,Kurt Hamrin (23 years old) - SWE - 162/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Kurt Hamrin (23 years old) - SWE - 162/182
+19229,Person,Presets,Kylian Mbappé (17 years old) - FRA - 139/194,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Kylian Mbappé (17 years old) - FRA - 139/194
+19396,Person,Presets,Lennart Skoglund (24 years old) - SWE - 161/176,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Lennart Skoglund (24 years old) - SWE - 161/176
+19225,Person,Presets,Lionel Messi (18 years old) - ARG - 150/200,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Lionel Messi (18 years old) - ARG - 150/200
+19233,Person,Presets,Luís Figo (19 years old) - POR - 143/188,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Luís Figo (19 years old) - POR - 143/188
+19394,Person,Presets,Marco Reus (18 years old) - GER - 124/174,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Marco Reus (18 years old) - GER - 124/174
+19403,Person,Presets,Mario Corso (22 years old) - ITA - 147/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Mario Corso (22 years old) - ITA - 147/172
+19232,Person,Presets,Mohamed Salah (17 years old) - EGY - 122/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Mohamed Salah (17 years old) - EGY - 122/182
+19358,Person,Presets,Neymar (17 years old) - BRA - 140/190,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Neymar (17 years old) - BRA - 140/190
+19371,Person,Presets,Oleg Blokhin (21 years old) - UKR - 154/184,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Oleg Blokhin (21 years old) - UKR - 154/184
+19365,Person,Presets,Paco Gento (23 years old) - ESP - 166/186,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Paco Gento (23 years old) - ESP - 166/186
+19407,Person,Presets,Patsy Gallagher (27 years old) - IRL - 163/168,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Patsy Gallagher (27 years old) - IRL - 163/168
+19391,Person,Presets,Pierre Littbarski (20 years old) - GER - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Pierre Littbarski (20 years old) - GER - 142/182
+19393,Person,Presets,Raheem Sterling (17 years old) - ENG - 124/174,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Raheem Sterling (17 years old) - ENG - 124/174
+19406,Person,Presets,Riyad Mahrez (17 years old) - ALG - 106/166,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Riyad Mahrez (17 years old) - ALG - 106/166
+19392,Person,Presets,Robert Pirès (19 years old) - FRA - 129/174,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Robert Pirès (19 years old) - FRA - 129/174
+19401,Person,Presets,Roberto Donadoni (20 years old) - ITA - 132/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Roberto Donadoni (20 years old) - ITA - 132/172
+19389,Person,Presets,Ryan Giggs (19 years old) - WAL - 137/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Ryan Giggs (19 years old) - WAL - 137/182
+19376,Person,Presets,Sadio Mané (17 years old) - SEN - 118/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Sadio Mané (17 years old) - SEN - 118/178
+19226,Person,Presets,Stanley Matthews (25 years old) - ENG - 168/188,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Stanley Matthews (25 years old) - ENG - 168/188
+19408,Person,Presets,Tesourinha (24 years old) - BRA - 148/168,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Tesourinha (24 years old) - BRA - 148/168
+19222,Person,Presets,Thomas Müller (18 years old) - GER - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Thomas Müller (18 years old) - GER - 128/178
+19363,Person,Presets,Tom Finney (24 years old) - ENG - 159/184,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Tom Finney (24 years old) - ENG - 159/184
+19400,Person,Presets,Willington Ortíz (21 years old) - COL - 142/172,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Willington Ortíz (21 years old) - COL - 142/172
+19409,Person,Presets,Zé Roberto (19 years old) - BRA - 125/170,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Zé Roberto (19 years old) - BRA - 125/170
+19368,Person,Presets,Zoltán Czibor (24 years old) - HUN - 167/182,Lua,Person > > Presets > > Player > > Legend Players > > Wide Midfielders (M/AM RL) > > Zoltán Czibor (24 years old) - HUN - 167/182
+19416,Person,Presets,Ademir Menezes (24 years old) - BRA - 166/186,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Ademir Menezes (24 years old) - BRA - 166/186
+19422,Person,Presets,Adolfo Baloncieri (27 years old) - ITA - 175/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Adolfo Baloncieri (27 years old) - ITA - 175/180
+23844,Person,Presets,Adrian Mutu (22 years old) - ROU - 135/169,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Adrian Mutu (22 years old) - ROU - 135/169
+19492,Person,Presets,Adriano (18 years old) - BRA - 125/170,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Adriano (18 years old) - BRA - 125/170
+19429,Person,Presets,Alan Shearer (19 years old) - ENG - 135/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Alan Shearer (19 years old) - ENG - 135/180
+19411,Person,Presets,Alberto Spencer (23 years old) - ECU - 159/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Alberto Spencer (23 years old) - ECU - 159/184
+19212,Person,Presets,Alessandro Del Piero (19 years old) - ITA - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Alessandro Del Piero (19 years old) - ITA - 142/182
+19286,Person,Presets,Alfredo Di Stéfano (24 years old) - ESP - 176/196,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Alfredo Di Stéfano (24 years old) - ESP - 176/196
+19200,Person,Presets,Andriy Shevchenko (19 years old) - UKR - 141/186,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Andriy Shevchenko (19 years old) - UKR - 141/186
+19427,Person,Presets,Ángel Labruna (25 years old) - ARG - 167/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Ángel Labruna (25 years old) - ARG - 167/182
+19457,Person,Presets,Anthony Yeboah (20 years old) - GHA - 128/168,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Anthony Yeboah (20 years old) - GHA - 128/168
+19431,Person,Presets,Arthur Friedenreich (27 years old) - BRA - 175/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Arthur Friedenreich (27 years old) - BRA - 175/180
+19410,Person,Presets,Bum-Kun Cha (21 years old) - KOR - 135/170,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Bum-Kun Cha (21 years old) - KOR - 135/170
+19444,Person,Presets,Carlos Tevez (18 years old) - ARG - 131/176,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Carlos Tevez (18 years old) - ARG - 131/176
+19224,Person,Presets,Charlie Buchan (27 years old) - ENG - 176/176,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Charlie Buchan (27 years old) - ENG - 176/176
+19436,Person,Presets,Christian Vieri (19 years old) - ITA - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Christian Vieri (19 years old) - ITA - 133/178
+19449,Person,Presets,Darko Pancev (20 years old) - MKD - 134/174,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Darko Pancev (20 years old) - MKD - 134/174
+19399,Person,Presets,David Jack (27 years old) - ENG - 167/172,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > David Jack (27 years old) - ENG - 167/172
+19441,Person,Presets,David Trezeguet (19 years old) - FRA - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > David Trezeguet (19 years old) - FRA - 133/178
+19435,Person,Presets,David Villa (18 years old) - ESP - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > David Villa (18 years old) - ESP - 128/178
+19421,Person,Presets,Denis Law (22 years old) - SCO - 154/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Denis Law (22 years old) - SCO - 154/184
+19208,Person,Presets,Dennis Bergkamp (20 years old) - NED - 144/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Dennis Bergkamp (20 years old) - NED - 144/184
+19218,Person,Presets,Didier Drogba (19 years old) - CIV - 130/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Didier Drogba (19 years old) - CIV - 130/180
+19434,Person,Presets,Dimitar Berbatov (18 years old) - BUL - 127/172,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Dimitar Berbatov (18 years old) - BUL - 127/172
+19450,Person,Presets,Diego Forlán (19 years old) - URU - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Diego Forlán (19 years old) - URU - 133/178
+19247,Person,Presets,Dixie Dean (26 years old) - ENG - 174/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Dixie Dean (26 years old) - ENG - 174/184
+19445,Person,Presets,Edin Džeko (18 years old) - BIH - 122/172,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Edin Džeko (18 years old) - BIH - 122/172
+19452,Person,Presets,Edinson Cavani (18 years old) - URU - 126/176,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Edinson Cavani (18 years old) - URU - 126/176
+23843,Person,Presets,Eiður Guðjohnsen (22 years old) - ISL - 140/166,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Eiður Guðjohnsen (22 years old) - ISL - 140/166
+19219,Person,Presets,Éric Cantona (20 years old) - FRA - 140/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Éric Cantona (20 years old) - FRA - 140/180
+19418,Person,Presets,Ernst Kuzorra (26 years old) - GER - 177/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Ernst Kuzorra (26 years old) - GER - 177/182
+19191,Person,Presets,Eusébio (22 years old) - POR - 164/194,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Eusébio (22 years old) - POR - 164/194
+19195,Person,Presets,Ferenc Puskás (24 years old) - HUN - 175/190,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Ferenc Puskás (24 years old) - HUN - 175/190
+19442,Person,Presets,Fernando Peyroteo (25 years old) - POR - 161/176,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Fernando Peyroteo (25 years old) - POR - 161/176
+19451,Person,Presets,Fernando Torres (18 years old) - ESP - 124/174,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Fernando Torres (18 years old) - ESP - 124/174
+19454,Person,Presets,Filippo Inzaghi (19 years old) - ITA - 127/172,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Filippo Inzaghi (19 years old) - ITA - 127/172
+19282,Person,Presets,Flórián Albert (22 years old) - HUN - 156/186,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Flórián Albert (22 years old) - HUN - 156/186
+19210,Person,Presets,Gabriel Batistuta (20 years old) - ARG - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Gabriel Batistuta (20 years old) - ARG - 142/182
+19223,Person,Presets,Gary Lineker (20 years old) - ENG - 138/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Gary Lineker (20 years old) - ENG - 138/178
+19207,Person,Presets,George Weah (20 years old) - LBR - 139/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > George Weah (20 years old) - LBR - 139/184
+19425,Person,Presets,Georgi Asparuhov (22 years old) - BUL - 155/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Georgi Asparuhov (22 years old) - BUL - 155/180
+19188,Person,Presets,Gerd Müller (22 years old) - GER - 162/192,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Gerd Müller (22 years old) - GER - 162/192
+19170,Person,Presets,Giuseppe Meazza (25 years old) - ITA - 182/192,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Giuseppe Meazza (25 years old) - ITA - 182/192
+19440,Person,Presets,Gonzalo Higuaín (18 years old) - ARG - 128/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Gonzalo Higuaín (18 years old) - ARG - 128/178
+19414,Person,Presets,Gunnar Nordahl (24 years old) - SWE - 166/186,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Gunnar Nordahl (24 years old) - SWE - 166/186
+19304,Person,Presets,Gyula Zsengellér (25 years old) - HUN - 167/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Gyula Zsengellér (25 years old) - HUN - 167/182
+19284,Person,Presets,Harry Kane (17 years old) - ENG - 127/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Harry Kane (17 years old) - ENG - 127/182
+19439,Person,Presets,Hernán Crespo (19 years old) - ARG - 133/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Hernán Crespo (19 years old) - ARG - 133/178
+19202,Person,Presets,Hristo Stoichkov (20 years old) - BUL - 146/186,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Hristo Stoichkov (20 years old) - BUL - 146/186
+19412,Person,Presets,Hugo Sánchez (21 years old) - MEX - 149/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Hugo Sánchez (21 years old) - MEX - 149/184
+19419,Person,Presets,Ian Rush (20 years old) - WAL - 138/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Ian Rush (20 years old) - WAL - 138/178
+19437,Person,Presets,Imre Schlosser (28 years old) - HUN - 178/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Imre Schlosser (28 years old) - HUN - 178/178
+19433,Person,Presets,Isidro Lángara (25 years old) - ESP - 170/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Isidro Lángara (25 years old) - ESP - 170/180
+19136,Person,Presets,John Charles (23 years old) - WAL - 157/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > John Charles (23 years old) - WAL - 157/182
+19447,Person,Presets,José Piendibene (27 years old) - URU - 174/174,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > José Piendibene (27 years old) - URU - 174/174
+19198,Person,Presets,Josef Bican (25 years old) - AUT - 178/188,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Josef Bican (25 years old) - AUT - 178/188
+19424,Person,Presets,Josip Skoblar (22 years old) - CRO - 145/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Josip Skoblar (22 years old) - CRO - 145/180
+19221,Person,Presets,Jupp Heynckes (22 years old) - GER - 150/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Jupp Heynckes (22 years old) - GER - 150/180
+19216,Person,Presets,Jürgen Klinsmann (20 years old) - GER - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Jürgen Klinsmann (20 years old) - GER - 142/182
+19199,Person,Presets,Karl-Heinz Rummenigge (21 years old) - GER - 153/188,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Karl-Heinz Rummenigge (21 years old) - GER - 153/188
+23839,Person,Presets,Kazuyoshi Miura (23 years old) - JPN - 150/158,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Kazuyoshi Miura (23 years old) - JPN - 150/158
+19204,Person,Presets,Kenny Dalglish (21 years old) - SCO - 149/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Kenny Dalglish (21 years old) - SCO - 149/184
+19178,Person,Presets,László Kubala (24 years old) - ESP - 170/190,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > László Kubala (24 years old) - ESP - 170/190
+19196,Person,Presets,Leônidas (25 years old) - BRA - 178/188,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Leônidas (25 years old) - BRA - 178/188
+19455,Person,Presets,Luca Toni (19 years old) - ITA - 125/170,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Luca Toni (19 years old) - ITA - 125/170
+19201,Person,Presets,Luis Suárez (18 years old) - URU - 136/186,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Luis Suárez (18 years old) - URU - 136/186
+19190,Person,Presets,Marco van Basten (20 years old) - NED - 154/194,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Marco van Basten (20 years old) - NED - 154/194
+19206,Person,Presets,Mario Kempes (21 years old) - ARG - 149/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Mario Kempes (21 years old) - ARG - 149/184
+19172,Person,Presets,Matthias Sindelar (26 years old) - AUT - 180/190,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Matthias Sindelar (26 years old) - AUT - 180/190
+19443,Person,Presets,Michael Owen (19 years old) - ENG - 141/176,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Michael Owen (19 years old) - ENG - 141/176
+23834,Person,Presets,Mido (22 years old) - EGY - 140/168,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Mido (22 years old) - EGY - 140/168
+19448,Person,Presets,Miroslav Klose (19 years old) - GER - 129/174,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Miroslav Klose (19 years old) - GER - 129/174
+19430,Person,Presets,Nat Lofthouse (24 years old) - ENG - 165/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Nat Lofthouse (24 years old) - ENG - 165/180
+19432,Person,Presets,Oldrich Nejedly (26 years old) - CZE - 170/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Oldrich Nejedly (26 years old) - CZE - 170/180
+23846,Person,Presets,Ole Gunnar Solskjær (22 years old) - NOR - 140/165,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Ole Gunnar Solskjær (22 years old) - NOR - 140/165
+23832,Person,Presets,Paolo Wanchope (22 years old) - CRC - 140/156,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Paolo Wanchope (22 years old) - CRC - 140/156
+19420,Person,Presets,Patrick Kluivert (19 years old) - NED - 125/170,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Patrick Kluivert (19 years old) - NED - 125/170
+19456,Person,Presets,Paul Van Himst (22 years old) - BEL - 159/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Paul Van Himst (22 years old) - BEL - 159/184
+19164,Person,Presets,Pelé (22 years old) - BRA - 180/200,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Pelé (22 years old) - BRA - 180/200
+19446,Person,Presets,Pierre-Emerick Aubameyang (18 years old) - GAB - 124/174,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Pierre-Emerick Aubameyang (18 years old) - GAB - 124/174
+19203,Person,Presets,Radamel Falcao (18 years old) - COL - 122/172,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Radamel Falcao (18 years old) - COL - 122/172
+19453,Person,Presets,Raúl (19 years old) - ESP - 144/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Raúl (19 years old) - ESP - 144/184
+19423,Person,Presets,Raymond Braine (26 years old) - BEL - 170/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Raymond Braine (26 years old) - BEL - 170/180
+19181,Person,Presets,Rivaldo (19 years old) - BRA - 143/188,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Rivaldo (19 years old) - BRA - 143/188
+19205,Person,Presets,Robert Lewandowski (18 years old) - POL - 129/184,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Robert Lewandowski (18 years old) - POL - 129/184
+19174,Person,Presets,Roberto Baggio (20 years old) - ITA - 150/190,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Roberto Baggio (20 years old) - ITA - 150/190
+19413,Person,Presets,Roberto Bettega (21 years old) - ITA - 145/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Roberto Bettega (21 years old) - ITA - 145/180
+19220,Person,Presets,Robin van Persie (18 years old) - NED - 125/180,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Robin van Persie (18 years old) - NED - 125/180
+23833,Person,Presets,Roger Milla (22 years old) - CMR - 149/168,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Roger Milla (22 years old) - CMR - 149/168
+19189,Person,Presets,Romário (20 years old) - BRA - 152/192,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Romário (20 years old) - BRA - 152/192
+19192,Person,Presets,Ronaldo (19 years old) - BRA - 156/196,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Ronaldo (19 years old) - BRA - 156/196
+19428,Person,Presets,Rudi Völler (20 years old) - GER - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Rudi Völler (20 years old) - GER - 142/182
+19213,Person,Presets,Ruud van Nistelrooij (19 years old) - NED - 137/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Ruud van Nistelrooij (19 years old) - NED - 137/182
+19211,Person,Presets,Samuel Eto'o (18 years old) - CMR - 132/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Samuel Eto'o (18 years old) - CMR - 132/182
+19415,Person,Presets,Sándor Kocsis (24 years old) - HUN - 166/186,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Sándor Kocsis (24 years old) - HUN - 166/186
+19214,Person,Presets,Sergio Agüero (18 years old) - ARG - 137/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Sergio Agüero (18 years old) - ARG - 137/182
+19426,Person,Presets,Silvio Piola (25 years old) - ITA - 172/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Silvio Piola (25 years old) - ITA - 172/182
+19193,Person,Presets,Thierry Henry (19 years old) - FRA - 143/188,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Thierry Henry (19 years old) - FRA - 143/188
+19417,Person,Presets,Tostão (22 years old) - BRA - 166/186,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Tostão (22 years old) - BRA - 166/186
+19194,Person,Presets,Uwe Seeler (23 years old) - GER - 165/190,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Uwe Seeler (23 years old) - GER - 165/190
+19217,Person,Presets,Wayne Rooney (18 years old) - ENG - 142/182,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Wayne Rooney (18 years old) - ENG - 142/182
+19438,Person,Presets,Włodzimierz Lubański (22 years old) - POL - 153/178,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Włodzimierz Lubański (22 years old) - POL - 153/178
+19197,Person,Presets,Zlatan Ibrahimovic (18 years old) - SWE - 138/188,Lua,Person > > Presets > > Player > > Legend Players > > Strikers (ST) > > Zlatan Ibrahimovic (18 years old) - SWE - 138/188
+13083,Person,Presets,Open in Dissect Data,Lua,Person > > Presets > > Player > > Open in Dissect Data
+12524,Person,Presets,Generate a DOF,Lua,Person > > Presets > > Non-Player > > Generate a DOF
+17984,Person,Presets,Generate a Technical Director,Lua,Person > > Presets > > Non-Player > > Generate a Technical Director
+12823,Person,Presets,Generate a Scout,Lua,Person > > Presets > > Non-Player > > Generate a Scout
+20704,Person,Presets,Generate a Performance Analyst,Lua,Person > > Presets > > Non-Player > > Generate a Performance Analyst
+20705,Person,Presets,Generate a Recruitment Analyst,Lua,Person > > Presets > > Non-Player > > Generate a Recruitment Analyst
+20706,Person,Presets,Generate a Loan Manager,Lua,Person > > Presets > > Non-Player > > Generate a Loan Manager
+12554,Person,Presets,Generate a Physio,Lua,Person > > Presets > > Non-Player > > Generate a Physio
+18043,Person,Presets,Generate a Sports Scientist,Lua,Person > > Presets > > Non-Player > > Generate a Sports Scientist
+12549,Person,Presets,Generate a Coach (General),Lua,Person > > Presets > > Non-Player > > Generate a Coach (General)
+20702,Person,Presets,Generate a Coach (Attacking),Lua,Person > > Presets > > Non-Player > > Generate a Coach (Attacking)
+20703,Person,Presets,Generate a Coach (Defending),Lua,Person > > Presets > > Non-Player > > Generate a Coach (Defending)
+20700,Person,Presets,Generate a Coach (Tactical),Lua,Person > > Presets > > Non-Player > > Generate a Coach (Tactical)
+20699,Person,Presets,Generate a Coach (Technical),Lua,Person > > Presets > > Non-Player > > Generate a Coach (Technical)
+20701,Person,Presets,Generate a Coach (Mental),Lua,Person > > Presets > > Non-Player > > Generate a Coach (Mental)
+17985,Person,Presets,Generate a Fitness Coach,Lua,Person > > Presets > > Non-Player > > Generate a Fitness Coach
+18042,Person,Presets,Generate a Goalkeeping Coach,Lua,Person > > Presets > > Non-Player > > Generate a Goalkeeping Coach
+24076,Person,Presets,Maximize Scouting Knowledge Level,Lua,Person > > Presets > > Non-Player > > Maximize Scouting Knowledge Level
+13085,Person,Presets,Open in Dissect Data,Lua,Person > > Presets > > Non-Player > > Open in Dissect Data
+23767,Person,Presets,Improve Player Partnerships,Lua,Person > > Presets > > Manager > > Improve Player Partnerships
+19897,Person,Presets,Add Managing Club to Freezer,"Lua, freeze",Person > > Presets > > Manager > > Add Managing Club to Freezer
+17759,Person,Presets,Open in Dissect Data,Lua,Person > > Presets > > Manager > > Open in Dissect Data
+11331,Person,Contract,Bonuses & Clauses >,Lua,Person > > Contract > > Full Contract > > Bonuses & Clauses >
+16863,Person,Transfers,Transfers >,Lua,Person > > Transfers >
+22739,Person,Person Data,Career Plans >,Lua,Person > > Person Data > > Career Plans >
+23249,Person,Person Data,Add Career Plans,Lua,Person > > Person Data > > Career Plans > > Add Career Plans
+18072,Person,Person Data,Days At Club / In Nation >,Lua,Person > > Person Data > > Days At Club / In Nation >
+20100,Person,Person Data,Eligibility >,Lua,Person > > Person Data > > Eligibility >
+23264,Person,Person Data,Add Eligibility,Lua,Person > > Person Data > > Eligibility > > Add Eligibility
+24077,Person,Person Data,Languages >,Lua,Person > > Person Data > > Languages >
+11071,Person,Person Data,Relationships >,Lua,Person > > Person Data > > Relationships >
+23618,Person,Person Data,Add Relationships,Lua,Person > > Person Data > > Relationships > > Add Relationships
+20109,Person,Person Data,Status >,Lua,Person > > Person Data > > Status >
+23825,Person,Player Data,Show Attributes 1 - 100,Lua,Person > > Player Data > > Attributes > > Show Attributes 1 - 100
+12620,Person,Staff Data,Tendencies >,Lua,Person > > Staff Data > > Tendencies >
+24053,Person,Staff Data,Knowledge >,Lua,Person > > Staff Data > > Knowledge >
+17204,Stadium,,Stadium >,"Lua, write",Stadium >
+18023,Stadium,Presets,Appereance - All Corners/All Seated/Roof,Lua,Stadium > > Presets > > Appereance - All Corners/All Seated/Roof
+18028,Stadium,Presets,Appereance - All Corners/All Seated/No Roof,Lua,Stadium > > Presets > > Appereance - All Corners/All Seated/No Roof
+19966,Stadium,Presets,Stadium Setting - Grass/Synthetic Mix/Very Good/Has Digital Ad Hoarding,"Lua, write",Stadium > > Presets > > Stadium Setting - Grass/Synthetic Mix/Very Good/Has Digital Ad Hoarding
+18025,Stadium,Presets,Open in Dissect Data,Lua,Stadium > > Presets > > Open in Dissect Data
+19898,Freezer,Freezer (Off),Freezer (Off),"Lua, freeze",Freezer > > Freezer (Off)
+13203,Database List,Agreement,Agreement >,Lua,Database List > > Agreement >
+13202,Database List,Continent,Continent >,Lua,Database List > > Continent >
+17811,Database List,Future Transfer,Future Transfer >,Lua,Database List > > Future Transfer >
+17785,Database List,Hall of Fame,Hall of Fame >,Lua,Database List > > Hall of Fame >
+17654,Database List,Human Manager,Human Manager >,Lua,Database List > > Human Manager >
+13089,Database List,Region,Region >,Lua,Database List > > Region >
+18041,Print List,People w/ Freeze Attributes Flag,People w/ Freeze Attributes Flag,"Lua, freeze",Print List > > People w/ Freeze Attributes Flag
+19600,Print List,People w/ Professionalism Hacked,People w/ Professionalism Hacked,Lua,Print List > > People w/ Professionalism Hacked
+20096,Print List,Talented Regens,Talented Regens,Lua,Print List > > Talented Regens
+19945,Useful Tools,Open Comparison GUI,Open Comparison GUI,Lua,Useful Tools > > Open Comparison GUI
+22761,Useful Tools,Open Mass Edit Manager,Open Mass Edit Manager,Lua,Useful Tools > > Open Mass Edit Manager
+22762,Useful Tools,Open Swap Manager,Open Swap Manager,Lua,Useful Tools > > Open Swap Manager
+19946,Useful Tools,Open Mini Scouting Tool GUI,Open Mini Scouting Tool GUI,Lua,Useful Tools > > Open Mini Scouting Tool GUI
+20696,Presets (Global),Accelerate Player Development,Accelerate Player Development,Lua,Presets (Global) > > Accelerate Player Development
+23770,Presets (Global),Accelerate Player Development,1. Notes,Lua,Presets (Global) > > Accelerate Player Development > 1. Notes
+23685,Presets (Global),Accelerate Player Development,Search Item,AA,Presets (Global) > > Accelerate Player Development > 2. Setup - Items List > Search Item
+24316,Presets (Global),Accelerate Player Development,Export All Items,AA,Presets (Global) > > Accelerate Player Development > 2. Setup - Items List > Export All Items
+24315,Presets (Global),Accelerate Player Development,Import Items,AA,Presets (Global) > > Accelerate Player Development > 2. Setup - Items List > Import Items
+23635,Presets (Global),Golden Generation,Golden Generation,"Lua, write",Presets (Global) > > Golden Generation
+23768,Presets (Global),Golden Generation,1. Notes,Lua,Presets (Global) > > Golden Generation > 1. Notes
+24006,Presets (Global),Golden Generation,Search,AA,Presets (Global) > > Golden Generation > 2. Setup > Items List > > Search
+23934,Presets (Global),On-Match Player Ability Modifier,On-Match Player Ability Modifier,Lua,Presets (Global) > > On-Match Player Ability Modifier
+23935,Presets (Global),On-Match Player Ability Modifier,1. Notes,Lua,Presets (Global) > > On-Match Player Ability Modifier > 1. Notes
+24080,Presets (Global),On-Match Player Ability Modifier,Search Item,AA,Presets (Global) > > On-Match Player Ability Modifier > 2. Setup - Items List > Search Item
+24360,Presets (Global),On-Match Player Ability Modifier,Export All Items,AA,Presets (Global) > > On-Match Player Ability Modifier > 2. Setup - Items List > Export All Items
+24359,Presets (Global),On-Match Player Ability Modifier,Import Items,AA,Presets (Global) > > On-Match Player Ability Modifier > 2. Setup - Items List > Import Items
+17839,Presets (Global),Force Board to Accept Your Requests (Including Club Vision),Force Board to Accept Your Requests (Including Club Vision),AA,Presets (Global) > > Force Board to Accept Your Requests (Including Club Vision)
+24406,Presets (Global),Force Board to Accept Your Requests (Including Club Vision),1. Notes,Lua,Presets (Global) > > Force Board to Accept Your Requests (Including Club Vision) > 1. Notes
+22720,Presets (Global),Force Players and Staff to Accept Your Contract Offers,Force Players and Staff to Accept Your Contract Offers,AA,Presets (Global) > > Force Players and Staff to Accept Your Contract Offers
+24405,Presets (Global),Force Players and Staff to Accept Your Contract Offers,1. Notes,Lua,Presets (Global) > > Force Players and Staff to Accept Your Contract Offers > 1. Notes
+23766,Presets (Global),Force Other Clubs to Accept Your Transfer Offers,Force Other Clubs to Accept Your Transfer Offers,AA,Presets (Global) > > Force Other Clubs to Accept Your Transfer Offers
+23769,Presets (Global),Force Other Clubs to Accept Your Transfer Offers,1. Instructions,Lua,Presets (Global) > > Force Other Clubs to Accept Your Transfer Offers > 1. Instructions
+24042,Presets (Global),No Work Permits,No Work Permits,AA,Presets (Global) > > No Work Permits
+24043,Presets (Global),No Work Permits,1. Notes,Lua,Presets (Global) > > No Work Permits > 1. Notes
+24044,Presets (Global),No Transfer Windows,No Transfer Windows,AA,Presets (Global) > > No Transfer Windows
+24045,Presets (Global),No Transfer Windows,1. Notes,Lua,Presets (Global) > > No Transfer Windows > 1. Notes
+24046,Presets (Global),No Loan Restrictions,No Loan Restrictions,AA,Presets (Global) > > No Loan Restrictions
+24047,Presets (Global),No Loan Restrictions,1. Notes,Lua,Presets (Global) > > No Loan Restrictions > 1. Notes
+24048,Presets (Global),Nationality Restrictions Lifted,Nationality Restrictions Lifted,AA,Presets (Global) > > Nationality Restrictions Lifted
+24049,Presets (Global),Nationality Restrictions Lifted,1. Instructions,Lua,Presets (Global) > > Nationality Restrictions Lifted > 1. Instructions
+23978,Presets (Global),Override and Max Out Extra Staff Limit,Override and Max Out Extra Staff Limit,AA,Presets (Global) > > Override and Max Out Extra Staff Limit
+23979,Presets (Global),Override and Max Out Extra Staff Limit,1. Instructions,Lua,Presets (Global) > > Override and Max Out Extra Staff Limit > 1. Instructions
+17843,Presets (Global),Ignore Player Retirement,Ignore Player Retirement,"Lua, write, symbol",Presets (Global) > > Ignore Player Retirement
+20739,Presets (Global),Ignore Player Retirement,Get My Club UID,"Lua, write",Presets (Global) > > Ignore Player Retirement > 1. Setup > Club UID > Get My Club UID
+20741,Presets (Global),Ignore Player Retirement,2. Apply,AA,Presets (Global) > > Ignore Player Retirement > 2. Apply
+1930,Table Settings,,Table Settings >,AA,Table Settings >
+18992,Table Settings,Add Drop Down List Item,Add Drop Down List Item,Lua,Table Settings > > Add Drop Down List Item
+20669,Table Settings,Pointer Code Locations,Pointer Code Locations,"AOB hook, symbol",Table Settings > > Pointer Code Locations
+12109,Table Settings,Savegame Check,Savegame Check,Lua,Table Settings > > Savegame Check
+19947,Table Settings,Table Timer,Table Timer,Lua,Table Settings > > Table Timer
+23688,Table Settings,Update Global Pointers,Update Global Pointers,Lua,Table Settings > > Update Global Pointers
+1,Table Settings,Update On Focus Change or Hover Tooltip,Update On Focus Change or Hover Tooltip,"AOB hook, focus/select, symbol",Table Settings > > Update On Focus Change or Hover Tooltip
+24269,Table Settings,Create Currency Data Types,Create Currency Data Types,Lua,Table Settings > > Create Currency Data Types
+24282,Table Settings,Change Currency,Change Currency,Lua,Table Settings > > Change Currency
+17809,Table Settings,Reload Settings,Reload Settings,Lua,Table Settings > > Reload Settings
+17805,Table Settings,Debug,Game Module Info,Lua,Table Settings > > Debug > > Game Module Info
+10433,Read Me!,,Read Me!,Lua,Read Me!

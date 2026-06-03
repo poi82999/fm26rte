@@ -1,0 +1,28 @@
+# Node / frontend build output
+apps/fm26-player-editor/node_modules/
+apps/fm26-player-editor/dist/
+apps/fm26-player-editor/dist-ssr/
+
+# Rust / Tauri build output
+apps/fm26-player-editor/src-tauri/target/
+apps/aob_test/target/
+
+# Local generated release binaries. Keep only the canonical handoff artifacts visible.
+FM26-Player-Editor.exe
+FM26-Player-Editor-next.exe
+FM26-Player-Editor-new.exe
+artifacts/release/*.exe
+!artifacts/release/FM26-Player-Editor.exe
+!artifacts/release/FM26-Player-Editor-Setup.exe
+
+# Reverse-engineering scratch output and bulky local tools
+research/il2cpp-dump/
+tools/jdk/
+tools/microsoft-jdk-21.zip
+tools/cheat-engine-src/
+
+# Logs and local editor files
+*.log
+*.local
+.vscode/
+.idea/

@@ -1,0 +1,1062 @@
+import { useMemo, useState } from 'react'
+import type { ReactNode } from 'react'
+import { invoke } from '@tauri-apps/api/core'
+import {
+  Activity,
+  CircleAlert,
+  Clock3,
+  Eye,
+  EyeOff,
+  ListChecks,
+  Loader2,
+  RotateCcw,
+  Search,
+  Shield,
+  Sparkles,
+  Star,
+  UserRound,
+} from 'lucide-react'
+import './App.css'
+import { fieldDefs, mockValues, positions, traitGroups, visibleReadKeys } from './appData'
+import type { FieldDef, FieldValue, Values } from './appData'
+
+type Section = 'attributes' | 'positions' | 'traits' | 'private' | 'scouting'
+type Change = { key: string; label: string; from: FieldValue; to: FieldValue }
+type SavedPlayer = { uid: number; name?: string | null; ca: number; pa: number; lastSeen: number }
+type ScanResult = {
+  uid: number
+  name?: string | null
+  person: number
+  player: number
+  ca: number
+  pa: number
+  dynamicOffset: number
+  hitCount: number
+}
+type ScoutingBand = { label: string; count: number }
+type ScoutingCandidate = {
+  label: string
+  uid?: number | null
+  position: string
+  caBand: string
+  paBand: string
+  comparisons: string[]
+  developmentBand?: string | null
+  personalityHint?: string | null
+  riskHint?: string | null
+  recommendation?: string | null
+}
+type ScoutingReport = {
+  teamName: string
+  squadKind: string
+  knowledgeLevel: number
+  totalRequested: number
+  resolvedPlayers: number
+  paBands: ScoutingBand[]
+  caBands: ScoutingBand[]
+  positionCounts: ScoutingBand[]
+  candidates: ScoutingCandidate[]
+  unresolvedUids: number[]
+  summaryNarrative?: string
+}
+type ClubPlayerUidsResult = {
+  inputId: number
+  sourceKind: string
+  squadKind: string
+  teamCount: number
+  playerUids: number[]
+  squads: { teamType: number; teamTypeLabel: string; playerCount: number; playerUids: number[] }[]
+}
+
+const RECENT_PLAYERS_KEY = 'fm26-rte.recentPlayers'
+const FAVORITE_PLAYERS_KEY = 'fm26-rte.favoritePlayers'
+
+function App() {
+  const [section, setSection] = useState<Section>('attributes')
+  const [uid, setUid] = useState('2002074288')
+  const [values, setValues] = useState<Values>({})
+  const [originalValues, setOriginalValues] = useState<Values>({})
+  const [revealedPrivate, setRevealedPrivate] = useState<Record<string, boolean>>({})
+  const [changes, setChanges] = useState<Change[]>([])
+  const [scan, setScan] = useState<ScanResult | null>(null)
+  const [connected, setConnected] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const [status, setStatus] = useState('FM26??ì¼???UIDë¡?? ìˆ˜ë¥?ê²€?‰í•˜?¸ìš”.')
+  const [faceMissing, setFaceMissing] = useState(false)
+  const [portraitSrc, setPortraitSrc] = useState('')
+  const [recentPlayers, setRecentPlayers] = useState<SavedPlayer[]>(() => loadSavedPlayers(RECENT_PLAYERS_KEY))
+  const [favoritePlayers, setFavoritePlayers] = useState<SavedPlayer[]>(() => loadSavedPlayers(FAVORITE_PLAYERS_KEY))
+  const [scoutTeamName, setScoutTeamName] = useState('?¤ì¹´?°íŒ… ?€???€')
+  const [scoutClubId, setScoutClubId] = useState('')
+  const [scoutSquad, setScoutSquad] = useState('1êµ?)
+  const [scoutLevel, setScoutLevel] = useState(1)
+  const [scoutUids, setScoutUids] = useState('')
+  const [scoutReport, setScoutReport] = useState<ScoutingReport | null>(null)
+  const isTauri = typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window
+  const activeFavorite = scan ? favoritePlayers.some((player) => player.uid === scan.uid) : false
+
+  const fieldsByCategory = useMemo(
+    () => ({
+      ê¸°ìˆ : fieldDefs.filter((field) => field.category === 'technical'),
+      ?•ì‹ : fieldDefs.filter((field) => field.category === 'mental'),
+      ? ì²´: fieldDefs.filter((field) => field.category === 'physical'),
+      ê³¨í‚¤?? fieldDefs.filter((field) => field.category === 'goalkeeping'),
+      hidden: fieldDefs.filter((field) => field.category === 'hidden'),
+    }),
+    [],
+  )
+
+  async function searchPlayer() {
+    setBusy(true)
+    setFaceMissing(false)
+    setPortraitSrc('')
+    setStatus('fm.exe ?°ê²° ë°?UID ?¤ìº” ì¤?..')
+    try {
+      if (!isTauri) {
+        const result = { uid: Number(uid), name: 'ë¯¸ë¦¬ë³´ê¸° ? ìˆ˜', person: 0, player: 0, ca: 142, pa: 168, dynamicOffset: 0x288, hitCount: 1 }
+        setConnected(true)
+        setScan(result)
+        setValues(mockValues)
+        setOriginalValues(mockValues)
+        setPortraitSrc(`faces/${uid}.png`)
+        rememberRecent(result)
+        setStatus('ë¸Œë¼?°ì? ë¯¸ë¦¬ë³´ê¸° ëª¨ë“œ?…ë‹ˆ?? Tauri ?±ì—?œëŠ” ?¤ì œ fm.exeë¥??¤ìº”?©ë‹ˆ??')
+        return
+      }
+
+      await invoke('connect_fm')
+      const result = await invoke<ScanResult>('scan_player', { uid: Number(uid) })
+      const loaded = await readMany(visibleReadKeys)
+      const face = await invoke<string | null>('read_player_face', { uid: Number(uid) })
+      setConnected(true)
+      setScan(result)
+      setValues(loaded)
+      setOriginalValues(loaded)
+      setPortraitSrc(face ?? '')
+      setChanges([])
+      setRevealedPrivate({})
+      rememberRecent(result)
+      setStatus(`${result.name ?? `UID ${result.uid}`} ? ìˆ˜ ?ˆì½”?œë? ì°¾ì•˜?µë‹ˆ?? ?„ë³´ ${result.hitCount}ê°?ì¤?ì²?ë²ˆì§¸ë¥??¬ìš©?©ë‹ˆ??`)
+    } catch (error) {
+      setConnected(false)
+      setScan(null)
+      setValues({})
+      setOriginalValues({})
+      setStatus(String(error))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function readMany(keys: string[]) {
+    const loaded: Values = {}
+    for (const key of keys) {
+      try {
+        const result = await invoke<{ key: string; value: FieldValue }>('read_field', { key })
+        loaded[result.key] = result.value
+      } catch {
+        loaded[key] = undefined
+      }
+    }
+    return loaded
+  }
+
+  async function revealField(key: string) {
+    if (values[key] !== undefined) {
+      setRevealedPrivate((current) => ({ ...current, [key]: !current[key] }))
+      return
+    }
+
+    setBusy(true)
+    try {
+      if (!isTauri) {
+        const next = mockValues[key] ?? 10
+        setValues((current) => ({ ...current, [key]: next }))
+        setOriginalValues((current) => ({ ...current, [key]: next }))
+      } else {
+        const result = await invoke<{ key: string; value: FieldValue }>('read_field', { key })
+        setValues((current) => ({ ...current, [result.key]: result.value }))
+        setOriginalValues((current) => ({ ...current, [result.key]: result.value }))
+      }
+      setRevealedPrivate((current) => ({ ...current, [key]: true }))
+    } catch (error) {
+      setStatus(String(error))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  function stageChange(key: string, label: string, from: FieldValue, to: FieldValue) {
+    const original = originalValues[key] ?? from
+    setValues((current) => ({ ...current, [key]: to }))
+    setChanges((current) => {
+      const next = current.filter((item) => item.key !== key)
+      if (original === to) return next
+      return [...next, { key, label, from: original, to }]
+    })
+  }
+
+  async function applyAll() {
+    if (changes.length === 0) return
+    setBusy(true)
+    setStatus('ë³€ê²½ì‚¬???ìš© ì¤?..')
+    try {
+      if (isTauri) {
+        const result = await invoke<{ key: string; ok: boolean; value?: FieldValue; error?: string }[]>('apply_changes', {
+          changes: changes.map((change) => ({ key: change.key, value: change.to })),
+        })
+        const failed = result.filter((item) => !item.ok)
+        if (failed.length > 0) throw new Error(failed.map((item) => `${item.key}: ${item.error}`).join('\n'))
+        setValues((current) => {
+          const next = { ...current }
+          for (const item of result) if (item.value !== undefined) next[item.key] = item.value
+          return next
+        })
+        setOriginalValues((current) => {
+          const next = { ...current }
+          for (const item of result) if (item.value !== undefined) next[item.key] = item.value
+          return next
+        })
+      } else {
+        setOriginalValues(values)
+      }
+      setChanges([])
+      setStatus('ë³€ê²½ì‚¬??„ ?ìš©?ˆìŠµ?ˆë‹¤.')
+    } catch (error) {
+      setStatus(String(error))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  function rememberRecent(result: ScanResult) {
+    const item = toSavedPlayer(result)
+    setRecentPlayers((current) => savePlayers(RECENT_PLAYERS_KEY, [item, ...current.filter((player) => player.uid !== item.uid)].slice(0, 6)))
+  }
+
+  function toggleFavorite() {
+    if (!scan) return
+    const item = toSavedPlayer(scan)
+    setFavoritePlayers((current) => {
+      const exists = current.some((player) => player.uid === item.uid)
+      const next = exists ? current.filter((player) => player.uid !== item.uid) : [item, ...current]
+      return savePlayers(FAVORITE_PLAYERS_KEY, next.slice(0, 20))
+    })
+  }
+
+  function openSavedPlayer(player: SavedPlayer) {
+    setUid(String(player.uid))
+    setStatus(`${player.name ?? player.uid} ? íƒ?? ê²€??ë²„íŠ¼?¼ë¡œ ?¤ì‹œ ë¶ˆëŸ¬?¤ì„¸??`)
+  }
+
+  function discardChanges() {
+    if (changes.length === 0) return
+    setValues((current) => {
+      const next = { ...current }
+      for (const change of changes) {
+        next[change.key] = originalValues[change.key] ?? change.from
+      }
+      return next
+    })
+    setChanges([])
+    setStatus('?€ê¸?ì¤‘ì¸ ë³€ê²½ì‚¬??„ ?ë˜ ê°’ìœ¼ë¡??˜ëŒ?¸ìŠµ?ˆë‹¤.')
+  }
+
+  async function collectClubUids() {
+    const clubId = Number(scoutClubId.trim())
+    if (!Number.isInteger(clubId) || clubId <= 0) {
+      setStatus('?´ëŸ½/?€ IDë¥?ë¨¼ì? ?…ë ¥?˜ì„¸??')
+      return
+    }
+
+    setBusy(true)
+    setStatus('?´ëŸ½/?€ IDë¡?? ìˆ˜ UID ?˜ì§‘ ì¤?..')
+    try {
+      if (!isTauri) {
+        const mockUids = [2002074288, 2002074291, 2002074302, 2002074317, 2002074331, 2002074344]
+        setScoutUids(mockUids.join('\n'))
+        setStatus('ë¸Œë¼?°ì? ë¯¸ë¦¬ë³´ê¸° UID ëª©ë¡??ë¶ˆëŸ¬?”ìŠµ?ˆë‹¤.')
+        return
+      }
+
+      if (!connected) await invoke('connect_fm')
+
+      const baseCost = 1000 // ±âº» ºñ¿ë
+      const perPlayerCost = 500 // 1¸í´ç Ãß°¡ ºñ¿ë
+      const levelMultiplier = scoutLevel * 1.5 // Áö½Ä ·¹º§ ¹èÀ²
+      const estimatedCost = Math.round((baseCost + (playerUids.length * perPlayerCost)) * levelMultiplier)
+      
+      if (scoutClubId.trim()) {
+        const clubIdNum = Number(scoutClubId.trim())
+        if (!Number.isInteger(clubIdNum) || clubIdNum <= 0) {
+           setStatus('À¯È¿ÇÑ Å¬·´ ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä.')
+           setBusy(false)
+           return
+        }
+        try {
+           await invoke('deduct_scouting_cost', { userClubId: clubIdNum, cost: estimatedCost })
+        } catch (e) {
+           setStatus(ÀÚ±İ »è°¨ ½ÇÆĞ: )
+           setBusy(false)
+           return
+        }
+      }
+      const result = await invoke<ClubPlayerUidsResult>('collect_club_player_uids', { clubId, squadKind: scoutSquad })
+      setConnected(true)
+      setScoutUids(result.playerUids.join('\n'))
+      setStatus(
+        `${result.sourceKind === 'club' ? '?´ëŸ½' : '?€'} ID ${result.inputId}: ${result.teamCount}ê°??¤ì¿¼?œì—??${result.playerUids.length}ëª?UID ?˜ì§‘ ?„ë£Œ`,
+      )
+    } catch (error) {
+      setStatus(String(error))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function buildScoutingReport() {
+    const playerUids = parseUidList(scoutUids)
+    if (playerUids.length === 0) {
+      setStatus('?¤ì¹´?°íŒ…??? ìˆ˜ UIDë¥?ë¨¼ì? ?…ë ¥?˜ì„¸??')
+      return
+    }
+
+    setBusy(true)
+    setStatus('?¤ì¹´?°íŒ… ë¦¬í¬???ì„± ì¤?..')
+    try {
+      if (!isTauri) {
+        setScoutReport(makeMockScoutingReport(scoutTeamName, scoutSquad, scoutLevel, playerUids))
+        setStatus('ë¸Œë¼?°ì? ë¯¸ë¦¬ë³´ê¸° ë¦¬í¬?¸ë? ?ì„±?ˆìŠµ?ˆë‹¤.')
+        return
+      }
+
+      if (!connected) await invoke('connect_fm')
+
+      const baseCost = 1000 // ±âº» ºñ¿ë
+      const perPlayerCost = 500 // 1¸í´ç Ãß°¡ ºñ¿ë
+      const levelMultiplier = scoutLevel * 1.5 // Áö½Ä ·¹º§ ¹èÀ²
+      const estimatedCost = Math.round((baseCost + (playerUids.length * perPlayerCost)) * levelMultiplier)
+      
+      if (scoutClubId.trim()) {
+        const clubIdNum = Number(scoutClubId.trim())
+        if (!Number.isInteger(clubIdNum) || clubIdNum <= 0) {
+           setStatus('À¯È¿ÇÑ Å¬·´ ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä.')
+           setBusy(false)
+           return
+        }
+        try {
+           await invoke('deduct_scouting_cost', { userClubId: clubIdNum, cost: estimatedCost })
+        } catch (e) {
+           setStatus(ÀÚ±İ »è°¨ ½ÇÆĞ: )
+           setBusy(false)
+           return
+        }
+      }
+      const report = await invoke<ScoutingReport>('build_scouting_report', {
+        request: {
+          teamName: scoutTeamName,
+          squadKind: scoutSquad,
+          knowledgeLevel: scoutLevel,
+          playerUids,
+        },
+      })
+      setConnected(true)
+      setScoutReport(report)
+      setStatus(`${report.teamName || scoutTeamName} ${report.squadKind} ë¦¬í¬???ì„± ?„ë£Œ: ${report.resolvedPlayers}/${report.totalRequested}ëª??•ì¸`)
+    } catch (error) {
+      setStatus(String(error))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <main className="app-shell">
+      <header className="topbar">
+        <div>
+          <div className="eyebrow">FM26 ? ìˆ˜ ?ë””??/div>
+          <h1>? ìˆ˜ ?¥ë ¥ì¹˜ë? ì¡°ìš©?˜ê³  ?•í™•?˜ê²Œ ?¤ë“¬ê¸?/h1>
+        </div>
+        <div className={connected ? 'connection-pill' : 'connection-pill idle'}>
+          <span className="status-dot"></span>
+          {connected ? 'fm.exe ?°ê²°?? : '?°ê²° ?€ê¸?}
+        </div>
+      </header>
+
+      <section className="search-strip">
+        <label>
+          <span>? ìˆ˜ UID</span>
+          <input value={uid} onChange={(event) => setUid(event.target.value)} />
+        </label>
+        <button type="button" className="primary-action" disabled={busy} onClick={searchPlayer}>
+          {busy ? <Loader2 size={17} className="spin" /> : <Search size={17} />}
+          ê²€??
+        </button>
+        <div className="scan-note">{status}</div>
+      </section>
+
+      <section className="workspace">
+        <aside className="sidebar">
+          <section className="player-card">
+            <div className="avatar">
+              {!faceMissing && portraitSrc ? (
+                <img src={portraitSrc} alt="" onError={() => setFaceMissing(true)} />
+              ) : (
+                <UserRound size={46} />
+              )}
+            </div>
+            <div>
+              <h2>{scan ? (scan.name ?? '? ìˆ˜ ë¶ˆëŸ¬??) : '? ìˆ˜ ?†ìŒ'}</h2>
+              <p>UID {uid}</p>
+            </div>
+            <button type="button" className={activeFavorite ? 'favorite-button active' : 'favorite-button'} disabled={!scan} onClick={toggleFavorite}>
+              <Star size={16} />
+              {activeFavorite ? 'ì¦ê²¨ì°¾ê¸° ?´ì œ' : 'ì¦ê²¨ì°¾ê¸° ì¶”ê?'}
+            </button>
+            <div className="mini-grid">
+              <span>CA / PA</span>
+              <strong>{scan ? `${scan.ca} / ${scan.pa}` : '-'}</strong>
+              <span>?íƒœ</span>
+              <strong>{scan ? '?¸ì§‘ ê°€?? : '?€ê¸?}</strong>
+            </div>
+          </section>
+
+          <nav className="section-nav">
+            <NavButton icon={<Activity />} active={section === 'attributes'} label="?¥ë ¥ì¹? onClick={() => setSection('attributes')} />
+            <NavButton icon={<Shield />} active={section === 'positions'} label="?¬ì??? onClick={() => setSection('positions')} />
+            <NavButton icon={<Sparkles />} active={section === 'traits'} label="? í˜¸ ?Œë ˆ?? onClick={() => setSection('traits')} />
+            <NavButton icon={<EyeOff />} active={section === 'private'} label="?¨ê? / ë¹„ê³µê°? onClick={() => setSection('private')} />
+            <NavButton icon={<Search />} active={section === 'scouting'} label="?¤ì¹´?°íŒ…" onClick={() => setSection('scouting')} />
+          </nav>
+
+          <SavedPlayerList title="ì¦ê²¨ì°¾ê¸°" icon={<Star />} players={favoritePlayers} onSelect={openSavedPlayer} />
+          <SavedPlayerList title="ìµœê·¼ ê²€?? icon={<Clock3 />} players={recentPlayers} onSelect={openSavedPlayer} />
+        </aside>
+
+        <section className="editor-surface">
+          {section === 'attributes' && <AttributesView groups={fieldsByCategory} values={values} onChange={stageChange} />}
+          {section === 'positions' && <PositionsView values={values} onChange={stageChange} />}
+          {section === 'traits' && <TraitsView values={values} onChange={stageChange} />}
+          {section === 'private' && (
+            <PrivateView fields={fieldsByCategory.hidden} revealed={revealedPrivate} values={values} onReveal={revealField} onChange={stageChange} />
+          )}
+          {section === 'scouting' && (
+            <ScoutingView
+              teamName={scoutTeamName}
+              clubId={scoutClubId}
+              squadKind={scoutSquad}
+              knowledgeLevel={scoutLevel}
+              uids={scoutUids}
+              report={scoutReport}
+              busy={busy}
+              onTeamNameChange={setScoutTeamName}
+              onClubIdChange={setScoutClubId}
+              onSquadKindChange={setScoutSquad}
+              onKnowledgeLevelChange={setScoutLevel}
+              onUidsChange={setScoutUids}
+              onCollect={collectClubUids}
+              onBuild={buildScoutingReport}
+            />
+          )}
+        </section>
+
+        <aside className="changes-panel">
+          <div className="panel-heading">
+            <ListChecks size={18} />
+            <h2>ë³€ê²??€ê¸?/h2>
+          </div>
+          {changes.length === 0 ? (
+            <p className="empty-state">?„ì§ ë³€ê²½ëœ ??ª©???†ìŠµ?ˆë‹¤.</p>
+          ) : (
+            <ul className="change-list">
+              {changes.map((change) => (
+                <li key={change.key}>
+                  <span>{change.label}</span>
+                  <strong>
+                    {formatChange(change.from)} ??{formatChange(change.to)}
+                  </strong>
+                </li>
+              ))}
+            </ul>
+          )}
+          <button type="button" className="apply-all" disabled={busy || changes.length === 0} onClick={applyAll}>
+            ëª¨ë‘ ?ìš©
+          </button>
+          <button type="button" className="soft-action" disabled={busy} onClick={() => setChanges([])}>
+            ?€ê¸?ëª©ë¡ ë¹„ìš°ê¸?
+          </button>
+          <button type="button" className="soft-action" disabled={busy || changes.length === 0} onClick={discardChanges}>
+            <RotateCcw size={16} />
+            ?ë˜ ê°’ìœ¼ë¡??˜ëŒë¦¬ê¸°
+          </button>
+          <div className="safety-note">
+            <CircleAlert size={16} />
+            ?ìš© ?„ì—??ë©”ëª¨ë¦¬ì— ?°ì? ?ŠìŠµ?ˆë‹¤.
+          </div>
+        </aside>
+      </section>
+    </main>
+  )
+}
+
+function NavButton({ icon, label, active, onClick }: { icon: ReactNode; label: string; active: boolean; onClick: () => void }) {
+  return (
+    <button type="button" className={active ? 'nav-button active' : 'nav-button'} onClick={onClick}>
+      {icon}
+      <span>{label}</span>
+    </button>
+  )
+}
+
+function SavedPlayerList({
+  title,
+  icon,
+  players,
+  onSelect,
+}: {
+  title: string
+  icon: ReactNode
+  players: SavedPlayer[]
+  onSelect: (player: SavedPlayer) => void
+}) {
+  return (
+    <section className="saved-panel">
+      <div className="saved-panel-title">
+        {icon}
+        <h3>{title}</h3>
+      </div>
+      {players.length === 0 ? (
+        <p>?€?¥ëœ ? ìˆ˜ê°€ ?†ìŠµ?ˆë‹¤.</p>
+      ) : (
+        <div className="saved-list">
+          {players.map((player) => (
+            <button type="button" key={player.uid} onClick={() => onSelect(player)}>
+              <span>{player.name ?? `UID ${player.uid}`}</span>
+              <strong>{player.ca} / {player.pa}</strong>
+            </button>
+          ))}
+        </div>
+      )}
+    </section>
+  )
+}
+
+function AttributesView({
+  groups,
+  values,
+  onChange,
+}: {
+  groups: Record<'ê¸°ìˆ ' | '?•ì‹ ' | '? ì²´' | 'ê³¨í‚¤??, FieldDef[]> & { hidden: FieldDef[] }
+  values: Values
+  onChange: (key: string, label: string, from: FieldValue, to: FieldValue) => void
+}) {
+  return (
+    <div className="editor-page">
+      <PageTitle title="?¥ë ¥ì¹? description="ê¸°ìˆ , ?•ì‹ , ? ì²´?€ ê³¨í‚¤???¥ë ¥ì¹˜ë? ???”ë©´?ì„œ ë¹„êµ?˜ê³  ?˜ì •?©ë‹ˆ??" />
+      <div className="attribute-board">
+        {(['ê¸°ìˆ ', '?•ì‹ ', '? ì²´', 'ê³¨í‚¤??] as const).map((group) => (
+          <section key={group} className="attribute-column">
+            <h3>{group}</h3>
+            {groups[group].map((field) => (
+              <NumberRow key={field.key} field={field} value={values[field.key]} onChange={onChange} />
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function NumberRow({
+  field,
+  value,
+  onChange,
+}: {
+  field: FieldDef
+  value: FieldValue | undefined
+  onChange: (key: string, label: string, from: FieldValue, to: FieldValue) => void
+}) {
+  const numeric = typeof value === 'number' ? value : ''
+  return (
+    <label className="attribute-row">
+      <span>{field.label}</span>
+      <input
+        type="number"
+        min={field.min}
+        max={field.max}
+        disabled={value === undefined}
+        value={numeric}
+        placeholder="-"
+        onChange={(event) => onChange(field.key, field.label, Number(value ?? 0), Number(event.target.value))}
+      />
+    </label>
+  )
+}
+
+function PositionsView({
+  values,
+  onChange,
+}: {
+  values: Values
+  onChange: (key: string, label: string, from: FieldValue, to: FieldValue) => void
+}) {
+  return (
+    <div className="editor-page">
+      <PageTitle title="?¬ì????í•©?? description="?¬ì????„ì¹˜ ê·¸ë?ë¡?ë°°ì¹˜???ì—°?¤ëŸ¬????•  ë¶„í¬ë¥?ë¹ ë¥´ê²??•ì¸?©ë‹ˆ??" />
+      <div className="pitch">
+        {positions.map((position) => {
+          const value = Number(values[position.key] ?? 0)
+          return (
+            <label
+              key={position.key}
+              className={`position-chip tone-${ratingTone(value)}`}
+              style={{ left: `${position.x}%`, top: `${position.y}%` }}
+            >
+              <span>{position.label}</span>
+              <input
+                type="number"
+                min={1}
+                max={20}
+                disabled={values[position.key] === undefined}
+                value={values[position.key] === undefined ? '' : value}
+                onChange={(event) => onChange(position.key, position.label, value, Number(event.target.value))}
+              />
+            </label>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function TraitsView({
+  values,
+  onChange,
+}: {
+  values: Values
+  onChange: (key: string, label: string, from: FieldValue, to: FieldValue) => void
+}) {
+  return (
+    <div className="editor-page">
+      <PageTitle title="? í˜¸ ?Œë ˆ?? description="ì²´í¬ë°•ìŠ¤ ?€???‰ë™ ? í˜•ë³??œê·¸ë¡?ì¼œê³  ?•ë‹ˆ??" />
+      <div className="trait-groups">
+        {traitGroups.map((group) => (
+          <section key={group.title} className="trait-group">
+            <h3>{group.title}</h3>
+            <div className="trait-tags">
+              {group.traits.map(([key, label]) => {
+                const active = values[key] === true
+                return (
+                  <button
+                    type="button"
+                    key={key}
+                    disabled={values[key] === undefined}
+                    className={active ? 'trait-tag active' : 'trait-tag'}
+                    onClick={() => onChange(key, label, active, !active)}
+                  >
+                    {label}
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function PrivateView({
+  fields,
+  revealed,
+  values,
+  onReveal,
+  onChange,
+}: {
+  fields: FieldDef[]
+  revealed: Record<string, boolean>
+  values: Values
+  onReveal: (key: string) => void
+  onChange: (key: string, label: string, from: FieldValue, to: FieldValue) => void
+}) {
+  return (
+    <div className="editor-page">
+      <PageTitle title="?¨ê? / ë¹„ê³µê°? description="ê²Œì„ ?´ì—???•í™•??ê³µê°œ?˜ì? ?ŠëŠ” ê°’ì? ëª…ì‹œ?ìœ¼ë¡??´ì—ˆ???Œë§Œ ë³´ì—¬ì¤ë‹ˆ??" />
+      <div className="private-list">
+        {fields.map((field) => {
+          const visible = revealed[field.key]
+          return (
+            <article key={field.key} className="private-row">
+              <div>
+                <span>{field.label}</span>
+                {visible ? (
+                  <input
+                    type="number"
+                    min={field.min}
+                    max={field.max}
+                    value={typeof values[field.key] === 'number' ? Number(values[field.key]) : ''}
+                    onChange={(event) => onChange(field.key, field.label, Number(values[field.key] ?? 0), Number(event.target.value))}
+                  />
+                ) : (
+                  <strong>?¨ê?</strong>
+                )}
+              </div>
+              <button type="button" className="soft-action" onClick={() => onReveal(field.key)}>
+                {visible ? <EyeOff size={16} /> : <Eye size={16} />}
+                {visible ? 'ê°€ë¦¬ê¸°' : 'ê°?ë³´ê¸°'}
+              </button>
+            </article>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function ScoutingView({
+  teamName,
+  clubId,
+  squadKind,
+  knowledgeLevel,
+  uids,
+  report,
+  busy,
+  onTeamNameChange,
+  onClubIdChange,
+  onSquadKindChange,
+  onKnowledgeLevelChange,
+  onUidsChange,
+  onCollect,
+  onBuild,
+}: {
+  teamName: string
+  clubId: string
+  squadKind: string
+  knowledgeLevel: number
+  uids: string
+  report: ScoutingReport | null
+  busy: boolean
+  onTeamNameChange: (value: string) => void
+  onClubIdChange: (value: string) => void
+  onSquadKindChange: (value: string) => void
+  onKnowledgeLevelChange: (value: number) => void
+  onUidsChange: (value: string) => void
+  onCollect: () => void
+  onBuild: () => void
+}) {
+  const maxPa = Math.max(1, ...(report?.paBands.map((band) => band.count) ?? [1]))
+  const maxCa = Math.max(1, ...(report?.caBands.map((band) => band.count) ?? [1]))
+  const maxPosition = Math.max(1, ...(report?.positionCounts.map((band) => band.count) ?? [1]))
+  const stageItems = scoutingStageItems(report?.knowledgeLevel ?? knowledgeLevel)
+
+  return (
+    <div className="editor-page">
+      <PageTitle title="?¤ì¹´?°íŒ… ?¼í„°" description="? ìˆ˜ UID ë¬¶ìŒ???€ ?¤ì¿¼?œì²˜??ë¶„ì„?˜ê³ , ì¡°ì‚¬ ?¨ê³„???°ë¼ ? ì¬ ?¥ë ¥ êµ¬ê°„???ì  ì¢í™?ˆë‹¤." />
+      <div className="scout-layout">
+        <section className="scout-form">
+          <label>
+            <span>?´ëŸ½ / ?€ ID</span>
+            <input value={clubId} onChange={(event) => onClubIdChange(event.target.value)} placeholder="?? 671" />
+          </label>
+          <label>
+            <span>?€ ?´ë¦„</span>
+            <input value={teamName} onChange={(event) => onTeamNameChange(event.target.value)} />
+          </label>
+          <label>
+            <span>?¤ì¿¼??/span>
+            <select value={squadKind} onChange={(event) => onSquadKindChange(event.target.value)}>
+              <option>?„ì²´</option>
+              <option>1êµ?/option>
+              <option>2êµ?/ B?€</option>
+              <option>U21</option>
+              <option>U19 / U18</option>
+            </select>
+          </label>
+          <label>
+            <span>ì¡°ì‚¬ ?¨ê³„</span>
+            <select value={knowledgeLevel} onChange={(event) => onKnowledgeLevelChange(Number(event.target.value))}>
+              <option value={1}>1?¨ê³„: ?“ì? PA êµ¬ê°„</option>
+              <option value={2}>2?¨ê³„: ì¤‘ê°„ PA êµ¬ê°„</option>
+              <option value={3}>3?¨ê³„: 10 ?¨ìœ„ êµ¬ê°„</option>
+              <option value={4}>4?¨ê³„: 10 ?¨ìœ„ êµ¬ê°„</option>
+              <option value={5}>5?¨ê³„: 10 ?¨ìœ„ êµ¬ê°„</option>
+            </select>
+          </label>
+          <label className="uid-area">
+            <span>? ìˆ˜ UID ëª©ë¡</span>
+            <textarea
+              value={uids}
+              onChange={(event) => onUidsChange(event.target.value)}
+              placeholder={'2002074288\n2002074291\n?¼í‘œ, ê³µë°±, ì¤„ë°”ê¿?ëª¨ë‘ ê°€??}
+            />
+          </label>
+          <button type="button" className="soft-action scout-soft" disabled={busy} onClick={onCollect}>
+            {busy ? <Loader2 size={17} className="spin" /> : <Search size={17} />}
+            ?´ëŸ½/?€ IDë¡?UID ë¶ˆëŸ¬?¤ê¸°
+          </button>
+          <button type="button" className="primary-action scout-build" disabled={busy} onClick={onBuild}>
+            {busy ? <Loader2 size={17} className="spin" /> : <Search size={17} />}
+            ë¦¬í¬???ì„±
+          </button>
+        </section>
+
+        <section className="scout-report">
+          {report ? (
+            <>
+              <div className="report-summary">
+                <Metric label="?€?? value={`${report.resolvedPlayers}/${report.totalRequested}ëª?} />
+                <Metric label="ì¡°ì‚¬ ?¨ê³„" value={`${report.knowledgeLevel}?¨ê³„`} />
+                <Metric label="ë¯¸í™•?? value={`${report.unresolvedUids.length}ëª?} />
+              </div>
+              <div className="stage-ladder">
+                {stageItems.map((item) => (
+                  <article key={item.level} className={item.unlocked ? 'stage-step unlocked' : 'stage-step locked'}>
+                    <span>{item.level}?¨ê³„</span>
+                    <strong>{item.title}</strong>
+                    <p>{item.description}</p>
+                  </article>
+                ))}
+              </div>
+              {report.summaryNarrative && (
+                <div className="report-narrative" style={{ padding: '1rem', background: 'var(--surface-sunken)', borderRadius: '8px', borderLeft: '4px solid var(--accent)', marginBottom: '1rem', fontStyle: 'italic', lineHeight: '1.6' }}>
+                  <p style={{ margin: 0 }}>
+                    <Sparkles size={16} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'text-bottom', color: 'var(--accent)' }} />
+                    {report.summaryNarrative}
+                  </p>
+                </div>
+              )}
+              <div className="report-grid">
+                <BandPanel title="? ì¬ ?¥ë ¥ ë¶„í¬" bands={report.paBands} max={maxPa} />
+                <BandPanel title="?„ì¬ ?¥ë ¥ ë¶„í¬" bands={report.caBands} max={maxCa} />
+                <BandPanel title="ì£??¬ì???ë¶„í¬" bands={report.positionCounts} max={maxPosition} />
+                <section className="report-panel">
+                  <h3>?ìœ„ ?„ë³´</h3>
+                  <div className="candidate-list">
+                    {report.candidates.length === 0 ? (
+                      <p>?•ì¸??? ìˆ˜ê°€ ?†ìŠµ?ˆë‹¤.</p>
+                    ) : (
+                      report.candidates.map((candidate) => (
+                        <article key={`${candidate.label}-${candidate.uid ?? candidate.position}`}>
+                          <strong>{candidate.label}</strong>
+                          <span>{candidate.position}</span>
+                          <em>CA {candidate.caBand} Â· PA {candidate.paBand}</em>
+                          {candidate.comparisons.length > 0 && (
+                            <div className="comparison-line">
+                              <small>ë¹„êµêµ?/small>
+                              <mark>{candidate.comparisons.join(' Â· ')}</mark>
+                            </div>
+                          )}
+                          <div className="candidate-intel">
+                            {candidate.developmentBand && <b>{candidate.developmentBand}</b>}
+                            {candidate.personalityHint && <b>{candidate.personalityHint}</b>}
+                            {candidate.riskHint && <b>{candidate.riskHint}</b>}
+                            {candidate.recommendation && <b>{candidate.recommendation}</b>}
+                          </div>
+                        </article>
+                      ))
+                    )}
+                  </div>
+                </section>
+              </div>
+            </>
+          ) : (
+            <div className="scout-empty">
+              <Search size={36} />
+              <h3>?„ì§ ë¦¬í¬?¸ê? ?†ìŠµ?ˆë‹¤.</h3>
+              <p>?€?´ë‚˜ ? ì†Œ???¤ì¿¼?œì˜ ? ìˆ˜ UIDë¥?ë¶™ì—¬ ?£ê³  ì¡°ì‚¬ ?¨ê³„ë¥?? íƒ?˜ì„¸??</p>
+            </div>
+          )}
+        </section>
+      </div>
+    </div>
+  )
+}
+
+function Metric({ label, value }: { label: string; value: string }) {
+  return (
+    <article className="metric">
+      <span>{label}</span>
+      <strong>{value}</strong>
+    </article>
+  )
+}
+
+function BandPanel({ title, bands, max }: { title: string; bands: ScoutingBand[]; max: number }) {
+  return (
+    <section className="report-panel">
+      <h3>{title}</h3>
+      <div className="band-list">
+        {bands.map((band) => (
+          <div key={band.label} className="band-row">
+            <span>{band.label}</span>
+            <div className="band-track">
+              <i style={{ width: `${Math.max(4, (band.count / max) * 100)}%` }} />
+            </div>
+            <strong>{band.count}</strong>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function scoutingStageItems(level: number) {
+  const items = [
+    ['?„ë³´ì¸?ê°ì?', 'PA/CAë¥??“ì? êµ¬ê°„?¼ë¡œë§?ë³´ê³  ?€ ?ˆì— ?ì„???ˆëŠ”ì§€ ?ë‹¨?©ë‹ˆ??'],
+    ['?„ë³´ ?¤ëª… ?•ì¸', '?ìœ„ ?„ë³´ ?´ë¦„ê³?UIDë¥??´ì–´ ?¤ì œ ì¶”ì  ?€?ì„ ?¡ìŠµ?ˆë‹¤.'],
+    ['?±ì¥ ?¬ì? ?ì •', '?„ì¬ ?¥ë ¥ê³?? ì¬ ?¥ë ¥??ì°¨ì´ë¥?ê¸°ë°˜?¼ë¡œ ?¡ì„± ?°ì„ ?œìœ„ë¥??˜ëˆ•?ˆë‹¤.'],
+    ['?±í–¥ ?ŒíŠ¸', '?„ë¡œ?˜ì‹, ?¼ë§, ?¹ë???ê¸°ë°˜?¼ë¡œ ?±ì¥ ê°€?¥ì„±??ì§ˆì„ ?•ì¸?©ë‹ˆ??'],
+    ['ë¦¬ìŠ¤??ê²€??, 'ë¶€??ë¹ˆë„, ê¾¸ì??? ì¤‘ìš” ê²½ê¸°, ?•ë°• ?€ì²˜ë? ë¬¶ì–´ ìµœì¢… ?„í—˜?„ë? ë´…ë‹ˆ??'],
+  ] as const
+
+  return items.map(([title, description], index) => ({
+    level: index + 1,
+    title,
+    description,
+    unlocked: level >= index + 1,
+  }))
+}
+
+function PageTitle({ title, description }: { title: string; description: string }) {
+  return (
+    <header className="page-title">
+      <div>
+        <p>? ìˆ˜ ?¸ì§‘</p>
+        <h2>{title}</h2>
+      </div>
+      <span>{description}</span>
+    </header>
+  )
+}
+
+function ratingTone(value: number) {
+  if (value >= 20) return 'elite'
+  if (value >= 18) return 'natural'
+  if (value >= 15) return 'good'
+  if (value >= 12) return 'ok'
+  return 'low'
+}
+
+function formatChange(value: FieldValue) {
+  if (typeof value === 'boolean') return value ? 'ì¼œì§' : 'êº¼ì§'
+  return value
+}
+
+function toSavedPlayer(result: ScanResult): SavedPlayer {
+  return {
+    uid: result.uid,
+    name: result.name,
+    ca: result.ca,
+    pa: result.pa,
+    lastSeen: Date.now(),
+  }
+}
+
+function loadSavedPlayers(key: string): SavedPlayer[] {
+  if (typeof window === 'undefined') return []
+  try {
+    const raw = window.localStorage.getItem(key)
+    if (!raw) return []
+    const parsed = JSON.parse(raw)
+    if (!Array.isArray(parsed)) return []
+    return parsed
+      .filter((item): item is SavedPlayer => typeof item?.uid === 'number' && typeof item?.ca === 'number' && typeof item?.pa === 'number')
+      .sort((a, b) => b.lastSeen - a.lastSeen)
+  } catch {
+    return []
+  }
+}
+
+function savePlayers(key: string, players: SavedPlayer[]) {
+  if (typeof window !== 'undefined') {
+    window.localStorage.setItem(key, JSON.stringify(players))
+  }
+  return players
+}
+
+function parseUidList(input: string) {
+  return Array.from(
+    new Set(
+      input
+        .split(/[\s,;]+/)
+        .map((part) => Number(part.trim()))
+        .filter((value) => Number.isInteger(value) && value > 0),
+    ),
+  )
+}
+
+function makeMockScoutingReport(teamName: string, squadKind: string, knowledgeLevel: number, playerUids: number[]): ScoutingReport {
+  const paSeeds = [184, 172, 165, 158, 151, 143, 136, 129, 118, 96]
+  const caSeeds = [148, 132, 121, 110, 104, 98, 86, 78, 65, 52]
+  const positionsSeed = ['?¤íŠ¸?¼ì´ì»?, 'ì¤‘ì•™ ë¯¸ë“œ?„ë”', 'ì¤‘ì•™ ?˜ë¹„??, '?¼ìª½ ?™ì–´', 'ê³¨í‚¤??, '?¤ë¥¸ìª??˜ë¹„??]
+  const players = playerUids.map((uid, index) => ({
+    uid,
+    ca: caSeeds[index % caSeeds.length],
+    pa: paSeeds[index % paSeeds.length],
+    position: positionsSeed[index % positionsSeed.length],
+  }))
+  const paBands = makeBands(players.map((player) => player.pa), knowledgeLevel)
+  const caBands = makeBands(players.map((player) => player.ca), knowledgeLevel)
+  const positionCounts = Array.from(
+    players.reduce((counts, player) => counts.set(player.position, (counts.get(player.position) ?? 0) + 1), new Map<string, number>()),
+  )
+    .map(([label, count]) => ({ label, count }))
+    .sort((a, b) => b.count - a.count)
+
+  return {
+    teamName,
+    squadKind,
+    knowledgeLevel,
+    totalRequested: playerUids.length,
+    resolvedPlayers: playerUids.length,
+    paBands,
+    caBands,
+    positionCounts,
+    candidates: [...players]
+      .sort((a, b) => b.pa - a.pa)
+      .slice(0, 6)
+      .map((player, index) => ({
+        label: knowledgeLevel >= 2 ? `ë¯¸ë¦¬ë³´ê¸° ? ìˆ˜ ${index + 1}` : `?ìœ„ ?„ë³´ ${index + 1}`,
+        uid: knowledgeLevel >= 2 ? player.uid : null,
+        position: player.position,
+        caBand: findBand(player.ca, knowledgeLevel),
+        paBand: findBand(player.pa, knowledgeLevel),
+        comparisons: index === 0 ? ['ë©”ì‹œ', '?¸ë‚˜?°ì???, '?¤ì´ë§ˆë¥´'] : ['?í¥ë¯?, 'ê·¸ë¦¬ì¦ˆë§Œ', '?´ë¼'],
+      })),
+    unresolvedUids: [],
+    summaryNarrative: "ë¸Œë¼?°ì? ë¯¸ë¦¬ë³´ê¸° ëª¨ë“œ?…ë‹ˆ?? ?´ë²ˆ ?¤ì¹´?°íŒ… ë¦¬í¬?¸ì— ?€??ë¸Œë¦¬?‘ì„ ?œì‘?˜ê² ?µë‹ˆ?? ?€???„ì²´?ìœ¼ë¡?? ì¬?¥ì´ ?°ì–´???ì„?¤ì´ ?¬ì§„???ˆì–´ ë¯¸ë˜ê°€ ?„ì£¼ ë°ìŠµ?ˆë‹¤.",
+  }
+}
+
+function makeBands(values: number[], knowledgeLevel: number) {
+  return bandRanges(knowledgeLevel).map(([label, min, max]) => ({
+    label,
+    count: values.filter((value) => value >= min && value <= max).length,
+  }))
+}
+
+function findBand(value: number, knowledgeLevel: number) {
+  return bandRanges(knowledgeLevel).find(([, min, max]) => value >= min && value <= max)?.[0] ?? 'ë¯¸í™•??
+}
+
+function bandRanges(knowledgeLevel: number): [string, number, number][] {
+  if (knowledgeLevel === 1) return [['1-119', 1, 119], ['120-149', 120, 149], ['150-169', 150, 169], ['170-200', 170, 200]]
+  if (knowledgeLevel === 2) {
+    return [['1-99', 1, 99], ['100-119', 100, 119], ['120-139', 120, 139], ['140-159', 140, 159], ['160-179', 160, 179], ['180-200', 180, 200]]
+  }
+  return [
+    ['1-99', 1, 99],
+    ['100-109', 100, 109],
+    ['110-119', 110, 119],
+    ['120-129', 120, 129],
+    ['130-139', 130, 139],
+    ['140-149', 140, 149],
+    ['150-159', 150, 159],
+    ['160-169', 160, 169],
+    ['170-179', 170, 179],
+    ['180-189', 180, 189],
+    ['190-200', 190, 200],
+  ]
+}
+
+export default App

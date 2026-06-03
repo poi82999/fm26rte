@@ -1,0 +1,35 @@
+# Fast local analysis defaults for ripgrep and similar tools.
+# This workspace intentionally keeps heavy binaries, dumps, vendored tools,
+# and build caches next to the source. They are useful, but should be opt-in.
+
+# Frontend / Tauri dependencies and outputs
+apps/fm26-player-editor/node_modules/
+apps/fm26-player-editor/dist/
+apps/fm26-player-editor/dist-ssr/
+apps/fm26-player-editor/src-tauri/target/
+apps/aob_test/target/
+
+# Legacy build outputs
+archive/legacy-winforms-rte/bin/
+archive/legacy-winforms-rte/obj/
+
+# Release artifacts and local executable copies
+artifacts/release/
+FM26-Player-Editor.exe
+FM26-Player-Editor-new.exe
+*.exe
+
+# Bulky reverse-engineering assets. Read these only when explicitly needed.
+research/il2cpp-dump/
+research/reverse-engineering/trace/*.log
+research/reverse-engineering/__pycache__/
+research/reverse-engineering/ce_luac/
+research/reverse-engineering/ce_luac_normalized/
+
+# Local tool/vendor payloads
+tools/jdk/
+tools/microsoft-jdk-21.zip
+tools/cheat-engine-src/
+
+# Logs
+*.log
