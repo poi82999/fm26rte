@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\신민석\\dev\\fm26-rte\\rte\\Rte.csproj": {}
+    "C:\\projects\\fm26rte\\archive\\legacy-winforms-rte\\Rte.csproj": {}
   },
   "projects": {
-    "C:\\Users\\신민석\\dev\\fm26-rte\\rte\\Rte.csproj": {
+    "C:\\projects\\fm26rte\\archive\\legacy-winforms-rte\\Rte.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\신민석\\dev\\fm26-rte\\rte\\Rte.csproj",
+        "projectUniqueName": "C:\\projects\\fm26rte\\archive\\legacy-winforms-rte\\Rte.csproj",
         "projectName": "FM26RTE",
-        "projectPath": "C:\\Users\\신민석\\dev\\fm26-rte\\rte\\Rte.csproj",
-        "packagesPath": "C:\\Users\\신민석\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\신민석\\dev\\fm26-rte\\rte\\obj\\",
+        "projectPath": "C:\\projects\\fm26rte\\archive\\legacy-winforms-rte\\Rte.csproj",
+        "packagesPath": "C:\\Users\\Shinminseok\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\fm26rte\\archive\\legacy-winforms-rte\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\신민석\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Shinminseok\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
@@ -61,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.420/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.424/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

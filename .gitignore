@@ -26,3 +26,7 @@ tools/cheat-engine-src/
 *.local
 .vscode/
 .idea/
+
+# Python
+__pycache__/
+*.pyc

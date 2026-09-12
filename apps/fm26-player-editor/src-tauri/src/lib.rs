@@ -6,10 +6,13 @@ use std::collections::{HashMap, HashSet};
 use std::fs;
 use std::sync::Mutex;
 
+mod analysis;
 mod comparisons;
 mod fields;
 mod media;
 mod noise;
+mod portrait;
+mod portrait_prompt;
 mod process;
 mod save_analysis;
 mod scouting;
@@ -65,6 +68,10 @@ const MANAGER_SCOUTING_CENTRE: usize = 0x370;
 const MANAGER_SCOUTING_BUDGET: usize = 0xde0;
 const MANAGER_RECRUITMENT_PACKAGE: usize = 0xdec;
 const MANAGER_FLAGS_1: usize = 0x404;
+// FMCET plao 심볼표(FMCETableEnums.lua)에서 추출. plao.Phes=558, plao.Pwes=332.
+const PLAYER_HEIGHT: usize = 0x22e; // 2바이트, cm (편집항목 Height로 확인됨)
+const PLAYER_WEIGHT: usize = 0x14c; // plao.Pwes, kg 추정 (미검증)
+const PERSON_PPRM: usize = 0xc0; // 선수 특성 비트필드 (Person 기준)
 
 #[derive(Default)]
 struct AppState {
@@ -293,6 +300,45 @@ struct ScoutingRiskDetails {
     note: String,
 }
 
+/// 전력 분석 도시에 — 상대(또는 우리) 스쿼드 전체의 진짜 정보 + 공략 분석.
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+struct SquadDossier {
+    team_name: String,
+    nation: Option<String>,
+    reputation: Option<u16>,
+    squad_kind: String,
+    player_count: usize,
+    /// CA 내림차순 정렬.
+    players: Vec<DossierPlayer>,
+    /// 위협 태그가 있는 핵심 선수 UID (하이라이트용).
+    key_player_uids: Vec<u32>,
+    /// 선발 추정 XI(상위 11명)에서 모은 공략 포인트(중복 제거).
+    team_weaknesses: Vec<analysis::Tag>,
+}
+
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+struct DossierPlayer {
+    uid: u32,
+    name: Option<String>,
+    position: String,
+    /// 소속 팀 종류 라벨 (1군/리저브/U21…). 스쿼드 지위 신호.
+    squad_label: String,
+    age: Option<u16>,
+    nation: Option<String>,
+    height_cm: Option<u16>,
+    weight_kg: Option<u16>,
+    ca: u16,
+    pa: u16,
+    foot: &'static str,
+    /// 14 이상 능력치 상위 8개.
+    standout: Vec<analysis::AttrValue>,
+    traits: Vec<String>,
+    threats: Vec<analysis::Tag>,
+    weaknesses: Vec<analysis::Tag>,
+}
+
 #[derive(Serialize)]
 #[serde(rename_all = "camelCase")]
 struct ClubPlayerUidsResult {
@@ -409,6 +455,14 @@ struct PersonalityProfile {
 #[tauri::command]
 fn app_status() -> String {
     "프론트엔드 준비 완료".to_string()
+}
+
+/// 창을 항상 위로 고정/해제. 경기 전 라인업·전술 화면 위에 도시에를 띄워두기 위함.
+#[tauri::command]
+fn set_window_on_top(on: bool, window: tauri::Window) -> Result<(), String> {
+    window
+        .set_always_on_top(on)
+        .map_err(|err| format!("창 고정 설정 실패: {err}"))
 }
 
 #[tauri::command]
@@ -657,6 +711,173 @@ fn collect_club_player_uids(
             lookup_notes.join(" / ")
         ))
     }
+}
+
+#[tauri::command]
+fn analyze_squad(
+    club_id: u32,
+    squad_kind: String,
+    state: tauri::State<'_, AppState>,
+) -> Result<SquadDossier, String> {
+    let target = state.target.lock().map_err(|_| "프로세스 상태 잠금 실패")?;
+    let target = target.as_ref().ok_or("먼저 fm.exe에 연결해야 합니다.")?;
+    let game_date = *state
+        .game_date
+        .lock()
+        .map_err(|_| "게임 날짜 상태 잠금 실패")?;
+
+    if club_id == 0 {
+        return Err("클럽/팀 ID를 입력하세요.".to_string());
+    }
+
+    // club 경로 우선, 실패 시 team 경로로 스쿼드를 해석한다.
+    let (team_name, nation, reputation, squads) = if let Some(club) =
+        find_club_by_uid(target, club_id)?
+    {
+        let (squads, _) = collect_squads_from_club(target, club, &squad_kind)?;
+        (
+            read_club_name(target, club).unwrap_or_else(|| format!("구단 ID {club_id}")),
+            read_club_nation_name(target, club),
+            read_club_reputation(target, club),
+            squads,
+        )
+    } else if let Some(team) = find_team_by_uid(target, club_id)? {
+        let team_type = target.read_u8(team + TEAM_TYPE).unwrap_or(255);
+        let club = target.read_usize(team + TEAM_CLUB).unwrap_or(0);
+        let (player_uids, _) = read_player_uids_from_team(target, team)?;
+        let squads = vec![ClubSquadPlayers {
+            team_type,
+            team_type_label: team_type_label(team_type).to_string(),
+            player_count: player_uids.len(),
+            player_uids,
+        }];
+        (
+            read_team_display_name(target, club, team_type)
+                .unwrap_or_else(|| format!("팀 ID {club_id}")),
+            read_club_nation_name(target, club),
+            read_club_reputation(target, club),
+            squads,
+        )
+    } else {
+        return Err("해당 ID의 클럽/팀 객체를 찾지 못했습니다.".to_string());
+    };
+
+    // uid → 소속 team_type 매핑 (중복 시 첫 등장 유지).
+    let mut order = Vec::new();
+    let mut team_type_of = HashMap::new();
+    for squad in &squads {
+        for uid in &squad.player_uids {
+            if team_type_of.insert(*uid, squad.team_type).is_none() {
+                order.push(*uid);
+            }
+        }
+    }
+
+    if order.is_empty() {
+        return Err("선수단 데이터를 찾지 못했습니다.".to_string());
+    }
+
+    let hits = find_players_by_uids(target, &order)?;
+    let mut players = Vec::new();
+    for uid in &order {
+        let Some(hit) = hits.get(uid).copied() else {
+            continue;
+        };
+        if let Ok(mut cache) = state.scouting_cache.lock() {
+            cache.insert(*uid, hit.pointers);
+        }
+        let team_type = team_type_of.get(uid).copied().unwrap_or(255);
+        if let Some(player) = read_dossier_player(target, *uid, hit.pointers, game_date, team_type) {
+            players.push(player);
+        }
+    }
+
+    players.sort_by(|a, b| b.ca.cmp(&a.ca));
+
+    let key_player_uids = players
+        .iter()
+        .filter(|player| !player.threats.is_empty())
+        .take(6)
+        .map(|player| player.uid)
+        .collect::<Vec<_>>();
+
+    // 선발 추정 XI(상위 11명)의 약점을 라벨 기준 중복 제거해 모은다.
+    let mut seen_labels = HashSet::new();
+    let team_weaknesses = players
+        .iter()
+        .take(11)
+        .flat_map(|player| player.weaknesses.iter().cloned())
+        .filter(|tag| seen_labels.insert(tag.label.clone()))
+        .collect::<Vec<_>>();
+
+    Ok(SquadDossier {
+        team_name,
+        nation,
+        reputation,
+        squad_kind,
+        player_count: players.len(),
+        players,
+        key_player_uids,
+        team_weaknesses,
+    })
+}
+
+fn read_dossier_player(
+    target: &Target,
+    uid: u32,
+    pointers: PlayerPointers,
+    game_date: GameDate,
+    team_type: u8,
+) -> Option<DossierPlayer> {
+    if target.read_u32(pointers.person + OBJ_DUNI).ok()? != uid {
+        return None;
+    }
+    let ca = target.read_u16(pointers.player + 0x264).ok()?;
+    let pa = target.read_u16(pointers.player + 0x266).ok()?;
+    if !(1..=200).contains(&ca) || !(1..=200).contains(&pa) {
+        return None;
+    }
+
+    // PATR 능력치를 디코딩(1~20)해 배열로.
+    let mut attrs = [0u8; analysis::ATTR_COUNT];
+    for (i, slot) in attrs.iter_mut().enumerate() {
+        *slot = read_fm_attribute(target, pointers.player + PATR + i).unwrap_or(0);
+    }
+
+    let position = read_best_position(target, pointers.player).unwrap_or_else(|| "N/A".to_string());
+    let role = analysis::Role::from_label(&position);
+
+    let traits = match target.read(pointers.person + PERSON_PPRM, 8) {
+        Ok(bytes) => analysis::active_traits(&bytes),
+        Err(_) => Vec::new(),
+    };
+
+    let height_cm = target
+        .read_u16(pointers.player + PLAYER_HEIGHT)
+        .ok()
+        .filter(|h| (140..=220).contains(h));
+    let weight_kg = target
+        .read_u16(pointers.player + PLAYER_WEIGHT)
+        .ok()
+        .filter(|w| (40..=150).contains(w));
+
+    Some(DossierPlayer {
+        uid,
+        name: read_person_name(target, pointers.person).unwrap_or(None),
+        position,
+        squad_label: team_type_label(team_type).to_string(),
+        age: read_player_age(target, pointers.person, game_date),
+        nation: read_person_nation_name(target, pointers.person),
+        height_cm,
+        weight_kg,
+        ca,
+        pa,
+        foot: analysis::foot_label(&attrs),
+        standout: analysis::standout(&attrs),
+        traits,
+        threats: analysis::threats(&attrs, role),
+        weaknesses: analysis::weaknesses(&attrs, role),
+    })
 }
 
 #[tauri::command]
@@ -1151,8 +1372,15 @@ fn read_scouting_abilities(target: &Target, pointers: PlayerPointers) -> Vec<Sco
         .collect()
 }
 
+/// 선수 얼굴. 포토 스튜디오에서 만든 생성 이미지가 있으면 그쪽이 우선이라,
+/// 편집 화면과 스카우팅 카드도 자동으로 유니폼 입은 사진으로 바뀐다.
 #[tauri::command]
 fn read_player_face(uid: u32) -> Result<Option<String>, String> {
+    if let Ok(image) = portrait::player_image(uid) {
+        if image.src.is_some() {
+            return Ok(image.src);
+        }
+    }
     let Some((path, mime)) = find_face_file(uid)? else {
         return Ok(None);
     };
@@ -1939,6 +2167,78 @@ fn apply_nation_changes(
 
 // ================================================================================
 
+// ================================================================================
+// 포토 스튜디오 — 얼굴 대신 "구단 유니폼 입은 실사 사진"을 붙이기 위한 프롬프트/파일 관리
+// ================================================================================
+
+#[tauri::command]
+fn studio_state() -> Result<portrait::StudioState, String> {
+    portrait::state()
+}
+
+#[tauri::command]
+fn save_kit_reference(
+    slot: String,
+    file_name: String,
+    data_base64: String,
+) -> Result<portrait::KitReference, String> {
+    portrait::save_kit(&slot, &file_name, &data_base64)
+}
+
+#[tauri::command]
+fn clear_kit_reference(slot: String) -> Result<(), String> {
+    portrait::clear_kit(&slot)
+}
+
+/// 생성본 우선, 없으면 페이스팩 얼굴.
+#[tauri::command]
+fn read_player_portrait(uid: u32) -> Result<portrait::PortraitImage, String> {
+    portrait::player_image(uid)
+}
+
+#[tauri::command]
+fn save_generated_portrait(uid: u32, data_base64: String) -> Result<String, String> {
+    portrait::save_generated(uid, &data_base64)
+}
+
+#[tauri::command]
+fn delete_generated_portrait(uid: u32) -> Result<(), String> {
+    portrait::delete_generated(uid)
+}
+
+#[tauri::command]
+fn build_portrait_prompts(
+    request: portrait::PortraitPromptRequest,
+) -> Vec<portrait::PortraitPrompt> {
+    portrait_prompt::build_prompts(&request)
+}
+
+#[tauri::command]
+fn export_portrait_prompts(
+    request: portrait::PortraitPromptRequest,
+    label: String,
+) -> Result<portrait::ExportResult, String> {
+    portrait_prompt::export(&request, &label)
+}
+
+/// 탐색기로 폴더 열기. 스튜디오 폴더 밖은 열지 않는다.
+#[tauri::command]
+fn open_studio_path(path: String) -> Result<(), String> {
+    let root = portrait::studio_root()?;
+    let target = std::path::PathBuf::from(&path);
+    if !target.starts_with(&root) {
+        return Err("스튜디오 폴더 밖의 경로는 열 수 없습니다.".to_string());
+    }
+    if !target.exists() {
+        return Err("폴더가 없습니다.".to_string());
+    }
+    std::process::Command::new("explorer")
+        .arg(&target)
+        .spawn()
+        .map_err(|err| format!("탐색기를 열지 못했습니다: {err}"))?;
+    Ok(())
+}
+
 #[tauri::command]
 fn analyze_save_file(path: String) -> Result<SaveFileHeader, String> {
     analyze_save_header(&path)
@@ -1954,6 +2254,7 @@ pub fn run() {
         .manage(AppState::default())
         .invoke_handler(tauri::generate_handler![
             app_status,
+            set_window_on_top,
             list_fields,
             set_game_date,
             connect_fm,
@@ -1963,9 +2264,19 @@ pub fn run() {
             apply_changes,
             collect_club_player_uids,
             identify_club,
+            analyze_squad,
             build_scouting_report,
             scout_player_detail,
             read_player_face,
+            studio_state,
+            save_kit_reference,
+            clear_kit_reference,
+            read_player_portrait,
+            save_generated_portrait,
+            delete_generated_portrait,
+            build_portrait_prompts,
+            export_portrait_prompts,
+            open_studio_path,
             read_club_balance,
             read_scouting_budget,
             collect_user_club_scouts,

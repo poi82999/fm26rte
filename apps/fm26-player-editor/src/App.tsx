@@ -8,15 +8,19 @@ import earthDarkUrl from './assets/earth-dark.jpg'
 import {
   Activity,
   Building2,
+  Camera,
   Calculator,
   CheckCircle2,
   CircleAlert,
+  ClipboardList,
   Clock3,
+  Crosshair,
   Eye,
   EyeOff,
   ListChecks,
   Loader2,
   MapPinned,
+  Pin,
   RotateCcw,
   Search,
   Shield,
@@ -27,11 +31,12 @@ import {
   UsersRound,
 } from 'lucide-react'
 import './App.css'
+import PhotoStudio from './PhotoStudio'
 import { fieldDefs, mockValues, positions, traitGroups, visibleReadKeys } from './appData'
 import type { FieldDef, FieldValue, Values } from './appData'
 
 type Section = 'attributes' | 'positions' | 'traits' | 'private'
-type MainView = 'editor' | 'scouting' | 'nation'
+type MainView = 'editor' | 'scouting' | 'nation' | 'analyst' | 'studio'
 type NationCandidate = {
   nation: string
   ntct: string
@@ -176,6 +181,42 @@ type ClubIdentityResult = {
   teamCount: number
   playerCount: number
   squadLabel: string
+}
+type DossierTag = {
+  label: string
+  detail: string
+  kind: 'threat' | 'weakness'
+}
+type DossierAttr = {
+  label: string
+  value: number
+}
+type DossierPlayer = {
+  uid: number
+  name?: string | null
+  position: string
+  squadLabel: string
+  age?: number | null
+  nation?: string | null
+  heightCm?: number | null
+  weightKg?: number | null
+  ca: number
+  pa: number
+  foot: string
+  standout: DossierAttr[]
+  traits: string[]
+  threats: DossierTag[]
+  weaknesses: DossierTag[]
+}
+type SquadDossier = {
+  teamName: string
+  nation?: string | null
+  reputation?: number | null
+  squadKind: string
+  playerCount: number
+  players: DossierPlayer[]
+  keyPlayerUids: number[]
+  teamWeaknesses: DossierTag[]
 }
 type ScoutingBudgetResult = {
   clubPtr: number
@@ -856,7 +897,7 @@ function App() {
       <header className="topbar">
         <div>
           <div className="eyebrow">FM26 선수 에디터</div>
-          <h1>{mainView === 'scouting' ? '스카우팅 센터' : mainView === 'nation' ? '국가 편집' : '선수 편집'}</h1>
+          <h1>{mainView === 'scouting' ? '스카우팅 센터' : mainView === 'nation' ? '국가 편집' : mainView === 'analyst' ? '전력 분석' : mainView === 'studio' ? '포토 스튜디오' : '선수 편집'}</h1>
         </div>
         <div className="topbar-actions">
           <div className="view-switch" aria-label="기능 선택">
@@ -871,6 +912,14 @@ function App() {
             <button type="button" className={mainView === 'nation' ? 'view-button active' : 'view-button'} onClick={() => setMainView('nation')}>
               <MapPinned size={16} />
               국가 편집
+            </button>
+            <button type="button" className={mainView === 'analyst' ? 'view-button active' : 'view-button'} onClick={() => setMainView('analyst')}>
+              <ClipboardList size={16} />
+              전력 분석
+            </button>
+            <button type="button" className={mainView === 'studio' ? 'view-button active' : 'view-button'} onClick={() => setMainView('studio')}>
+              <Camera size={16} />
+              포토 스튜디오
             </button>
           </div>
           <div className={connected ? 'connection-pill' : 'connection-pill idle'}>
@@ -980,6 +1029,10 @@ function App() {
         </>
       ) : mainView === 'nation' ? (
         <NationView connected={connected} />
+      ) : mainView === 'analyst' ? (
+        <AnalystView connected={connected} />
+      ) : mainView === 'studio' ? (
+        <PhotoStudio connected={connected} club={verifiedClub} />
       ) : (
         <section className="scouting-workspace">
           <section className="editor-surface scouting-surface">
@@ -1018,6 +1071,241 @@ function App() {
         </section>
       )}
     </main>
+  )
+}
+
+function AnalystView({ connected }: { connected: boolean }) {
+  const [clubId, setClubId] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [pinned, setPinned] = useState(false)
+  const [dossier, setDossier] = useState<SquadDossier | null>(null)
+  const [selectedUid, setSelectedUid] = useState<number | null>(null)
+  const [status, setStatus] = useState<string>(
+    connected ? '상대 팀(또는 구단) ID를 입력하고 분석하세요.' : '분석 시 자동으로 fm.exe에 연결합니다.',
+  )
+  const [error, setError] = useState<string | null>(null)
+
+  const analyze = async () => {
+    setError(null)
+    const parsed = Number(clubId.trim())
+    if (!Number.isFinite(parsed) || parsed <= 0) {
+      setError('유효한 클럽/팀 ID를 입력하세요.')
+      return
+    }
+    setBusy(true)
+    setStatus('fm.exe 연결 및 스쿼드 분석 중...')
+    setDossier(null)
+    setSelectedUid(null)
+    try {
+      await invoke<ConnectResult>('connect_fm')
+      const result = await invoke<SquadDossier>('analyze_squad', {
+        clubId: Math.trunc(parsed),
+        squadKind: '전체',
+      })
+      setDossier(result)
+      setSelectedUid(result.players[0]?.uid ?? null)
+      setStatus(
+        `${result.teamName} · 선수 ${result.playerCount}명 분석 완료. 공략 포인트 ${result.teamWeaknesses.length}건.`,
+      )
+    } catch (err) {
+      setError(String(err))
+      setStatus('분석 실패.')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  const selected = dossier?.players.find((player) => player.uid === selectedUid) ?? null
+
+  const togglePin = async () => {
+    const next = !pinned
+    try {
+      await invoke('set_window_on_top', { on: next })
+      setPinned(next)
+      setStatus(next ? '창을 항상 위로 고정했습니다. FM 위에 띄워두고 사용하세요.' : '창 고정을 해제했습니다.')
+    } catch (err) {
+      setError(String(err))
+    }
+  }
+
+  return (
+    <section className="analyst-workspace">
+      <PageTitle
+        title="전력 분석 도시에"
+        description="상대 팀 ID 하나로 스쿼드 전원의 진짜 능력치·특성·약점을 뽑아 공략 포인트를 정리합니다. 인게임 전력 분석가가 하지 않는 일을 대신합니다."
+      />
+
+      <div className="analyst-search">
+        <label>
+          <span>상대 클럽/팀 ID</span>
+          <input
+            value={clubId}
+            onChange={(event) => setClubId(event.target.value)}
+            placeholder="예: 상대 구단 UID"
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') analyze()
+            }}
+          />
+        </label>
+        <button type="button" className="primary-action" disabled={busy} onClick={analyze}>
+          {busy ? <Loader2 size={17} className="spin" /> : <Crosshair size={17} />}
+          분석
+        </button>
+        <button
+          type="button"
+          className={pinned ? 'pin-toggle active' : 'pin-toggle'}
+          onClick={togglePin}
+          title="창을 FM 위에 항상 띄워둡니다"
+        >
+          <Pin size={16} />
+          {pinned ? '고정됨' : '항상 위'}
+        </button>
+        <div className="scan-note">{status}</div>
+      </div>
+
+      {error && <div className="analyst-error">{error}</div>}
+
+      {dossier && (
+        <div className="analyst-body">
+          <header className="analyst-summary">
+            <div>
+              <h3>{dossier.teamName}</h3>
+              <span className="analyst-meta">
+                {dossier.nation ? `${dossier.nation} · ` : ''}
+                {dossier.reputation != null ? `명성 ${dossier.reputation} · ` : ''}
+                선수 {dossier.playerCount}명
+              </span>
+            </div>
+            {dossier.teamWeaknesses.length > 0 && (
+              <div className="analyst-gameplan">
+                <h4>공략 포인트</h4>
+                <ul>
+                  {dossier.teamWeaknesses.map((tag, index) => (
+                    <li key={index}>
+                      <strong>{tag.label}</strong>
+                      <span>{tag.detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </header>
+
+          <div className="analyst-grid">
+            <div className="analyst-roster">
+              <table>
+                <thead>
+                  <tr>
+                    <th>선수</th>
+                    <th>포지션</th>
+                    <th>CA</th>
+                    <th>PA</th>
+                    <th>나이</th>
+                    <th>태그</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {dossier.players.map((player) => {
+                    const isKey = dossier.keyPlayerUids.includes(player.uid)
+                    return (
+                      <tr
+                        key={player.uid}
+                        className={`${player.uid === selectedUid ? 'selected' : ''} ${isKey ? 'key-player' : ''}`}
+                        onClick={() => setSelectedUid(player.uid)}
+                      >
+                        <td>
+                          {isKey && <span className="key-dot" title="핵심 선수" />}
+                          {player.name ?? `UID ${player.uid}`}
+                          <span className="roster-squad">{player.squadLabel}</span>
+                        </td>
+                        <td>{player.position}</td>
+                        <td>{player.ca}</td>
+                        <td>{player.pa}</td>
+                        <td>{player.age ?? '-'}</td>
+                        <td>
+                          {player.threats.length > 0 && <span className="tag-count threat">위협 {player.threats.length}</span>}
+                          {player.weaknesses.length > 0 && (
+                            <span className="tag-count weakness">약점 {player.weaknesses.length}</span>
+                          )}
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            {selected && (
+              <aside className="analyst-detail">
+                <div className="detail-head">
+                  <h3>{selected.name ?? `UID ${selected.uid}`}</h3>
+                  <span className="analyst-meta">
+                    {selected.position} · {selected.foot}
+                    {selected.age != null ? ` · ${selected.age}세` : ''}
+                    {selected.heightCm != null ? ` · ${selected.heightCm}cm` : ''}
+                    {selected.weightKg != null ? ` · ${selected.weightKg}kg` : ''}
+                    {selected.nation ? ` · ${selected.nation}` : ''}
+                  </span>
+                  <span className="detail-rating">
+                    CA <strong>{selected.ca}</strong> / PA <strong>{selected.pa}</strong>
+                  </span>
+                </div>
+
+                {selected.threats.length > 0 && (
+                  <div className="detail-block">
+                    <h4>경계 (위협)</h4>
+                    {selected.threats.map((tag, index) => (
+                      <div key={index} className="detail-tag threat">
+                        <strong>{tag.label}</strong>
+                        <span>{tag.detail}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {selected.weaknesses.length > 0 && (
+                  <div className="detail-block">
+                    <h4>공략 (약점)</h4>
+                    {selected.weaknesses.map((tag, index) => (
+                      <div key={index} className="detail-tag weakness">
+                        <strong>{tag.label}</strong>
+                        <span>{tag.detail}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {selected.standout.length > 0 && (
+                  <div className="detail-block">
+                    <h4>돋보이는 능력치</h4>
+                    <div className="standout-grid">
+                      {selected.standout.map((attr) => (
+                        <span key={attr.label} className="standout-chip">
+                          {attr.label} <strong>{attr.value}</strong>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {selected.traits.length > 0 && (
+                  <div className="detail-block">
+                    <h4>플레이 습성</h4>
+                    <div className="trait-chips">
+                      {selected.traits.map((trait) => (
+                        <span key={trait} className="trait-chip">
+                          {trait}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </aside>
+            )}
+          </div>
+        </div>
+      )}
+    </section>
   )
 }
 

@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FM26RTE
-build_property.ProjectDir = C:\Users\신민석\dev\fm26-rte\rte\
+build_property.ProjectDir = C:\projects\fm26rte\archive\legacy-winforms-rte\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
